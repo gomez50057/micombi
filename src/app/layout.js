@@ -1,4 +1,5 @@
 import "./globals.css";
+import GoogleAnalytics from "@/components/mi-combi/system/GoogleAnalytics/GoogleAnalytics";
 import ServiceWorkerRegister from "@/components/mi-combi/system/ServiceWorkerRegister/ServiceWorkerRegister";
 import ToastViewport from "@/components/mi-combi/ui/ToastViewport/ToastViewport";
 
@@ -22,6 +23,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es-MX" suppressHydrationWarning>
+      <head>
+        <GoogleAnalytics />
+      </head>
       <body>
         <ServiceWorkerRegister />
         <ToastViewport />
