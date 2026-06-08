@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" role="img" aria-labelledby="title">
+  <title id="title">Mi Combi</title>
+  <rect width="192" height="192" rx="42" fill="#00C2A8"/>
+  <path fill="#102A43" d="M42 78c0-18 14-32 32-32h44c18 0 32 14 32 32v42c0 8-6 14-14 14h-2v8c0 5-4 9-9 9s-9-4-9-9v-8H76v8c0 5-4 9-9 9s-9-4-9-9v-8h-2c-8 0-14-6-14-14V78Z"/>
+  <path fill="#FFFFFF" d="M57 76c0-8 6-14 14-14h50c8 0 14 6 14 14v18H57V76Z"/>
+  <circle cx="70" cy="118" r="9" fill="#FFD23F"/>
+  <circle cx="122" cy="118" r="9" fill="#FFD23F"/>
+  <path fill="#FF5C39" d="M62 101h68v8H62z"/>
+</svg>
