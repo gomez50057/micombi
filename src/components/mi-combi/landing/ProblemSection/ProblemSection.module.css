@@ -1,0 +1,29 @@
+.section {
+  background: var(--dark);
+  color: #ffffff;
+  padding: 72px 20px;
+}
+
+.section p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.lines {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.lines strong {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  color: var(--accent);
+  padding: 18px;
+}
+
+@media (max-width: 760px) {
+  .lines {
+    grid-template-columns: 1fr;
+  }
+}

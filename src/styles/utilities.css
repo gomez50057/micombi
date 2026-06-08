@@ -1,0 +1,53 @@
+.section {
+  padding: 72px 20px;
+}
+
+.sectionAlt {
+  background: #eefbf8;
+  padding: 72px 20px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: var(--container);
+  width: 100%;
+}
+
+.pageShell {
+  min-height: 70vh;
+  padding: 48px 20px 80px;
+}
+
+.pageIntro {
+  margin: 0 auto 28px;
+  max-width: var(--container);
+}
+
+.pageIntro h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.05;
+  margin: 0 0 14px;
+}
+
+.pageIntro p {
+  color: var(--muted);
+  font-size: 1.03rem;
+  margin: 0;
+  max-width: 760px;
+}
+
+.leaflet-container {
+  min-height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 720px) {
+  .section,
+  .sectionAlt {
+    padding: 52px 16px;
+  }
+
+  .pageShell {
+    padding: 32px 16px 64px;
+  }
+}

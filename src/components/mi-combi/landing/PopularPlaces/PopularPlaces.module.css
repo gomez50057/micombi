@@ -1,0 +1,20 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tags span {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  box-shadow: var(--shadow-soft);
+  font-weight: 800;
+  padding: 11px 14px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+}

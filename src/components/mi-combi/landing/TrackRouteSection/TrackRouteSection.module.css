@@ -1,0 +1,18 @@
+.panel {
+  align-items: end;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 28px;
+}
+
+@media (max-width: 720px) {
+  .panel {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

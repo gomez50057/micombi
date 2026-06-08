@@ -1,0 +1,24 @@
+.list {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list li {
+  background: #ffffff;
+  border-left: 6px solid var(--secondary);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+  color: var(--dark-soft);
+  font-weight: 800;
+  padding: 16px;
+}
+
+@media (max-width: 680px) {
+  .list {
+    grid-template-columns: 1fr;
+  }
+}

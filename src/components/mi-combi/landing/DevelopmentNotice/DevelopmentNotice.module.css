@@ -1,0 +1,17 @@
+.notice {
+  background: #fff7dd;
+  border: 1px solid #ffe18a;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+  padding: 28px;
+}
+
+.notice h2 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  margin: 0 0 14px;
+}
+
+.notice p {
+  color: var(--dark-soft);
+  margin: 10px 0;
+}

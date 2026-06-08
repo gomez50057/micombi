@@ -1,0 +1,84 @@
+.layout {
+  align-items: center;
+  display: grid;
+  gap: 36px;
+  grid-template-columns: minmax(0, 0.8fr) minmax(300px, 1fr);
+}
+
+.preview {
+  background: #dff7ef;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+  min-height: 380px;
+  overflow: hidden;
+  position: relative;
+}
+
+.streetOne,
+.streetTwo {
+  background: #ffffff;
+  border-radius: 999px;
+  height: 24px;
+  opacity: 0.95;
+  position: absolute;
+  width: 120%;
+}
+
+.streetOne {
+  left: -40px;
+  top: 130px;
+  transform: rotate(-18deg);
+}
+
+.streetTwo {
+  left: -80px;
+  top: 230px;
+  transform: rotate(21deg);
+}
+
+.routeLine {
+  border: 8px solid var(--secondary);
+  border-bottom: 0;
+  border-left: 0;
+  border-radius: 0 80px 0 0;
+  height: 190px;
+  left: 82px;
+  position: absolute;
+  top: 104px;
+  transform: rotate(10deg);
+  width: 340px;
+}
+
+.pointA,
+.pointB,
+.pointC {
+  background: var(--dark);
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 8px 10px;
+  position: absolute;
+}
+
+.pointA {
+  left: 58px;
+  top: 110px;
+}
+
+.pointB {
+  left: 235px;
+  top: 160px;
+}
+
+.pointC {
+  right: 42px;
+  top: 284px;
+}
+
+@media (max-width: 840px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

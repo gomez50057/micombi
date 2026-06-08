@@ -1,0 +1,50 @@
+.flow {
+  counter-reset: step;
+  display: grid;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flow li {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  font-weight: 800;
+  gap: 14px;
+  padding: 16px;
+}
+
+.flow li::before {
+  align-items: center;
+  background: var(--primary);
+  border-radius: 999px;
+  color: var(--dark);
+  content: counter(step);
+  counter-increment: step;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-weight: 900;
+  height: 34px;
+  justify-content: center;
+  width: 34px;
+}
+
+.states {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.states span {
+  background: var(--dark);
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 9px 12px;
+}

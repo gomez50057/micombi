@@ -1,0 +1,16 @@
+.layout {
+  align-items: center;
+  border: 2px dashed var(--primary);
+  border-radius: var(--radius-sm);
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+@media (max-width: 720px) {
+  .layout {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
