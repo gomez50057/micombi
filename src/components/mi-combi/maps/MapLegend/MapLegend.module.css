@@ -1,0 +1,56 @@
+.legend {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+  padding: 16px;
+}
+
+.legend h3 {
+  margin: 0 0 12px;
+}
+
+.item {
+  align-items: flex-start;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.item strong {
+  display: block;
+  font-size: 0.85rem;
+}
+
+.item p {
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin: 2px 0 0;
+}
+
+.dot {
+  border-radius: 999px;
+  display: inline-block;
+  flex: 0 0 auto;
+  height: 12px;
+  margin-top: 4px;
+  width: 12px;
+}
+
+.validated {
+  background: var(--success);
+}
+
+.preliminary,
+.community {
+  background: var(--primary);
+}
+
+.review,
+.unconfirmed {
+  background: var(--warning);
+}
+
+.updated {
+  background: var(--info);
+}

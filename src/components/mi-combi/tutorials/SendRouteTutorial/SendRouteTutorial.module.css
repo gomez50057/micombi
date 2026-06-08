@@ -1,0 +1,36 @@
+.columns {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.columns h3 {
+  margin: 0 0 10px;
+}
+
+.columns ol,
+.columns ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 22px;
+}
+
+.columns li {
+  color: var(--dark-soft);
+  font-weight: 700;
+}
+
+.message {
+  background: rgba(0, 194, 168, 0.12);
+  border-radius: var(--radius-sm);
+  color: var(--primary-dark);
+  font-weight: 900;
+  padding: 14px;
+}
+
+@media (max-width: 760px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+}

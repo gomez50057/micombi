@@ -1,0 +1,30 @@
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+  padding: 22px;
+}
+
+.marker {
+  align-items: center;
+  background: var(--accent);
+  border-radius: 999px;
+  color: var(--dark);
+  display: inline-flex;
+  font-weight: 800;
+  height: 34px;
+  justify-content: center;
+  margin-bottom: 16px;
+  width: 34px;
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  margin: 0 0 10px;
+}
+
+.card p {
+  color: var(--muted);
+  margin: 0;
+}

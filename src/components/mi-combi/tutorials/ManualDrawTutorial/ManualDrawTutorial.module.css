@@ -1,0 +1,17 @@
+.steps {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 22px;
+}
+
+.steps li {
+  color: var(--dark-soft);
+  font-weight: 700;
+}
+
+.close {
+  color: var(--primary-dark);
+  font-weight: 900;
+  margin-bottom: 0;
+}

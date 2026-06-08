@@ -1,0 +1,21 @@
+.panel {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+}
+
+.panel h3 {
+  margin: 0 0 6px;
+}
+
+.panel p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0 0 12px;
+}
+
+.actions {
+  display: grid;
+  gap: 10px;
+}

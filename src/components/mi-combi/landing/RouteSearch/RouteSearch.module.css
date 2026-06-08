@@ -1,0 +1,393 @@
+.section {
+  margin-top: -34px;
+  padding: 0 20px 42px;
+  position: relative;
+  z-index: 2;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+  margin: 0 auto;
+  max-width: var(--container);
+  padding: 24px;
+}
+
+.heading {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.heading h2 {
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  margin: 0;
+}
+
+.heading p {
+  color: var(--secondary);
+  font-weight: 800;
+  margin: 0;
+}
+
+.controls {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(220px, 1fr) minmax(170px, 0.32fr) minmax(170px, 0.32fr);
+}
+
+.controls input,
+.controls select {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--dark);
+  font-size: 0.95rem;
+  font-weight: 700;
+  min-height: 48px;
+  padding: 0 14px;
+}
+
+.quickFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.quickFilters button,
+.history button,
+.helpButton,
+.resultActions button,
+.compareHeader button,
+.reportPanel button {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--dark);
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 900;
+  min-height: 34px;
+  padding: 0 10px;
+}
+
+.quickFilters .activeQuickFilter,
+.segmented .activeSegment {
+  background: var(--dark);
+  border-color: var(--dark);
+  color: #ffffff;
+}
+
+.advancedBar {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.segmented {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: inline-grid;
+  gap: 4px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 4px;
+}
+
+.segmented button {
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  color: var(--dark);
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 900;
+  min-height: 32px;
+  padding: 0 10px;
+}
+
+.tutorialPanel,
+.history,
+.locationStatus {
+  background: #f7fbff;
+  border: 1px solid #d7e8ff;
+  border-radius: var(--radius-sm);
+  color: var(--dark-soft);
+  margin: 12px 0 0;
+  padding: 12px;
+}
+
+.tutorialPanel {
+  display: grid;
+  gap: 5px;
+}
+
+.tutorialPanel strong,
+.history span {
+  color: var(--dark);
+  font-weight: 900;
+}
+
+.tutorialPanel p,
+.locationStatus {
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.tutorialPanel p {
+  margin: 0;
+}
+
+.history {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.results {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.result {
+  align-items: center;
+  background: #f9fffd;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  padding: 14px;
+}
+
+.compactResult {
+  padding: 11px 12px;
+}
+
+.result h3 {
+  font-size: 0.98rem;
+  margin: 0 0 4px;
+}
+
+.result p,
+.empty {
+  color: var(--muted);
+  margin: 0;
+}
+
+.metaGrid {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 12px 0 0;
+}
+
+.metaGrid div,
+.compareGrid dl div {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.metaGrid dt,
+.compareGrid dt {
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 900;
+  margin-bottom: 3px;
+}
+
+.metaGrid dd,
+.compareGrid dd {
+  color: var(--dark);
+  font-size: 0.82rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.resultAside {
+  align-items: flex-end;
+  display: grid;
+  gap: 8px;
+  justify-items: end;
+  min-width: 210px;
+}
+
+.qualityBadge {
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 900;
+  padding: 5px 8px;
+}
+
+.complete {
+  background: #e7f7ef;
+  color: #11663d;
+}
+
+.partial {
+  background: #fff7dd;
+  color: #7a5200;
+}
+
+.review {
+  background: #ffeaea;
+  color: #8d1b1b;
+}
+
+.resultActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.more {
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.comparePanel,
+.reportPanel,
+.compareHint {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 16px;
+}
+
+.compareHint {
+  background: #f7fbff;
+  border-color: #d7e8ff;
+}
+
+.compareHint strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.compareHint p {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.compareHeader {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.compareHeader h3,
+.reportPanel h3,
+.compareGrid h4 {
+  margin: 0;
+}
+
+.compareGrid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.compareGrid article {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+}
+
+.compareGrid dl {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.reportPanel p {
+  color: var(--muted);
+  font-weight: 700;
+  margin: 4px 0 0;
+}
+
+.reportPanel textarea {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--dark);
+  font: inherit;
+  min-height: 190px;
+  padding: 12px;
+  resize: vertical;
+  width: 100%;
+}
+
+.reportPanel button {
+  justify-self: start;
+}
+
+@media (max-width: 820px) {
+  .heading {
+    display: grid;
+  }
+
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  .advancedBar,
+  .result {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .advancedBar {
+    display: grid;
+  }
+
+  .segmented,
+  .metaGrid,
+  .compareGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .resultAside {
+    align-items: stretch;
+    justify-items: stretch;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .resultActions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: stretch;
+  }
+
+  .compareHeader {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .more {
+    display: grid;
+  }
+}
