@@ -1,0 +1,72 @@
+{
+  "type": "FeatureCollection",
+  "name": "RA-05 PARQUE URBANO / E. EJERCITO MEXICANO (vuelta)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "routeId": "tuzobus-ra-05-vuelta",
+        "name": "RA-05 PARQUE URBANO / E. EJERCITO MEXICANO (vuelta)",
+        "externalId": "RA-05",
+        "origin": "PARQUE URBANO/SAN ANTONIO",
+        "destination": "Cto. San Antonio 100, Parque Urbano San Antonio, 42083 Pachuca de Soto, Hgo.",
+        "source": "tuzobus_oficial",
+        "sourceLabel": "Tuzobus oficial",
+        "sourceUrl": "https://p-tuzobus.hidalgo.gob.mx/",
+        "routeType": "tuzobus_alimentadora",
+        "color": "#7C3AED",
+        "fare": "$10 aprox.",
+        "frequency": "Por confirmar",
+        "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+        "status": "validated",
+        "updatedAt": "2026-06-06",
+        "featureIndex": 0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.789444,
+            20.049722
+          ],
+          [
+            -98.788333,
+            20.051944
+          ],
+          [
+            -98.785833,
+            20.050833
+          ],
+          [
+            -98.784444,
+            20.050278
+          ],
+          [
+            -98.783889,
+            20.048056
+          ],
+          [
+            -98.781944,
+            20.047222
+          ],
+          [
+            -98.781111,
+            20.043889
+          ],
+          [
+            -98.781389,
+            20.041667
+          ],
+          [
+            -98.778889,
+            20.039722
+          ],
+          [
+            -98.780833,
+            20.040556
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "type": "FeatureCollection",
+  "name": "RA- 2D C. VIÑEDOS / CETRAM TÉLLEZ (vuelta)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "routeId": "tuzobus-ra-2d-vuelta",
+        "name": "RA- 2D C. VIÑEDOS / CETRAM TÉLLEZ (vuelta)",
+        "externalId": "RA- 2D",
+        "origin": "FRACCIONAMIENTO VIÑEDOS",
+        "destination": "Zempoala, 43845 Hgo.",
+        "source": "tuzobus_oficial",
+        "sourceLabel": "Tuzobus oficial",
+        "sourceUrl": "https://p-tuzobus.hidalgo.gob.mx/",
+        "routeType": "tuzobus_alimentadora",
+        "color": "#7C3AED",
+        "fare": "$10 aprox.",
+        "frequency": "Por confirmar",
+        "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+        "status": "validated",
+        "updatedAt": "2026-06-06",
+        "featureIndex": 0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.782222,
+            19.975556
+          ],
+          [
+            -98.774444,
+            20.004167
+          ],
+          [
+            -98.779444,
+            20.009167
+          ],
+          [
+            -98.778889,
+            20.011111
+          ],
+          [
+            -98.774722,
+            20.011389
+          ],
+          [
+            -98.781944,
+            20.009444
+          ],
+          [
+            -98.788889,
+            20.009444
+          ],
+          [
+            -98.788889,
+            20.009444
+          ],
+          [
+            -98.781944,
+            20.006111
+          ],
+          [
+            -98.778056,
+            20.006111
+          ],
+          [
+            -98.803889,
+            20.011944
+          ]
+        ]
+      }
+    }
+  ]
+}

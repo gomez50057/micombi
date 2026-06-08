@@ -1,0 +1,108 @@
+{
+  "type": "FeatureCollection",
+  "name": "RA-02A FRACC. VILLA FONTANA / E. MATILDE (vuelta)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "routeId": "tuzobus-ra-02a-vuelta",
+        "name": "RA-02A FRACC. VILLA FONTANA / E. MATILDE (vuelta)",
+        "externalId": "RA-02A",
+        "origin": "SAN ALFONSO/SANTA MATILDE/ LINDA VISTA",
+        "destination": "43845 Privadas Santa Matilde, Hgo.",
+        "source": "tuzobus_oficial",
+        "sourceLabel": "Tuzobus oficial",
+        "sourceUrl": "https://p-tuzobus.hidalgo.gob.mx/",
+        "routeType": "tuzobus_alimentadora",
+        "color": "#7C3AED",
+        "fare": "$10 aprox.",
+        "frequency": "Por confirmar",
+        "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+        "status": "validated",
+        "updatedAt": "2026-06-06",
+        "featureIndex": 0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.785,
+            20.015
+          ],
+          [
+            -98.802778,
+            20.030278
+          ],
+          [
+            -98.800556,
+            20.030278
+          ],
+          [
+            -98.800833,
+            20.027222
+          ],
+          [
+            -98.798889,
+            20.025556
+          ],
+          [
+            -98.7975,
+            20.026389
+          ],
+          [
+            -98.795,
+            20.028889
+          ],
+          [
+            -98.792222,
+            20.028056
+          ],
+          [
+            -98.787778,
+            20.026944
+          ],
+          [
+            -98.787222,
+            20.024722
+          ],
+          [
+            -98.787222,
+            20.0225
+          ],
+          [
+            -98.788333,
+            20.021944
+          ],
+          [
+            -98.791667,
+            20.021944
+          ],
+          [
+            -98.791667,
+            20.020556
+          ],
+          [
+            -98.791667,
+            20.018056
+          ],
+          [
+            -98.789722,
+            20.017778
+          ],
+          [
+            -98.787222,
+            20.017778
+          ],
+          [
+            -98.785,
+            20.016389
+          ],
+          [
+            -98.785,
+            20.015
+          ]
+        ]
+      }
+    }
+  ]
+}

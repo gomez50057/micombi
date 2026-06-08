@@ -1,0 +1,556 @@
+{
+  "generatedAt": "2026-06-06",
+  "routeCount": 61,
+  "pointCount": 84,
+  "files": [
+    {
+      "id": "rutashidalgo-tbtroncal1-1",
+      "name": "Tuzobus Troncal 1",
+      "source": "rutashidalgo",
+      "sourceLabel": "Rutas Hidalgo",
+      "routeType": "tuzobus_troncal",
+      "color": "#0e9e35",
+      "file": "/data/geojson/routes/rutashidalgo-tbtroncal1-1.geojson"
+    },
+    {
+      "id": "rutashidalgo-tbtroncal1-2-5",
+      "name": "Tuzobus Troncal 2-5",
+      "source": "rutashidalgo",
+      "sourceLabel": "Rutas Hidalgo",
+      "routeType": "tuzobus_troncal",
+      "color": "#0e9e35",
+      "file": "/data/geojson/routes/rutashidalgo-tbtroncal1-2-5.geojson"
+    },
+    {
+      "id": "rutashidalgo-chavarria-centro",
+      "name": "Chavarria - Centro",
+      "source": "rutashidalgo",
+      "sourceLabel": "Rutas Hidalgo",
+      "routeType": "combi",
+      "color": "#0e9e35",
+      "file": "/data/geojson/routes/rutashidalgo-chavarria-centro.geojson"
+    },
+    {
+      "id": "rutashidalgo-calera-centro",
+      "name": "La Calera - Centro",
+      "source": "rutashidalgo",
+      "sourceLabel": "Rutas Hidalgo",
+      "routeType": "combi",
+      "color": "#653b07",
+      "file": "/data/geojson/routes/rutashidalgo-calera-centro.geojson"
+    },
+    {
+      "id": "rutashidalgo-delaunidad",
+      "name": "Ruta de la Unidad",
+      "source": "rutashidalgo",
+      "sourceLabel": "Rutas Hidalgo",
+      "routeType": "combi",
+      "color": "#df210b",
+      "file": "/data/geojson/routes/rutashidalgo-delaunidad.geojson"
+    },
+    {
+      "id": "rutashidalgo-pachuca-margaritas",
+      "name": "Pachuca - Margaritas",
+      "source": "rutashidalgo",
+      "sourceLabel": "Rutas Hidalgo",
+      "routeType": "combi",
+      "color": "#ef792d",
+      "file": "/data/geojson/routes/rutashidalgo-pachuca-margaritas.geojson"
+    },
+    {
+      "id": "rutashidalgo-pachuca-upp",
+      "name": "Pachuca - UPP",
+      "source": "rutashidalgo",
+      "sourceLabel": "Rutas Hidalgo",
+      "routeType": "combi",
+      "color": "#8611e3",
+      "file": "/data/geojson/routes/rutashidalgo-pachuca-upp.geojson"
+    },
+    {
+      "id": "rutashidalgo-pachuca-zempoala",
+      "name": "Pachuca - Zempoala",
+      "source": "rutashidalgo",
+      "sourceLabel": "Rutas Hidalgo",
+      "routeType": "combi",
+      "color": "#0c7b2a",
+      "file": "/data/geojson/routes/rutashidalgo-pachuca-zempoala.geojson"
+    },
+    {
+      "id": "rutashidalgo-providencia-tilcuautla-colosio",
+      "name": "Providencia - Tilcuautla por Colosio",
+      "source": "rutashidalgo",
+      "sourceLabel": "Rutas Hidalgo",
+      "routeType": "combi",
+      "color": "#1b3ddc",
+      "file": "/data/geojson/routes/rutashidalgo-providencia-tilcuautla-colosio.geojson"
+    },
+    {
+      "id": "rutashidalgo-providencia-tilcuautla-conalep",
+      "name": "Providencia - Tilcuautla por Conalep",
+      "source": "rutashidalgo",
+      "sourceLabel": "Rutas Hidalgo",
+      "routeType": "combi",
+      "color": "#1b3ddc",
+      "file": "/data/geojson/routes/rutashidalgo-providencia-tilcuautla-conalep.geojson"
+    },
+    {
+      "id": "rutashidalgo-providencia-tilcuautla-sanfernando",
+      "name": "Providencia - Tilcuautla por San Fernando",
+      "source": "rutashidalgo",
+      "sourceLabel": "Rutas Hidalgo",
+      "routeType": "combi",
+      "color": "#1b3ddc",
+      "file": "/data/geojson/routes/rutashidalgo-providencia-tilcuautla-sanfernando.geojson"
+    },
+    {
+      "id": "rutashidalgo-sanfernando-centro",
+      "name": "San Fernando - Centro",
+      "source": "rutashidalgo",
+      "sourceLabel": "Rutas Hidalgo",
+      "routeType": "combi",
+      "color": "#ef792d",
+      "file": "/data/geojson/routes/rutashidalgo-sanfernando-centro.geojson"
+    },
+    {
+      "id": "tuzobus-troncal-centro-tellez-oficial",
+      "name": "Tuzobus Troncal Centro - Tellez",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_troncal",
+      "color": "#7A1230",
+      "file": "/data/geojson/routes/tuzobus-troncal-centro-tellez-oficial.geojson"
+    },
+    {
+      "id": "tuzobus-ra-01-a-ida",
+      "name": "RA-01 A MATILDE / VALLE VERDE / E. MATILDE (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-01-a-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-01-a-vuelta",
+      "name": "RA-01 A MATILDE / VALLE VERDE / E. MATILDE (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-01-a-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-01-b-ida",
+      "name": "RA-01 B EJIDOS LA PALMA / E. MATILDE (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-01-b-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-01-b-vuelta",
+      "name": "RA-01 B EJIDOS LA PALMA / E. MATILDE (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-01-b-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-02a-ida",
+      "name": "RA-02A FRACC. VILLA FONTANA / E. MATILDE (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-02a-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-02a-vuelta",
+      "name": "RA-02A FRACC. VILLA FONTANA / E. MATILDE (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-02a-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-02b-ida",
+      "name": "RA-02B BLVD. SAN ALFONSO / JAGÜEY TÉLLEZ (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-02b-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-02b-vuelta",
+      "name": "RA-02B BLVD. SAN ALFONSO / JAGÜEY TÉLLEZ (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-02b-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-2d-ida",
+      "name": "RA- 2D C. VIÑEDOS / CETRAM TÉLLEZ (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-2d-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-2d-vuelta",
+      "name": "RA- 2D C. VIÑEDOS / CETRAM TÉLLEZ (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-2d-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-02-e-ida",
+      "name": "RA 02-E FRAC. AMORES DE DON JUAN / CETRAM TÉLLEZ (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-02-e-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-02-e-vuelta",
+      "name": "RA 02-E FRAC. AMORES DE DON JUAN / CETRAM TÉLLEZ (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-02-e-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-03-ida",
+      "name": "RA 03 BOSQUES DE MATILDE / E. EFRÉN REBOLLEDO (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-03-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-03-vuelta",
+      "name": "RA 03 BOSQUES DE MATILDE / E. EFRÉN REBOLLEDO (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-03-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-04-ida",
+      "name": "RA 04 LA PALMA / E. TERCERA EDAD (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-04-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-04-vuelta",
+      "name": "RA 04 LA PALMA / E. TERCERA EDAD (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-04-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-05-ida",
+      "name": "RA-05 PARQUE URBANO / E. EJERCITO MEXICANO (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-05-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-05-vuelta",
+      "name": "RA-05 PARQUE URBANO / E. EJERCITO MEXICANO (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-05-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-06-ida",
+      "name": "RA 06 HOGARES UNIÓN / E. EJERCITO MEXICANO (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-06-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-06-vuelta",
+      "name": "RA 06 HOGARES UNIÓN / E. EJERCITO MEXICANO (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-06-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-07-ida",
+      "name": "RA 07 LA COLONIA / E. FELIPE ÁNGELES (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-07-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-07-vuelta",
+      "name": "RA 07 LA COLONIA / E. FELIPE ÁNGELES (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-07-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-08-ida",
+      "name": "RA 08 TUZOS / E. VICENTE SEGURA (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-08-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-08-vuelta",
+      "name": "RA 08 TUZOS / E. VICENTE SEGURA (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-08-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-09-ida",
+      "name": "RA 09 PITAHAYAS / E. C. DE JUSTICIA (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-09-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-09-vuelta",
+      "name": "RA 09 PITAHAYAS / E. C. DE JUSTICIA (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-09-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-10-ida",
+      "name": "RA 10 CAMELINAS / E. C. DE JUSTICIA (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-10-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-10-vuelta",
+      "name": "RA 10 CAMELINAS / E. C. DE JUSTICIA (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-10-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-11-ida",
+      "name": "RA 11 HUIXMÍ / E. C. DE JUSTICIA (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-11-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-11-vuelta",
+      "name": "RA 11 HUIXMÍ / E. C. DE JUSTICIA (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-11-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-12-ida",
+      "name": "RA 12 MAGISTERIO / E. JUAN C DORIA (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-12-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-12-vuelta",
+      "name": "RA 12 MAGISTERIO / E. JUAN C DORIA (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-12-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-13-ida",
+      "name": "RA 13 EL VENADO / E. HOSPITALES (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-13-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-13-vuelta",
+      "name": "RA 13 EL VENADO / E. HOSPITALES (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-13-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-14-ida",
+      "name": "RA 14 NOPANCALCO / E. BICENTENARIO (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-14-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-14-vuelta",
+      "name": "RA 14 NOPANCALCO / E. BICENTENARIO (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-14-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-15-a-ida",
+      "name": "RA 15-A SAN CAYETANO / E. C. DE AUTOBUSES (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-15-a-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-15-a-vuelta",
+      "name": "RA 15-A SAN CAYETANO / E. C. DE AUTOBUSES (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-15-a-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-15b-ida",
+      "name": "RA-15B ABETOS / E. C. DE AUTOBUSES (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-15b-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-15b-vuelta",
+      "name": "RA-15B ABETOS / E. C. DE AUTOBUSES (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-15b-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-15-c-ida",
+      "name": "RA 15-C FRACC. COLOSIO / E. C. DE AUTOBUSES (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-15-c-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-15-c-vuelta",
+      "name": "RA 15-C FRACC. COLOSIO / E. C. DE AUTOBUSES (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-15-c-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-16-ida",
+      "name": "RA 16 SAN CARLOS / E. ZONA PLATEADA (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-16-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-16-vuelta",
+      "name": "RA 16 SAN CARLOS / E. ZONA PLATEADA (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-16-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-17-ida",
+      "name": "RA 17 TEZONTLE / HOSPITAL GENERAL PACHUCA (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-17-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-17-vuelta",
+      "name": "RA 17 TEZONTLE / HOSPITAL GENERAL PACHUCA (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-17-vuelta.geojson"
+    },
+    {
+      "id": "tuzobus-ra-19-ida",
+      "name": "RA 19 REAL DEL VALLE / E. PREPA 1 (ida)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#2563EB",
+      "file": "/data/geojson/routes/tuzobus-ra-19-ida.geojson"
+    },
+    {
+      "id": "tuzobus-ra-19-vuelta",
+      "name": "RA 19 REAL DEL VALLE / E. PREPA 1 (vuelta)",
+      "source": "tuzobus_oficial",
+      "sourceLabel": "Tuzobus oficial",
+      "routeType": "tuzobus_alimentadora",
+      "color": "#7C3AED",
+      "file": "/data/geojson/routes/tuzobus-ra-19-vuelta.geojson"
+    }
+  ]
+}

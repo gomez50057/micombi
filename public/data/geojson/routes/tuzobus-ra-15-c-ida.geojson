@@ -1,0 +1,128 @@
+{
+  "type": "FeatureCollection",
+  "name": "RA 15-C FRACC. COLOSIO / E. C. DE AUTOBUSES (ida)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "routeId": "tuzobus-ra-15-c-ida",
+        "name": "RA 15-C FRACC. COLOSIO / E. C. DE AUTOBUSES (ida)",
+        "externalId": "RA 15-C",
+        "origin": "COLOSIO/PUNTA AZUL/PIRACANTOS/AMPLIACION SANTA JULIA",
+        "destination": "Blvrd Felipe Angeles 309, Jaime Torres Bodet, 42080 Pachuca de Soto, Hgo.",
+        "source": "tuzobus_oficial",
+        "sourceLabel": "Tuzobus oficial",
+        "sourceUrl": "https://p-tuzobus.hidalgo.gob.mx/",
+        "routeType": "tuzobus_alimentadora",
+        "color": "#2563EB",
+        "fare": "$10 aprox.",
+        "frequency": "Por confirmar",
+        "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+        "status": "validated",
+        "updatedAt": "2026-06-06",
+        "featureIndex": 0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.7875,
+            20.120278
+          ],
+          [
+            -98.788611,
+            20.120556
+          ],
+          [
+            -98.788611,
+            20.12
+          ],
+          [
+            -98.7875,
+            20.12
+          ],
+          [
+            -98.786667,
+            20.119722
+          ],
+          [
+            -98.785556,
+            20.120278
+          ],
+          [
+            -98.782778,
+            20.118611
+          ],
+          [
+            -98.781944,
+            20.119722
+          ],
+          [
+            -98.781389,
+            20.121667
+          ],
+          [
+            -98.779722,
+            20.121389
+          ],
+          [
+            -98.777222,
+            20.121389
+          ],
+          [
+            -98.775833,
+            20.121111
+          ],
+          [
+            -98.774722,
+            20.120278
+          ],
+          [
+            -98.774722,
+            20.118611
+          ],
+          [
+            -98.774444,
+            20.116944
+          ],
+          [
+            -98.774444,
+            20.114722
+          ],
+          [
+            -98.773056,
+            20.113056
+          ],
+          [
+            -98.775,
+            20.112778
+          ],
+          [
+            -98.774722,
+            20.110833
+          ],
+          [
+            -98.771944,
+            20.108333
+          ],
+          [
+            -98.769444,
+            20.106111
+          ],
+          [
+            -98.767778,
+            20.104167
+          ],
+          [
+            -98.765,
+            20.101667
+          ],
+          [
+            -98.760556,
+            20.102778
+          ]
+        ]
+      }
+    }
+  ]
+}

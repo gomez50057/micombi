@@ -1,0 +1,128 @@
+{
+  "type": "FeatureCollection",
+  "name": "RA 15-C FRACC. COLOSIO / E. C. DE AUTOBUSES (vuelta)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "routeId": "tuzobus-ra-15-c-vuelta",
+        "name": "RA 15-C FRACC. COLOSIO / E. C. DE AUTOBUSES (vuelta)",
+        "externalId": "RA 15-C",
+        "origin": "COLOSIO/PUNTA AZUL/PIRACANTOS/AMPLIACION SANTA JULIA",
+        "destination": "C. Altar 50, Colosio, 42088 Pachuca de Soto, Hgo.",
+        "source": "tuzobus_oficial",
+        "sourceLabel": "Tuzobus oficial",
+        "sourceUrl": "https://p-tuzobus.hidalgo.gob.mx/",
+        "routeType": "tuzobus_alimentadora",
+        "color": "#7C3AED",
+        "fare": "$10 aprox.",
+        "frequency": "Por confirmar",
+        "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+        "status": "validated",
+        "updatedAt": "2026-06-06",
+        "featureIndex": 0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.752222,
+            20.106389
+          ],
+          [
+            -98.761111,
+            20.1025
+          ],
+          [
+            -98.765556,
+            20.102778
+          ],
+          [
+            -98.768333,
+            20.105278
+          ],
+          [
+            -98.769444,
+            20.106389
+          ],
+          [
+            -98.771667,
+            20.108611
+          ],
+          [
+            -98.774444,
+            20.111111
+          ],
+          [
+            -98.774722,
+            20.1125
+          ],
+          [
+            -98.772778,
+            20.113056
+          ],
+          [
+            -98.774167,
+            20.115
+          ],
+          [
+            -98.774167,
+            20.117222
+          ],
+          [
+            -98.774444,
+            20.118611
+          ],
+          [
+            -98.774444,
+            20.12
+          ],
+          [
+            -98.775833,
+            20.121667
+          ],
+          [
+            -98.777222,
+            20.121667
+          ],
+          [
+            -98.779722,
+            20.121667
+          ],
+          [
+            -98.781667,
+            20.121667
+          ],
+          [
+            -98.782222,
+            20.119444
+          ],
+          [
+            -98.783056,
+            20.118611
+          ],
+          [
+            -98.785556,
+            20.120833
+          ],
+          [
+            -98.786667,
+            20.121111
+          ],
+          [
+            -98.786667,
+            20.119722
+          ],
+          [
+            -98.7875,
+            20.120278
+          ],
+          [
+            -98.788611,
+            20.120556
+          ]
+        ]
+      }
+    }
+  ]
+}

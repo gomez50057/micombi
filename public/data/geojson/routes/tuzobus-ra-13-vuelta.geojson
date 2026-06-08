@@ -1,0 +1,108 @@
+{
+  "type": "FeatureCollection",
+  "name": "RA 13 EL VENADO / E. HOSPITALES (vuelta)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "routeId": "tuzobus-ra-13-vuelta",
+        "name": "RA 13 EL VENADO / E. HOSPITALES (vuelta)",
+        "externalId": "RA 13",
+        "origin": "ISSTE/REAL DE LA PLATA/EL VENADO/LOS TUZOS",
+        "destination": "Av. de los Ingenieros 527-515, Los Tuzos, 42185 Fraccionamientos del Sur, Hgo.",
+        "source": "tuzobus_oficial",
+        "sourceLabel": "Tuzobus oficial",
+        "sourceUrl": "https://p-tuzobus.hidalgo.gob.mx/",
+        "routeType": "tuzobus_alimentadora",
+        "color": "#7C3AED",
+        "fare": "$10 aprox.",
+        "frequency": "Por confirmar",
+        "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+        "status": "validated",
+        "updatedAt": "2026-06-06",
+        "featureIndex": 0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.776667,
+            20.073889
+          ],
+          [
+            -98.775,
+            20.074167
+          ],
+          [
+            -98.773611,
+            20.073611
+          ],
+          [
+            -98.771667,
+            20.073611
+          ],
+          [
+            -98.770556,
+            20.072778
+          ],
+          [
+            -98.77,
+            20.071667
+          ],
+          [
+            -98.769722,
+            20.070833
+          ],
+          [
+            -98.7675,
+            20.068889
+          ],
+          [
+            -98.762222,
+            20.066111
+          ],
+          [
+            -98.76,
+            20.065
+          ],
+          [
+            -98.758333,
+            20.064167
+          ],
+          [
+            -98.758611,
+            20.062778
+          ],
+          [
+            -98.758889,
+            20.061667
+          ],
+          [
+            -98.758333,
+            20.059722
+          ],
+          [
+            -98.757222,
+            20.058056
+          ],
+          [
+            -98.757222,
+            20.056667
+          ],
+          [
+            -98.759167,
+            20.057222
+          ],
+          [
+            -98.758056,
+            20.056667
+          ],
+          [
+            -98.754167,
+            20.055278
+          ]
+        ]
+      }
+    }
+  ]
+}

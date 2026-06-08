@@ -1,0 +1,116 @@
+{
+  "type": "FeatureCollection",
+  "name": "RA-15B ABETOS / E. C. DE AUTOBUSES (vuelta)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "routeId": "tuzobus-ra-15b-vuelta",
+        "name": "RA-15B ABETOS / E. C. DE AUTOBUSES (vuelta)",
+        "externalId": "RA-15B",
+        "origin": "ABETOS/AMPLIACION EL PALMAR/SAN CAYETANO/AMPLIACION SANTA JULIA",
+        "destination": "Río Camarones, 42088 Pachuca de Soto, Hgo.",
+        "source": "tuzobus_oficial",
+        "sourceLabel": "Tuzobus oficial",
+        "sourceUrl": "https://p-tuzobus.hidalgo.gob.mx/",
+        "routeType": "tuzobus_alimentadora",
+        "color": "#7C3AED",
+        "fare": "$10 aprox.",
+        "frequency": "Por confirmar",
+        "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+        "status": "validated",
+        "updatedAt": "2026-06-06",
+        "featureIndex": 0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.752222,
+            20.106389
+          ],
+          [
+            -98.761111,
+            20.1025
+          ],
+          [
+            -98.765556,
+            20.102778
+          ],
+          [
+            -98.768333,
+            20.105278
+          ],
+          [
+            -98.769444,
+            20.106389
+          ],
+          [
+            -98.771667,
+            20.108611
+          ],
+          [
+            -98.774444,
+            20.111111
+          ],
+          [
+            -98.775833,
+            20.112222
+          ],
+          [
+            -98.776944,
+            20.113611
+          ],
+          [
+            -98.78,
+            20.116111
+          ],
+          [
+            -98.785833,
+            20.120833
+          ],
+          [
+            -98.785556,
+            20.120278
+          ],
+          [
+            -98.784444,
+            20.115
+          ],
+          [
+            -98.784444,
+            20.113333
+          ],
+          [
+            -98.783889,
+            20.111944
+          ],
+          [
+            -98.784167,
+            20.109722
+          ],
+          [
+            -98.788333,
+            20.110833
+          ],
+          [
+            -98.791944,
+            20.111389
+          ],
+          [
+            -98.796389,
+            20.113056
+          ],
+          [
+            -98.798333,
+            20.113889
+          ],
+          [
+            -98.800833,
+            20.114722
+          ]
+        ]
+      }
+    }
+  ]
+}

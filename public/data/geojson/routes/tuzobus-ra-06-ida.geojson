@@ -1,0 +1,64 @@
+{
+  "type": "FeatureCollection",
+  "name": "RA 06 HOGARES UNIÓN / E. EJERCITO MEXICANO (ida)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "routeId": "tuzobus-ra-06-ida",
+        "name": "RA 06 HOGARES UNIÓN / E. EJERCITO MEXICANO (ida)",
+        "externalId": "RA 06",
+        "origin": "HOGARES UNION/TERECITAS/SAN ANTONIO",
+        "destination": "México - Pachuca 2029A, San Antonio el Desmonte, 42111 Pachuca de Soto, Hgo.",
+        "source": "tuzobus_oficial",
+        "sourceLabel": "Tuzobus oficial",
+        "sourceUrl": "https://p-tuzobus.hidalgo.gob.mx/",
+        "routeType": "tuzobus_alimentadora",
+        "color": "#2563EB",
+        "fare": "$10 aprox.",
+        "frequency": "Por confirmar",
+        "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+        "status": "validated",
+        "updatedAt": "2026-06-06",
+        "featureIndex": 0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.799167,
+            20.058611
+          ],
+          [
+            -98.797778,
+            20.057778
+          ],
+          [
+            -98.796667,
+            20.056667
+          ],
+          [
+            -98.795556,
+            20.058056
+          ],
+          [
+            -98.792778,
+            20.056111
+          ],
+          [
+            -98.790556,
+            20.054444
+          ],
+          [
+            -98.789444,
+            20.053333
+          ],
+          [
+            -98.788611,
+            20.052222
+          ]
+        ]
+      }
+    }
+  ]
+}

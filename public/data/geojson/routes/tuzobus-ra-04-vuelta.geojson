@@ -1,0 +1,72 @@
+{
+  "type": "FeatureCollection",
+  "name": "RA 04 LA PALMA / E. TERCERA EDAD (vuelta)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "routeId": "tuzobus-ra-04-vuelta",
+        "name": "RA 04 LA PALMA / E. TERCERA EDAD (vuelta)",
+        "externalId": "RA 04",
+        "origin": "LA PALMA/FRACC. LOMAS DE LA PLATA",
+        "destination": "Pachuca de Soto, 42117 Hgo.",
+        "source": "tuzobus_oficial",
+        "sourceLabel": "Tuzobus oficial",
+        "sourceUrl": "https://p-tuzobus.hidalgo.gob.mx/",
+        "routeType": "tuzobus_alimentadora",
+        "color": "#7C3AED",
+        "fare": "$10 aprox.",
+        "frequency": "Por confirmar",
+        "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+        "status": "validated",
+        "updatedAt": "2026-06-06",
+        "featureIndex": 0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.793611,
+            20.042778
+          ],
+          [
+            -98.797778,
+            20.041667
+          ],
+          [
+            -98.796944,
+            20.044167
+          ],
+          [
+            -98.799167,
+            20.044722
+          ],
+          [
+            -98.801944,
+            20.045
+          ],
+          [
+            -98.803333,
+            20.045556
+          ],
+          [
+            -98.806111,
+            20.046111
+          ],
+          [
+            -98.809167,
+            20.046667
+          ],
+          [
+            -98.813889,
+            20.0475
+          ],
+          [
+            -98.818611,
+            20.048333
+          ]
+        ]
+      }
+    }
+  ]
+}

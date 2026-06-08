@@ -1,0 +1,128 @@
+{
+  "type": "FeatureCollection",
+  "name": "RA 08 TUZOS / E. VICENTE SEGURA (vuelta)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "routeId": "tuzobus-ra-08-vuelta",
+        "name": "RA 08 TUZOS / E. VICENTE SEGURA (vuelta)",
+        "externalId": "RA 08",
+        "origin": "TUZOS/LOS PINOS/TULIPANES/GEO VILLAS/JUAN C. DORIA",
+        "destination": "Av. de los Ingenieros 651, Los Tuzos, 42185 Fraccionamientos del Sur, Hgo.",
+        "source": "tuzobus_oficial",
+        "sourceLabel": "Tuzobus oficial",
+        "sourceUrl": "https://p-tuzobus.hidalgo.gob.mx/",
+        "routeType": "tuzobus_alimentadora",
+        "color": "#7C3AED",
+        "fare": "$10 aprox.",
+        "frequency": "Por confirmar",
+        "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+        "status": "validated",
+        "updatedAt": "2026-06-06",
+        "featureIndex": 0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.779444,
+            20.068333
+          ],
+          [
+            -98.776667,
+            20.068611
+          ],
+          [
+            -98.776667,
+            20.066944
+          ],
+          [
+            -98.776667,
+            20.065278
+          ],
+          [
+            -98.777778,
+            20.0625
+          ],
+          [
+            -98.774167,
+            20.060833
+          ],
+          [
+            -98.772778,
+            20.06
+          ],
+          [
+            -98.771389,
+            20.060278
+          ],
+          [
+            -98.769444,
+            20.06
+          ],
+          [
+            -98.768056,
+            20.059722
+          ],
+          [
+            -98.766111,
+            20.059167
+          ],
+          [
+            -98.764167,
+            20.058889
+          ],
+          [
+            -98.763056,
+            20.058611
+          ],
+          [
+            -98.763333,
+            20.0575
+          ],
+          [
+            -98.763611,
+            20.055556
+          ],
+          [
+            -98.764167,
+            20.054167
+          ],
+          [
+            -98.764444,
+            20.0525
+          ],
+          [
+            -98.762778,
+            20.051667
+          ],
+          [
+            -98.760833,
+            20.051111
+          ],
+          [
+            -98.760278,
+            20.051944
+          ],
+          [
+            -98.759167,
+            20.051667
+          ],
+          [
+            -98.759167,
+            20.051667
+          ],
+          [
+            -98.758056,
+            20.053056
+          ],
+          [
+            -98.756667,
+            20.052778
+          ]
+        ]
+      }
+    }
+  ]
+}

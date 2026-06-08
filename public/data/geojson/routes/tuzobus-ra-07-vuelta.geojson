@@ -1,0 +1,72 @@
+{
+  "type": "FeatureCollection",
+  "name": "RA 07 LA COLONIA / E. FELIPE ÁNGELES (vuelta)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "routeId": "tuzobus-ra-07-vuelta",
+        "name": "RA 07 LA COLONIA / E. FELIPE ÁNGELES (vuelta)",
+        "externalId": "RA 07",
+        "origin": "RANCHO LA COLONIA/VILLAS DE PACHUCA",
+        "destination": "Av. Mexico, Rancho la Colonia, 42083 Pachuca de Soto, Hgo.",
+        "source": "tuzobus_oficial",
+        "sourceLabel": "Tuzobus oficial",
+        "sourceUrl": "https://p-tuzobus.hidalgo.gob.mx/",
+        "routeType": "tuzobus_alimentadora",
+        "color": "#7C3AED",
+        "fare": "$10 aprox.",
+        "frequency": "Por confirmar",
+        "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+        "status": "validated",
+        "updatedAt": "2026-06-06",
+        "featureIndex": 0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.786111,
+            20.055
+          ],
+          [
+            -98.788611,
+            20.052222
+          ],
+          [
+            -98.783611,
+            20.054167
+          ],
+          [
+            -98.781944,
+            20.052222
+          ],
+          [
+            -98.779722,
+            20.052222
+          ],
+          [
+            -98.778611,
+            20.052222
+          ],
+          [
+            -98.778611,
+            20.052222
+          ],
+          [
+            -98.778056,
+            20.049444
+          ],
+          [
+            -98.775,
+            20.048056
+          ],
+          [
+            -98.771389,
+            20.046389
+          ]
+        ]
+      }
+    }
+  ]
+}

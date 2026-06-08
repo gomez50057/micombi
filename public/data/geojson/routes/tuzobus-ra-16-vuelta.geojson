@@ -1,0 +1,72 @@
+{
+  "type": "FeatureCollection",
+  "name": "RA 16 SAN CARLOS / E. ZONA PLATEADA (vuelta)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "routeId": "tuzobus-ra-16-vuelta",
+        "name": "RA 16 SAN CARLOS / E. ZONA PLATEADA (vuelta)",
+        "externalId": "RA 16",
+        "origin": "SAN CARLOS/ZONA PLATEADA",
+        "destination": "San Carlos, 42084 Pachuca de Soto, Hgo.",
+        "source": "tuzobus_oficial",
+        "sourceLabel": "Tuzobus oficial",
+        "sourceUrl": "https://p-tuzobus.hidalgo.gob.mx/",
+        "routeType": "tuzobus_alimentadora",
+        "color": "#7C3AED",
+        "fare": "$10 aprox.",
+        "frequency": "Por confirmar",
+        "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+        "status": "validated",
+        "updatedAt": "2026-06-06",
+        "featureIndex": 0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.770278,
+            20.096111
+          ],
+          [
+            -98.770556,
+            20.0975
+          ],
+          [
+            -98.775833,
+            20.096667
+          ],
+          [
+            -98.778333,
+            20.097222
+          ],
+          [
+            -98.781667,
+            20.098333
+          ],
+          [
+            -98.783611,
+            20.0975
+          ],
+          [
+            -98.784722,
+            20.097778
+          ],
+          [
+            -98.785833,
+            20.098056
+          ],
+          [
+            -98.787222,
+            20.098333
+          ],
+          [
+            -98.789167,
+            20.098611
+          ]
+        ]
+      }
+    }
+  ]
+}

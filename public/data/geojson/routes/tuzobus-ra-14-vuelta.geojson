@@ -1,0 +1,92 @@
+{
+  "type": "FeatureCollection",
+  "name": "RA 14 NOPANCALCO / E. BICENTENARIO (vuelta)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "routeId": "tuzobus-ra-14-vuelta",
+        "name": "RA 14 NOPANCALCO / E. BICENTENARIO (vuelta)",
+        "externalId": "RA 14",
+        "origin": "SAN PEDRO NOPANCALCO, EL TEZONTLE, VENTAPRIETA",
+        "destination": "C. 30 de Julio 790, San Pedro Nopancalco, 42084 Pachuca de Soto, Hgo.",
+        "source": "tuzobus_oficial",
+        "sourceLabel": "Tuzobus oficial",
+        "sourceUrl": "https://p-tuzobus.hidalgo.gob.mx/",
+        "routeType": "tuzobus_alimentadora",
+        "color": "#7C3AED",
+        "fare": "$10 aprox.",
+        "frequency": "Por confirmar",
+        "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+        "status": "validated",
+        "updatedAt": "2026-06-06",
+        "featureIndex": 0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.771667,
+            20.088611
+          ],
+          [
+            -98.774444,
+            20.089444
+          ],
+          [
+            -98.776389,
+            20.089722
+          ],
+          [
+            -98.778889,
+            20.09
+          ],
+          [
+            -98.780556,
+            20.090556
+          ],
+          [
+            -98.785278,
+            20.091944
+          ],
+          [
+            -98.785833,
+            20.091944
+          ],
+          [
+            -98.786944,
+            20.088889
+          ],
+          [
+            -98.788611,
+            20.089444
+          ],
+          [
+            -98.79,
+            20.090278
+          ],
+          [
+            -98.790833,
+            20.088889
+          ],
+          [
+            -98.7925,
+            20.088056
+          ],
+          [
+            -98.793611,
+            20.0875
+          ],
+          [
+            -98.795278,
+            20.088333
+          ],
+          [
+            -98.796111,
+            20.088889
+          ]
+        ]
+      }
+    }
+  ]
+}

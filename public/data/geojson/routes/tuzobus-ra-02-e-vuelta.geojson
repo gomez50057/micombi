@@ -1,0 +1,80 @@
+{
+  "type": "FeatureCollection",
+  "name": "RA 02-E FRAC. AMORES DE DON JUAN / CETRAM TÉLLEZ (vuelta)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "routeId": "tuzobus-ra-02-e-vuelta",
+        "name": "RA 02-E FRAC. AMORES DE DON JUAN / CETRAM TÉLLEZ (vuelta)",
+        "externalId": "RA 02-E",
+        "origin": "FRACCIONAMIENTO VIÑEDOS/AMORES DE DON JUAN/PRIVADA PORTOBELLO",
+        "destination": "43845 Hgo.",
+        "source": "tuzobus_oficial",
+        "sourceLabel": "Tuzobus oficial",
+        "sourceUrl": "https://p-tuzobus.hidalgo.gob.mx/",
+        "routeType": "tuzobus_alimentadora",
+        "color": "#7C3AED",
+        "fare": "$10 aprox.",
+        "frequency": "Por confirmar",
+        "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+        "status": "validated",
+        "updatedAt": "2026-06-06",
+        "featureIndex": 0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.791667,
+            20.013611
+          ],
+          [
+            -98.791667,
+            20.013611
+          ],
+          [
+            -98.791667,
+            20.015833
+          ],
+          [
+            -98.791667,
+            20.017778
+          ],
+          [
+            -98.794722,
+            20.017778
+          ],
+          [
+            -98.798333,
+            20.0175
+          ],
+          [
+            -98.796944,
+            20.015278
+          ],
+          [
+            -98.795278,
+            20.013333
+          ],
+          [
+            -98.794444,
+            20.010278
+          ],
+          [
+            -98.797222,
+            20.010278
+          ],
+          [
+            -98.8,
+            20.010278
+          ],
+          [
+            -98.803611,
+            20.011111
+          ]
+        ]
+      }
+    }
+  ]
+}

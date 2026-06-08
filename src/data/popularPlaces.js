@@ -1,0 +1,16 @@
+export const popularPlaces = [
+  "Centro",
+  "UAEH",
+  "Central de Autobuses",
+  "Hospital General",
+  "Providencia",
+  "Tulipanes",
+  "Pachuquilla",
+  "Real del Monte",
+  "Zempoala",
+  "Tilcuautla",
+  "Plaza Q",
+  "Plaza del Valle",
+  "ICSA",
+  "CEDICSO",
+];

@@ -1,0 +1,60 @@
+{
+  "type": "FeatureCollection",
+  "name": "RA-01 B EJIDOS LA PALMA / E. MATILDE (vuelta)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "routeId": "tuzobus-ra-01-b-vuelta",
+        "name": "RA-01 B EJIDOS LA PALMA / E. MATILDE (vuelta)",
+        "externalId": "RA-01 B",
+        "origin": "EL MIRADOR/MATILDE",
+        "destination": "Av. Reforma Agraria 586-548, Matilde, 42119 Pachuca de Soto, Hgo.",
+        "source": "tuzobus_oficial",
+        "sourceLabel": "Tuzobus oficial",
+        "sourceUrl": "https://p-tuzobus.hidalgo.gob.mx/",
+        "routeType": "tuzobus_alimentadora",
+        "color": "#7C3AED",
+        "fare": "$10 aprox.",
+        "frequency": "Por confirmar",
+        "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+        "status": "validated",
+        "updatedAt": "2026-06-06",
+        "featureIndex": 0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.803056,
+            20.030556
+          ],
+          [
+            -98.803056,
+            20.030556
+          ],
+          [
+            -98.805278,
+            20.032222
+          ],
+          [
+            -98.806944,
+            20.033333
+          ],
+          [
+            -98.808611,
+            20.034722
+          ],
+          [
+            -98.81,
+            20.035833
+          ],
+          [
+            -98.811111,
+            20.036944
+          ]
+        ]
+      }
+    }
+  ]
+}

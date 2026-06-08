@@ -1,0 +1,92 @@
+{
+  "type": "FeatureCollection",
+  "name": "RA 03 BOSQUES DE MATILDE / E. EFRÉN REBOLLEDO (ida)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "routeId": "tuzobus-ra-03-ida",
+        "name": "RA 03 BOSQUES DE MATILDE / E. EFRÉN REBOLLEDO (ida)",
+        "externalId": "RA 03",
+        "origin": "REAL TOLEDO, BOSQUES DE MATILDE/MINERAL DEL ORO",
+        "destination": "Cumbreras, San Antonio, 42119 Pachuca de Soto, Hgo.",
+        "source": "tuzobus_oficial",
+        "sourceLabel": "Tuzobus oficial",
+        "sourceUrl": "https://p-tuzobus.hidalgo.gob.mx/",
+        "routeType": "tuzobus_alimentadora",
+        "color": "#2563EB",
+        "fare": "$10 aprox.",
+        "frequency": "Por confirmar",
+        "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+        "status": "validated",
+        "updatedAt": "2026-06-06",
+        "featureIndex": 0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.7775,
+            20.026944
+          ],
+          [
+            -98.797778,
+            20.035556
+          ],
+          [
+            -98.791944,
+            20.0325
+          ],
+          [
+            -98.789722,
+            20.031389
+          ],
+          [
+            -98.7875,
+            20.030556
+          ],
+          [
+            -98.787222,
+            20.033056
+          ],
+          [
+            -98.786944,
+            20.034444
+          ],
+          [
+            -98.786111,
+            20.037778
+          ],
+          [
+            -98.781944,
+            20.036944
+          ],
+          [
+            -98.781944,
+            20.033889
+          ],
+          [
+            -98.782222,
+            20.031111
+          ],
+          [
+            -98.7825,
+            20.027778
+          ],
+          [
+            -98.779722,
+            20.026389
+          ],
+          [
+            -98.7775,
+            20.026944
+          ],
+          [
+            -98.776944,
+            20.030556
+          ]
+        ]
+      }
+    }
+  ]
+}

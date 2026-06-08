@@ -1,0 +1,72 @@
+{
+  "type": "FeatureCollection",
+  "name": "RA-01 A MATILDE / VALLE VERDE / E. MATILDE (vuelta)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "routeId": "tuzobus-ra-01-a-vuelta",
+        "name": "RA-01 A MATILDE / VALLE VERDE / E. MATILDE (vuelta)",
+        "externalId": "RA-01 A",
+        "origin": "Matilde, 42119 Pachuca de Soto, Hgo.",
+        "destination": "20 de Noviembre, San Antonio, 43845 Acayuca, Hgo.",
+        "source": "tuzobus_oficial",
+        "sourceLabel": "Tuzobus oficial",
+        "sourceUrl": "https://p-tuzobus.hidalgo.gob.mx/",
+        "routeType": "tuzobus_alimentadora",
+        "color": "#7C3AED",
+        "fare": "$10 aprox.",
+        "frequency": "Por confirmar",
+        "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+        "status": "validated",
+        "updatedAt": "2026-06-06",
+        "featureIndex": 0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.803056,
+            20.030556
+          ],
+          [
+            -98.805278,
+            20.032222
+          ],
+          [
+            -98.806667,
+            20.033056
+          ],
+          [
+            -98.8075,
+            20.031111
+          ],
+          [
+            -98.808889,
+            20.030278
+          ],
+          [
+            -98.811111,
+            20.029722
+          ],
+          [
+            -98.812778,
+            20.03
+          ],
+          [
+            -98.813056,
+            20.032222
+          ],
+          [
+            -98.813056,
+            20.032222
+          ],
+          [
+            -98.813056,
+            20.032222
+          ]
+        ]
+      }
+    }
+  ]
+}

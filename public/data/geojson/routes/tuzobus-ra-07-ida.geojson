@@ -1,0 +1,76 @@
+{
+  "type": "FeatureCollection",
+  "name": "RA 07 LA COLONIA / E. FELIPE ÁNGELES (ida)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "routeId": "tuzobus-ra-07-ida",
+        "name": "RA 07 LA COLONIA / E. FELIPE ÁNGELES (ida)",
+        "externalId": "RA 07",
+        "origin": "RANCHO LA COLONIA/VILLAS DE PACHUCA",
+        "destination": "Av. de las Aves 147-61, Villas de Pachuca, 42083 Pachuca de Soto, Hgo.",
+        "source": "tuzobus_oficial",
+        "sourceLabel": "Tuzobus oficial",
+        "sourceUrl": "https://p-tuzobus.hidalgo.gob.mx/",
+        "routeType": "tuzobus_alimentadora",
+        "color": "#2563EB",
+        "fare": "$10 aprox.",
+        "frequency": "Por confirmar",
+        "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+        "status": "validated",
+        "updatedAt": "2026-06-06",
+        "featureIndex": 0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.771389,
+            20.046389
+          ],
+          [
+            -98.773056,
+            20.047222
+          ],
+          [
+            -98.775,
+            20.048333
+          ],
+          [
+            -98.7775,
+            20.049722
+          ],
+          [
+            -98.776944,
+            20.051111
+          ],
+          [
+            -98.775833,
+            20.053056
+          ],
+          [
+            -98.778333,
+            20.052778
+          ],
+          [
+            -98.779722,
+            20.0525
+          ],
+          [
+            -98.781944,
+            20.052778
+          ],
+          [
+            -98.783611,
+            20.054167
+          ],
+          [
+            -98.784722,
+            20.055
+          ]
+        ]
+      }
+    }
+  ]
+}

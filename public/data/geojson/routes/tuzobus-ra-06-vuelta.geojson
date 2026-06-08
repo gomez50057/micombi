@@ -1,0 +1,64 @@
+{
+  "type": "FeatureCollection",
+  "name": "RA 06 HOGARES UNIÓN / E. EJERCITO MEXICANO (vuelta)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "routeId": "tuzobus-ra-06-vuelta",
+        "name": "RA 06 HOGARES UNIÓN / E. EJERCITO MEXICANO (vuelta)",
+        "externalId": "RA 06",
+        "origin": "HOGARES UNION/TERECITAS/SAN ANTONIO",
+        "destination": "Zona comercia, Bv. Paseos de la Plata Supermanzana Fracc Local 1, 42111 Pachuca de Soto, Hgo.",
+        "source": "tuzobus_oficial",
+        "sourceLabel": "Tuzobus oficial",
+        "sourceUrl": "https://p-tuzobus.hidalgo.gob.mx/",
+        "routeType": "tuzobus_alimentadora",
+        "color": "#7C3AED",
+        "fare": "$10 aprox.",
+        "frequency": "Por confirmar",
+        "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+        "status": "validated",
+        "updatedAt": "2026-06-06",
+        "featureIndex": 0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.789722,
+            20.050278
+          ],
+          [
+            -98.790833,
+            20.051111
+          ],
+          [
+            -98.791389,
+            20.052778
+          ],
+          [
+            -98.793611,
+            20.054444
+          ],
+          [
+            -98.795,
+            20.055556
+          ],
+          [
+            -98.796667,
+            20.056944
+          ],
+          [
+            -98.797778,
+            20.057778
+          ],
+          [
+            -98.799167,
+            20.058611
+          ]
+        ]
+      }
+    }
+  ]
+}

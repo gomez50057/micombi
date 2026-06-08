@@ -1,0 +1,1595 @@
+// Puntos oficiales de Tuzobus generados desde CDN Hidalgo.
+export const tuzobusPoints = [
+  {
+    "id": "station-01",
+    "type": "station",
+    "name": "TÉLLEZ",
+    "subtitle": "Estacion 01",
+    "address": "Blvd Tellez, Zempoala, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-01",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/1-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/1-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/1-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/1-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/1-5.jpg"
+    ],
+    "lat": 20.012222,
+    "lng": -98.804444,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-02",
+    "type": "station",
+    "name": "GABRIEL MANCERA",
+    "subtitle": "Estacion 02",
+    "address": "El Mirador CP.43845, Zempoala, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/2-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/2-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/2-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/2-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/2-5.jpg"
+    ],
+    "lat": 20.024444,
+    "lng": -98.808611,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-03",
+    "type": "station",
+    "name": "MATILDE",
+    "subtitle": "Estacion 03",
+    "address": "Carretera Federal México-Pachuca, Km. 79+000, casi esquina con Ley Agraria, Col. Santa María Matilde, C.P. 42119, Pachuca de Soto, Hidalgo",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-01",
+      "T-02",
+      "T-04",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/3-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/3-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/3-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/3-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/3-5.jpg"
+    ],
+    "lat": 20.030833,
+    "lng": -98.8025,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-04",
+    "type": "station",
+    "name": "EFRÉN REBOLLEDO",
+    "subtitle": "Estacion 04",
+    "address": "Carretera Federal México-Pachuca, Km. 79+600, casi esquina con Av. La Principal, Col. Santa María Matilde, C.P. 42119, Pachuca de Soto, Hidalgo",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-04",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/4-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/4-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/4-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/4-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/4-5.jpg"
+    ],
+    "lat": 20.035,
+    "lng": -98.798889,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-05",
+    "type": "station",
+    "name": "TERCERA EDAD",
+    "subtitle": "Estacion 05",
+    "address": "Carretera Federal México-Pachuca, Km. 80+600, Cruce con camino a Palma Gorda, Barrio La Palma, C.P. 42110, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-04",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/5-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/5-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/5-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/5-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/5-5.jpg"
+    ],
+    "lat": 20.042222,
+    "lng": -98.793889,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-06",
+    "type": "station",
+    "name": "SAN ANTONIO",
+    "subtitle": "Estacion 06",
+    "address": "Carretera Federal México-Pachuca, Km. 81+200, esquina con De Los Gurriones, Colonia. San Antonio el Desmonte, C.P. 42083, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/6-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/6-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/6-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/6-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/6-5.jpg"
+    ],
+    "lat": 20.046944,
+    "lng": -98.791111,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-07",
+    "type": "station",
+    "name": "EJÉRCITO MEXICANO",
+    "subtitle": "Estacion 07",
+    "address": "Carretera Federal México-Pachuca, Km. 81+620, entre Hidalgo y Manuel Vargas Cataño, Colonia. San Antonio el Desmonte, C.P. 42083, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-04",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/7-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/7-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/7-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/7-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/7-5.jpg"
+    ],
+    "lat": 20.050278,
+    "lng": -98.789444,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-08",
+    "type": "station",
+    "name": "FELIPE ÁNGELES",
+    "subtitle": "Estacion 08",
+    "address": "Carretera Federal México-Pachuca, Km. 82+330, entre Avenida. De Las Aves y Boulevard. Nuevo Hidalgo, Fraccionamiento. Villas de Pachuca, C.P. 42083, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-01",
+      "T-02",
+      "T-04",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/8-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/8-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/8-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/8-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/8-5.jpg"
+    ],
+    "lat": 20.055556,
+    "lng": -98.786667,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-09o",
+    "type": "station",
+    "name": "CENTRO DE JUSTICIA ORIENTE.",
+    "subtitle": "Estacion 09o",
+    "address": "Blvd. Felipe Ángeles, Km.82+830, casi esquina con Avenida.Los Prismas, Fraccionamiento. Los Prismas, C.P. 42083, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-02",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/9o-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/9o-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/9o-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/9o-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/9o-5.jpg"
+    ],
+    "lat": 20.06,
+    "lng": -98.784167,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-09p",
+    "type": "station",
+    "name": "CENTRO DE JUSTICIA PONIENTE.",
+    "subtitle": "Estacion 09p",
+    "address": "Blvd. Felipe Ángeles, Km.82+830, casi esquina con Avenida. Los Prismas, Fraccionamiento. Los Prismas, C.P. 42083, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-02",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/9p-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/9p-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/9p-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/9p-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/9p-5.jpg"
+    ],
+    "lat": 20.06,
+    "lng": -98.784444,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-10",
+    "type": "station",
+    "name": "VICENTE SEGURA",
+    "subtitle": "Estacion 10",
+    "address": "Blvd. Felipe Ángeles, Km.83+330, frente a estacionamiento de la Feria, Fraccionamiento. SPAUAH, C.P. 42082, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-02",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/10-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/10-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/10-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/10-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/10-5.jpg"
+    ],
+    "lat": 20.064167,
+    "lng": -98.782222,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-11",
+    "type": "station",
+    "name": "JUAN C. DORIA",
+    "subtitle": "Estacion 11",
+    "address": "Blvd. Felipe Ángeles, Km.83+850, entre Justino Fernández y Gral. Rafael Cravioto, Fraccionamiento. Pachoacan, C.P. 42083, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-01",
+      "T-02",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/11-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/11-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/11-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/11-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/11-5.jpg"
+    ],
+    "lat": 20.068333,
+    "lng": -98.78,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-12",
+    "type": "station",
+    "name": "HOSPITALES",
+    "subtitle": "Estacion 12",
+    "address": ". Blvd. Felipe Ángeles, Km.84+720, entre Río Papaloapan y Río Yaqui, Unidad habitacional ISSSTE, C.P. 42083, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-02",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/12-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/12-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/12-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/12-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/12-5.jpg"
+    ],
+    "lat": 20.075,
+    "lng": -98.776389,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-13",
+    "type": "station",
+    "name": "SEPH",
+    "subtitle": "Estacion 13",
+    "address": ". Blvd. Felipe Ángeles, Km.85+190, frente a SEPH y Club de Golf Pachuca, Ejido Venta Prieta, C.P. 42083, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-04",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/13-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/13-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/13-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/13-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/13-5.jpg"
+    ],
+    "lat": 20.078889,
+    "lng": -98.774444,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-14",
+    "type": "station",
+    "name": "TECNOLÓGICO",
+    "subtitle": "Estacion 14",
+    "address": ". Blvd. Felipe Ángeles, Km.85+710, Col. Venta Prieta, C.P. 42083, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-04",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/14-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/14-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/14-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/14-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/14-5.jpg"
+    ],
+    "lat": 20.083333,
+    "lng": -98.7725,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-15p",
+    "type": "station",
+    "name": "BICENTENARIO PONIENTE.",
+    "subtitle": "Estacion 15p",
+    "address": "Blvd. Felipe Ángeles, Km.86+310, Col. Venta Prieta, C.P. 42083, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-01",
+      "T-02",
+      "T-04",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/15p-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/15p-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/15p-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/15p-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/15p-5.jpg"
+    ],
+    "lat": 20.088056,
+    "lng": -98.771111,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-15o",
+    "type": "station",
+    "name": "BICENTENARIO ORIENTE.",
+    "subtitle": "Estacion 15o",
+    "address": "Blvd. Felipe Ángeles, Km.86+310, Col. Venta Prieta, C.P. 42083, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-01",
+      "T-02",
+      "T-04",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/15o-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/15o-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/15o-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/15o-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/15o-5.jpg"
+    ],
+    "lat": 20.088056,
+    "lng": -98.770833,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-16",
+    "type": "station",
+    "name": "CENTRO MINERO",
+    "subtitle": "Estacion 16",
+    "address": "Blvd. Felipe Ángeles, Km.86+580, frente a zona comercial Plaza Peri sur, Col. Venta Prieta, C.P. 42083, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-02",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/16-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/16-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/16-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/16-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/16-5.jpg"
+    ],
+    "lat": 20.090833,
+    "lng": -98.770833,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-17",
+    "type": "station",
+    "name": "ZONA PLATEADA",
+    "subtitle": "Estacion 17",
+    "address": "Blvd. Felipe Ángeles, Km.87+000, casi esquina con Camino Real de la Plata, Ejido Venta Prieta, C.P. 42083, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-02",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/17-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/17-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/17-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/17-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/17-5.jpg"
+    ],
+    "lat": 20.094722,
+    "lng": -98.768889,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-18",
+    "type": "station",
+    "name": "TECLÓGICO DE MONTERREY",
+    "subtitle": "Estacion 18",
+    "address": "Blvd. Felipe Ángeles, Km.87+600, frente a Tecnológico de Monterrey, Ejido Venta Prieta, C.P. 42083, Pachuca de Soto, Hidalgo..",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-01",
+      "T-02",
+      "T-04",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/18-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/18-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/18-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/18-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/18-5.jpg"
+    ],
+    "lat": 20.098333,
+    "lng": -98.765278,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-19",
+    "type": "station",
+    "name": "ESTADIO HIDALGO",
+    "subtitle": "Estacion 19",
+    "address": "Blvd. Felipe Ángeles, Km.88+375, frente a CECATI, Fraccionamiento Jaime Torres Bodet, C.P. 42064, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-01",
+      "T-02",
+      "T-04",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/19-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/19-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/19-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/19-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/19-5.jpg"
+    ],
+    "lat": 20.102778,
+    "lng": -98.760833,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-19p",
+    "type": "station",
+    "name": "CENTRAL DE AUTOBUSES",
+    "subtitle": "Estacion 19p",
+    "address": "Blvd. Javier Rojo Gómez SN, Ex-hacienda de Coscotitlán, C.P.42086, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-01"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/19-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/19-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/19-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/19-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/19-5.jpg"
+    ],
+    "lat": 20.106111,
+    "lng": -98.751111,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-20",
+    "type": "station",
+    "name": "CUNA DE FUTBOL",
+    "subtitle": "Estacion 20",
+    "address": "Blvd. Felipe Ángeles, Km.89+240, frente a Poli fórum José M. Morelos, Fraccionamiento. Ex-Hacienda de Coscotitlán, C.P. 42064, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/20-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/20-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/20-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/20-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/20-5.jpg"
+    ],
+    "lat": 20.108611,
+    "lng": -98.754722,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-21",
+    "type": "station",
+    "name": "SANTA JULIA",
+    "subtitle": "Estacion 21",
+    "address": "Av. Benito Juárez, Km.89+840, con esquina a Cuesco, Colonia Cuesco, C.P.42064, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-04",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/21-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/21-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/21-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/21-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/21-5.jpg"
+    ],
+    "lat": 20.112222,
+    "lng": -98.750833,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-22",
+    "type": "station",
+    "name": "PREPA 1",
+    "subtitle": "Estacion 22",
+    "address": "Av. Benito Juárez, km.90+210, frente a Preparatoria No. 1, Colonia Cuesco, C.P. 42064, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-01",
+      "T-02"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/22-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/22-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/22-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/22-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/22-5.jpg"
+    ],
+    "lat": 20.114722,
+    "lng": -98.747778,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-23o",
+    "type": "station",
+    "name": "REVOLUCIÓN",
+    "subtitle": "Estacion 23o",
+    "address": "Av. Revolución, entre calle Jaime Nunó y Quinta Mary, Colonia Revolución, C.P. 42060, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-02",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/23o-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/23o-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/23o-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/23o-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/23o-5.jpg"
+    ],
+    "lat": 20.116111,
+    "lng": -98.7425,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-24o",
+    "type": "station",
+    "name": "MANUEL DUBLÁN",
+    "subtitle": "Estacion 24o",
+    "address": "Av. Revolución, entre calle Manuel Dublán y Jesús Silva, Col. Revolución, C.P. 42060, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/24o-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/24o-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/24o-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/24o-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/24o-5.jpg"
+    ],
+    "lat": 20.118333,
+    "lng": -98.739167,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-25o",
+    "type": "station",
+    "name": "PRESIDENTE ALEMÁN",
+    "subtitle": "Estacion 25o",
+    "address": "Av. Revolución, esquina con calle Belisario Domínguez, Col. Centro, C.P. 42000, Pachuca de Soto, Hidalgo",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-01",
+      "T-02",
+      "T-04",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/25o-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/25o-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/25o-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/25o-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/25o-5.jpg"
+    ],
+    "lat": 20.121667,
+    "lng": -98.734722,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-26",
+    "type": "station",
+    "name": "NIÑOS HÉROES ORIENTE.",
+    "subtitle": "Estacion 26",
+    "address": "Calle Mariano Matamoros, entre calle Guadalupe Victoria e Ignacio Allende, Colonia. Centro, C.P. 42000, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-04",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/26o-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/26o-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/26o-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/26o-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/26o-5.jpg"
+    ],
+    "lat": 20.125,
+    "lng": -98.7325,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-26p",
+    "type": "station",
+    "name": "NIÑOS HEROES PONIENTE.",
+    "subtitle": "Estacion 26p",
+    "address": ". Calle Mariano Matamoros, entre calle Guadalupe Victoria e Ignacio Allende, Colonia Centro, C.P. 42000, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-04",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/26p-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/26p-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/26p-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/26p-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/26p-5.jpg"
+    ],
+    "lat": 20.125,
+    "lng": -98.732778,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-27",
+    "type": "station",
+    "name": "CENTRO HISTÓRICO",
+    "subtitle": "Estacion 27",
+    "address": "Calle Ignacio Allende, entre calle Julián Villagrán y Bravo, Colonia Centro, C.P. 42000, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-04",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/27-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/27-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/10-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/10-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/10-5.jpg"
+    ],
+    "lat": 20.129167,
+    "lng": -98.731111,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-25p",
+    "type": "station",
+    "name": "PLAZA JUÁREZ",
+    "subtitle": "Estacion 25p",
+    "address": "Av. Benito Juárez, esquina con calle C. Gómez Pérez, Colonia Centro, C.P. 42000, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-01",
+      "T-02",
+      "T-04",
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/25p-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/25p-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/25p-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/25p-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/25p-5.jpg"
+    ],
+    "lat": 20.122716,
+    "lng": -98.737152,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-24p",
+    "type": "station",
+    "name": "PARQUE DEL MAESTRO",
+    "subtitle": "Estacion 24p",
+    "address": "Av. Benito Juárez, entre calle General. Ignacio Mejía y Manuel Dublán, Colonia Centro, C.P. 42000, Pachuca de Soto, Hidalgo.",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/24p-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/24p-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/24p-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/24p-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/24p-5.jpg"
+    ],
+    "lat": 20.12,
+    "lng": -98.740556,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "station-23p",
+    "type": "station",
+    "name": "BIOPARQUE",
+    "subtitle": "Estacion 23p",
+    "address": "Av. Benito Juárez, esquina con calle 16 de enero, Colonia Maestranza, C.P. 42060, Pachuca de Soto, Hidalgo",
+    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+    "status": "Activa",
+    "services": [
+      "T-05"
+    ],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/23p-1.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/23p-2.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/23p-3.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/23p-4.jpg",
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/23p-5.jpg"
+    ],
+    "lat": 20.116944,
+    "lng": -98.744722,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-gorros-para-tu-fiesta-com-alegria-macarena",
+    "type": "recharge",
+    "name": "Gorros para tu fiesta.com (Alegría Macarena)",
+    "subtitle": "Punto de recarga",
+    "address": "Av. De Los Arboles 207. Colonia Tulipanes Mineral De La Reforma Hidalgo C.P. 42185",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 15/08/2016",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-1.JPG"
+    ],
+    "lat": 20.06132345212323,
+    "lng": -98.77363695955707,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-farmacia-gi-toledo",
+    "type": "recharge",
+    "name": "Farmacia GI Toledo",
+    "subtitle": "Punto de recarga",
+    "address": "Av. San Marcos S/N M22 L1, Fracc. Villas San Marcos, Zempoala Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 11/02/2022",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-2.JPG"
+    ],
+    "lat": 20.029651536943767,
+    "lng": -98.78724486519766,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-la-pape",
+    "type": "recharge",
+    "name": "La Pape",
+    "subtitle": "Punto de recarga",
+    "address": "C. Antiguo Camino de F.F.C.C. 223, Real de Toledo, 42119 Pachuca de Soto, Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 28/01/2021",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-3.JPG"
+    ],
+    "lat": 20.03055,
+    "lng": -98.78236,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-distribuidor-papelera-ortiz",
+    "type": "recharge",
+    "name": "Distribuidor Papelera Ortiz",
+    "subtitle": "Punto de recarga",
+    "address": "Biznaga 1, San Antonio El Desmonte, Pachuca De Soto Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 21/10/2021",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-4.JPG"
+    ],
+    "lat": 20.04520577318163,
+    "lng": -98.8019142490163,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-papeleria-leo",
+    "type": "recharge",
+    "name": "Papelería Leo",
+    "subtitle": "Punto de recarga",
+    "address": "Av. De Los Arboles 207. Colonia Tulipanes Mineral De La Reforma Hidalgo C.P. 42185",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 15/08/2016",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-5.JPG"
+    ],
+    "lat": 20.06132345212323,
+    "lng": -98.77363695955707,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-las-valquirias",
+    "type": "recharge",
+    "name": "Las Valquirias",
+    "subtitle": "Punto de recarga",
+    "address": "Priv Osavide N.105 M.9 L.24, Real Navarra Fase III, Zempoala, Hgo",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 07/04/2022",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-6.JPG"
+    ],
+    "lat": 20.0060942379639,
+    "lng": -98.791933363511,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-estetica-eli-ramos",
+    "type": "recharge",
+    "name": "Estética Eli Ramos",
+    "subtitle": "Punto de recarga",
+    "address": "Calle Autonomía 504, Loc. Jaguey de Téllez, Zempoala, Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 24/01/2024",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-7.JPG"
+    ],
+    "lat": 19.97864416353038,
+    "lng": -98.787896560454,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-papeleria-grafito",
+    "type": "recharge",
+    "name": "Papelería Grafito",
+    "subtitle": "Punto de recarga",
+    "address": "Blvd. San Guillermo N.248, Santa Matilde, Zempoala, Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 01/12/2016",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-8.JPG"
+    ],
+    "lat": 20.03283190713731,
+    "lng": -98.7870832093962,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-papeleria-azul",
+    "type": "recharge",
+    "name": "Papelería Azul",
+    "subtitle": "Punto de recarga",
+    "address": "Ramón G Bonfil, Canutillo y Atoyatla, Parque de Poblamiento 1ra, Pachuca de Soto, Hgo. CP: 42032",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 27/07/2021",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-9.JPG"
+    ],
+    "lat": 20.11339425832064,
+    "lng": -98.77241143295117,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-farmacia-eliezer",
+    "type": "recharge",
+    "name": "Farmacia Eliezer",
+    "subtitle": "Punto de recarga",
+    "address": "Calle Prolongación Rojo Gómez S/N Colonia Ampliación El Palmar C.P. 42082",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 05/01/2017",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-10.JPG"
+    ],
+    "lat": 20.10732670096636,
+    "lng": -98.7853158262211,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-papeleria-san-alfonso",
+    "type": "recharge",
+    "name": "Papelería San Alfonso",
+    "subtitle": "Punto de recarga",
+    "address": "Av. San Guillermo 175, Rinconadas San Alfonso, Zempoala Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 23/01/2017",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-11.JPG"
+    ],
+    "lat": 20.01536476973786,
+    "lng": -98.78511742111,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-abarrotes-canales",
+    "type": "recharge",
+    "name": "Abarrotes Canales",
+    "subtitle": "Punto de recarga",
+    "address": "Av. Reforma Agraria M. G-1 L3, Santa Matilde, Pachuca de Soto, Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 16/03/2022",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-12.JPG"
+    ],
+    "lat": 20.085427684220928,
+    "lng": -98.80892003665058,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-papeleria-nadia",
+    "type": "recharge",
+    "name": "Papelería Nadia",
+    "subtitle": "Punto de recarga",
+    "address": "Av. Huixmi, Sn, Santa Gertrudis, Pachuca De Soto, Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 24/01/2017",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-13.JPG"
+    ],
+    "lat": 20.085427684220928,
+    "lng": -98.80892003665058,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-pimboli-papeleria",
+    "type": "recharge",
+    "name": "Pimboli Papelería",
+    "subtitle": "Punto de recarga",
+    "address": "Av. Mayas #141, El Huixmi, Pachuca de Soto, Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 03/12/2020",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-14.JPG"
+    ],
+    "lat": 20.08255630609521,
+    "lng": -98.81337891329302,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-farmacia-farmasano",
+    "type": "recharge",
+    "name": "Farmacia Farmasano",
+    "subtitle": "Punto de recarga",
+    "address": "Campo De Tiro 500 San Antonio El Desmonte Pachuca De Soto C.P. 42082",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 02/03/2016",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-16.JPG"
+    ],
+    "lat": 20.05801945524366,
+    "lng": -98.79796404441751,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-la-tabasquenita",
+    "type": "recharge",
+    "name": "La Tabasqueñita",
+    "subtitle": "Punto de recarga",
+    "address": "Privada 42 San Javier L30, Santa Matilde, Pachuca de Soto, Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 16/02/2021",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-17.JPG"
+    ],
+    "lat": 20.020211661442726,
+    "lng": -98.78770951900698,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-farmacia-eliezer-san-cayetano",
+    "type": "recharge",
+    "name": "Farmacia Eliezer San Cayetano",
+    "subtitle": "Punto de recarga",
+    "address": "Calle Cofre de Perote #137, Col. San Cayetano, Pachuca de Soto, Hgo. CP 42084",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 17/02/2021",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-18.JPG"
+    ],
+    "lat": 20.101500924825302,
+    "lng": -98.77238836282486,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-itzally",
+    "type": "recharge",
+    "name": "Itzally",
+    "subtitle": "Punto de recarga",
+    "address": "Av. Javier Rojo Gómez Núm. 109, Fracc. Juan C Doria, Pachuca de Soto, Hgo",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 04/05/2022",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-19.JPG"
+    ],
+    "lat": 20.06607897919237,
+    "lng": -98.77669104173128,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-farmacia-gi-paseos",
+    "type": "recharge",
+    "name": "Farmacia Gi Paseos",
+    "subtitle": "Punto de recarga",
+    "address": "Blvd De la Plata Loca 1, Fracc. Paseos de la Plata, Pachuca de Soto, Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 13/11/2020",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-20.JPG"
+    ],
+    "lat": 20.058739610582787,
+    "lng": -98.80004240164556,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-copias-e-impresiones-gaby",
+    "type": "recharge",
+    "name": "Copias e impresiones Gaby",
+    "subtitle": "Punto de recarga",
+    "address": "Cto. Esmeralda 131, Fracc. Villa Fontana, Zempoala. CP 43840",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 23/05/2023",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-21.JPG"
+    ],
+    "lat": 20.018397026224537,
+    "lng": -98.7806331837228,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-tienda-copaly",
+    "type": "recharge",
+    "name": "Tienda Copaly",
+    "subtitle": "Punto de recarga",
+    "address": "C. Sauce 210, Col. Tezontle, Pachuca de Soto Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 18/11/2021",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-22.JPG"
+    ],
+    "lat": 20.09198770044602,
+    "lng": -98.77800141949784,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-farmacia-kauyumari",
+    "type": "recharge",
+    "name": "Farmacia Kauyumari",
+    "subtitle": "Punto de recarga",
+    "address": "14 de Febrero Privada Ixchel Núm.. 100, Local 1 Manzana II Lote, Fracc. Cihuatl, Pachuca de Soto.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 31/05/2019",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-24.JPG"
+    ],
+    "lat": 20.058727897580447,
+    "lng": -98.79614100162735,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-papeleria-princess",
+    "type": "recharge",
+    "name": "Papelería Princess",
+    "subtitle": "Punto de recarga",
+    "address": "Priv 72 Santa Verónica #3997 L 75, Santa Matilde, Zempoala, Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 26/10/2022",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-25.JPG"
+    ],
+    "lat": 20.02043478775177,
+    "lng": -98.7919857242082,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-farmacia-gi-pitahayas",
+    "type": "recharge",
+    "name": "Farmacia Gi Pitahayas",
+    "subtitle": "Punto de recarga",
+    "address": "Hda. De San Francisco N.200-A Local 2, Fracc. Hda de Pitahayas, Pachuca de Soto Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 30/08/2021",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-26.JPG"
+    ],
+    "lat": 20.064300569714266,
+    "lng": -98.79372076645335,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-papeleria-tangram-3",
+    "type": "recharge",
+    "name": "Papelería Tangram 3",
+    "subtitle": "Punto de recarga",
+    "address": "Av. Nuevo Pachuca Local 5B, Col. Juan C.Doria, Pachuca de Soto",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 05/02/2019",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-27.JPG"
+    ],
+    "lat": 20.063607434448464,
+    "lng": -98.77728016378792,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-farmacia-aquiles",
+    "type": "recharge",
+    "name": "Farmacia Aquiles",
+    "subtitle": "Punto de recarga",
+    "address": "Xochiquetzali 101,Paseo Toltecas S/N, Aquiles Serdán, Pachuca de Soto.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 03/09/2021",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-28.JPG"
+    ],
+    "lat": 20.116940513626165,
+    "lng": -98.75784801209241,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-farmacia-valle-verde",
+    "type": "recharge",
+    "name": "Farmacia Valle Verde",
+    "subtitle": "Punto de recarga",
+    "address": "Calle Juvencio Meneses S/N, Lindavista, Zempoala, Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 07/10/2022",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-29.JPG"
+    ],
+    "lat": 20.02965001430727,
+    "lng": -98.81153659503353,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-papeleria-tangram",
+    "type": "recharge",
+    "name": "Papelería Tangram",
+    "subtitle": "Punto de recarga",
+    "address": "Blvd. Hacienda de Pitahayas 2da Sección, Local 5 y 6, Fracc. Pitahayas, Pachuca de Soto.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 07/10/2017",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-30.JPG"
+    ],
+    "lat": 20.06430804525107,
+    "lng": -98.7964704046908,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-farmacia-gi-tulipanes",
+    "type": "recharge",
+    "name": "Farmacia Gi Tulipanes",
+    "subtitle": "Punto de recarga",
+    "address": "Av. De los Árboles, Núm. 117, Fracc. Los Cipreses, Mineral de la Reforma, Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 24/05/2024",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-31.JPG"
+    ],
+    "lat": 20.1215591400944,
+    "lng": -98.77812395596864,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-papeleria-la-escuelita",
+    "type": "recharge",
+    "name": "Papelería la escuelita",
+    "subtitle": "Punto de recarga",
+    "address": "C. Lumbrera 753, Fracc. los Tuzos, Mineral de la Reforma, Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 11/02/2022",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-32.JPG"
+    ],
+    "lat": 20.052311132849038,
+    "lng": -98.75518304444377,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-papeleria-tigger-ii",
+    "type": "recharge",
+    "name": "Papelería Tigger II",
+    "subtitle": "Punto de recarga",
+    "address": "Antonio Lechuga Escobar 437, Forjadores, 42185, Pachuca de Soto.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 24/01/2020",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-33.JPG"
+    ],
+    "lat": 20.052412666783308,
+    "lng": -98.7636814266411,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-papeleria-lapicito",
+    "type": "recharge",
+    "name": "Papelería Lapicito",
+    "subtitle": "Punto de recarga",
+    "address": "Calle 30 de Julio, Col Nopancalco, Pachuca de Soto Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 30/07/2020",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-34.JPG"
+    ],
+    "lat": 20.08878074835207,
+    "lng": -98.79603235365991,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-papeleria-grafito-ii",
+    "type": "recharge",
+    "name": "Papelería Grafito II",
+    "subtitle": "Punto de recarga",
+    "address": "Av. Victoria 200, San Alfonso, Zempoala, Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 17/08/2021",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-35.JPG"
+    ],
+    "lat": 20.016685956331546,
+    "lng": -98.79208523550123,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-abarrotes-don-juan",
+    "type": "recharge",
+    "name": "Abarrotes Don Juan",
+    "subtitle": "Punto de recarga",
+    "address": "Av. Victoria M3 L1 L5, Los Amores de Don Juan, Zempoala.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 20/01/2020",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-36.JPG"
+    ],
+    "lat": 20.013497372289383,
+    "lng": -98.79220438799088,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-farmacia-solidaridad-piracantos",
+    "type": "recharge",
+    "name": "Farmacia Solidaridad - Piracantos",
+    "subtitle": "Punto de recarga",
+    "address": "Av. Solidaridad S/N, Calle 13, Col. Piracantos, Pachuca de Soto, Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 02/02/2024",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-37.JPG"
+    ],
+    "lat": 20.1215591400944,
+    "lng": -98.77812395596864,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-maxiceka",
+    "type": "recharge",
+    "name": "Maxiceka",
+    "subtitle": "Punto de recarga",
+    "address": "Av. La Palma S/N, La Palma, Pachuca de Soto.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 06/02/2019",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-38.JPG"
+    ],
+    "lat": 20.04616427714161,
+    "lng": -98.8057358519558,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-papeleria-el-gis",
+    "type": "recharge",
+    "name": "Papelería El Gis",
+    "subtitle": "Punto de recarga",
+    "address": "Av. San Marcos N. 81, Fraccionamiento San Marcos, Zempoala, Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 04/03/2020",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-39.JPG"
+    ],
+    "lat": 20.029264655924383,
+    "lng": -98.78760934304407,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-puntaditas-y-papeles",
+    "type": "recharge",
+    "name": "Puntaditas Y Papeles",
+    "subtitle": "Punto de recarga",
+    "address": "Blvd. Alejandro Hierro 158, Forjadores de Pachuca, Pachuca de Soto.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 05/02/2021",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-40.JPG"
+    ],
+    "lat": 20.055285642383506,
+    "lng": -98.76405894697697,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-la-ventanita",
+    "type": "recharge",
+    "name": "La Ventanita",
+    "subtitle": "Punto de recarga",
+    "address": "Calle Valsassina 113, Fracc La Florina, Zempoala, Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 01/12/2022",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-41.JPG"
+    ],
+    "lat": 20.005692005068028,
+    "lng": -98.78553717428244,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-casa-gema",
+    "type": "recharge",
+    "name": "Casa Gema",
+    "subtitle": "Punto de recarga",
+    "address": "Solidaridad #308, Téllez, Zempoala Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 30/07/2020",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-42.JPG"
+    ],
+    "lat": 19.98063463987842,
+    "lng": -98.78959870230652,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-farmacia-gi-forjadores",
+    "type": "recharge",
+    "name": "Farmacia Gi Forjadores",
+    "subtitle": "Punto de recarga",
+    "address": "Blvd. Alejandro Hierro N.95 M4 L58, Forjadores de Pachuca, Mineral de la Reforma, Hgo",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 05/10/2021",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-43.JPG"
+    ],
+    "lat": 20.058079933856742,
+    "lng": -98.76299789094487,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-tienda-y-papeleria-je-sy",
+    "type": "recharge",
+    "name": "Tienda y Papelería Je&Sy",
+    "subtitle": "Punto de recarga",
+    "address": "Calle Regina 108, Fracc. Los Amores de Don Juan, Zempoala, Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 12/10/2023",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-44.JPG"
+    ],
+    "lat": 20.01296465630937,
+    "lng": -98.79015828231135,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-abarrotes-ricano",
+    "type": "recharge",
+    "name": "Abarrotes Ricano",
+    "subtitle": "Punto de recarga",
+    "address": "Calle Pino Suarez Esquina con Vicente Suarez. #69, Ampliación El Palmar, Pachuca de Soto. Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 01/09/2020",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-45.JPG"
+    ],
+    "lat": 20.106521652012365,
+    "lng": -98.79745826737769,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-papeleria-perlita-huixmi",
+    "type": "recharge",
+    "name": "Papelería Perlita Huixmi",
+    "subtitle": "Punto de recarga",
+    "address": "Calle 5 de mayo S/N, Col. Huixmi, Pachuca de Soto Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 05/03/2021",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-46.JPG"
+    ],
+    "lat": 20.076354040265475,
+    "lng": -98.8195418745242,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-ciber-space-ii",
+    "type": "recharge",
+    "name": "Ciber Space II",
+    "subtitle": "Punto de recarga",
+    "address": "C. Popocatepetl 154, San Cayetano, Pachuca de soto, Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 16/02/2023",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-47.JPG"
+    ],
+    "lat": 20.107910935125506,
+    "lng": -98.77451078897083,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-miscelanea-y-papeleria-geo",
+    "type": "recharge",
+    "name": "Miscelánea Y Papelería Geo",
+    "subtitle": "Punto de recarga",
+    "address": "Geovillas Circuito México 117, Pachuca de Soto, Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 13/09/2021",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-48.JPG"
+    ],
+    "lat": 20.061275821897837,
+    "lng": -98.77605619914561,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-farmacia-gi-san-alfonso",
+    "type": "recharge",
+    "name": "Farmacia Gi San Alfonso",
+    "subtitle": "Punto de recarga",
+    "address": "Priv. San Victor N.4016, Fracc. Santa Matilde, Zempoala, Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 21/04/2022",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-49.JPG"
+    ],
+    "lat": 20.018307756739627,
+    "lng": -98.79229981212383,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-papeleria-y-regalos-padrisssimo",
+    "type": "recharge",
+    "name": "Papelería Y Regalos Padrisssimo",
+    "subtitle": "Punto de recarga",
+    "address": "Cofre de Perote 138, Col. San Cayetano el Bordo, Pachuca de Soto, Hgo. CP: 42084",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 28/07/2021",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-50.JPG"
+    ],
+    "lat": 20.102889210550334,
+    "lng": -98.77240426340954,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-papeleria-fa",
+    "type": "recharge",
+    "name": "Papelería FA",
+    "subtitle": "Punto de recarga",
+    "address": "C. Felipe Ángeles 110, Col. San Antonio el Desmonte, Pachuca de Soto, Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 29/04/2024",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-51.JPG"
+    ],
+    "lat": 20.051315312228525,
+    "lng": -98.78686365916576,
+    "source": "tuzobus_oficial"
+  },
+  {
+    "id": "recharge-papeleria-e-internet-yolab",
+    "type": "recharge",
+    "name": "Papelería e Internet YOLAB",
+    "subtitle": "Punto de recarga",
+    "address": "C. Paseo de la Perla 181, Fracc Paseos de la Plata II, Pachuca de soto, Hgo.",
+    "schedule": "Lunes a Domingo de 9:00 a 18:00 hrs",
+    "status": "Venta de Tarjetas desde 09/02/2023",
+    "services": [],
+    "photos": [
+      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/recargas/PRE-52.JPG"
+    ],
+    "lat": 20.052968572197187,
+    "lng": -98.80521727815436,
+    "source": "tuzobus_oficial"
+  }
+];

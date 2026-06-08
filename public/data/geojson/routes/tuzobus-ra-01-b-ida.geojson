@@ -1,0 +1,72 @@
+{
+  "type": "FeatureCollection",
+  "name": "RA-01 B EJIDOS LA PALMA / E. MATILDE (ida)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "routeId": "tuzobus-ra-01-b-ida",
+        "name": "RA-01 B EJIDOS LA PALMA / E. MATILDE (ida)",
+        "externalId": "RA-01 B",
+        "origin": "EL MIRADOR/MATILDE",
+        "destination": "México - Pachuca 85, Matilde, 42119 Acayuca, Hgo.",
+        "source": "tuzobus_oficial",
+        "sourceLabel": "Tuzobus oficial",
+        "sourceUrl": "https://p-tuzobus.hidalgo.gob.mx/",
+        "routeType": "tuzobus_alimentadora",
+        "color": "#2563EB",
+        "fare": "$10 aprox.",
+        "frequency": "Por confirmar",
+        "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
+        "status": "validated",
+        "updatedAt": "2026-06-06",
+        "featureIndex": 0
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.811389,
+            20.0375
+          ],
+          [
+            -98.811111,
+            20.036944
+          ],
+          [
+            -98.809444,
+            20.035278
+          ],
+          [
+            -98.806667,
+            20.033333
+          ],
+          [
+            -98.806389,
+            20.033889
+          ],
+          [
+            -98.805278,
+            20.035833
+          ],
+          [
+            -98.804167,
+            20.037222
+          ],
+          [
+            -98.802778,
+            20.038056
+          ],
+          [
+            -98.800556,
+            20.036944
+          ],
+          [
+            -98.798611,
+            20.035833
+          ]
+        ]
+      }
+    }
+  ]
+}
