@@ -4,6 +4,29 @@
   grid-template-columns: 390px minmax(0, 1fr);
   margin: 0 auto;
   max-width: min(1520px, calc(100vw - 40px));
+  min-width: 0;
+  position: relative;
+}
+
+@media (min-width: 1081px) {
+  .layout.mapExpanded {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: min(1520px, calc(100vw - 20px));
+  }
+
+  .layout.mapExpanded .sidebar {
+    left: 4px;
+    position: absolute;
+    right: auto;
+    top: 8px;
+    grid-row: 1;
+    z-index: 950;
+  }
+
+  .layout.mapExpanded .mapWrap {
+    grid-column: 1;
+    grid-row: 1;
+  }
 }
 
 .sidebar {
@@ -12,7 +35,9 @@
   display: grid;
   gap: 16px;
   max-height: 780px;
+  min-width: 0;
   overflow: auto;
+  overscroll-behavior: contain;
   padding-right: 4px;
 }
 
@@ -26,6 +51,7 @@
   box-shadow: var(--shadow-soft);
   display: grid;
   gap: 12px;
+  min-width: 0;
   padding: 16px;
 }
 
@@ -37,10 +63,60 @@
 .sidebar.minimized {
   gap: 0;
   overflow: visible;
+  width: 52px;
 }
 
 .sidebar.minimized .sidebarBody {
   display: none;
+}
+
+.sidebar.minimized .sidebarHeader {
+  border-radius: 999px;
+  box-shadow: 0 10px 26px rgb(15 23 42 / 18%);
+  height: 52px;
+  padding: 0;
+  width: 52px;
+}
+
+.sidebar.minimized .panelHeader {
+  display: block;
+  height: 52px;
+  width: 52px;
+}
+
+.sidebar.minimized .panelTitle,
+.sidebar.minimized .panelTools button + button {
+  display: none;
+}
+
+.sidebar.minimized .panelTools {
+  display: block;
+  height: 52px;
+  width: 52px;
+}
+
+.sidebar.minimized .panelTools .iconTool {
+  align-items: center;
+  background: var(--dark);
+  border: 0;
+  border-radius: 999px;
+  box-shadow: 0 12px 30px rgb(15 23 42 / 22%);
+  color: #ffffff;
+  display: inline-flex;
+  height: 52px;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0;
+  width: 52px;
+}
+
+.sidebar.minimized .iconTool span {
+  display: none;
+}
+
+.sidebar.minimized .iconTool svg {
+  height: 23px;
+  width: 23px;
 }
 
 .sidebar.maximizedPanel {
@@ -56,12 +132,14 @@
   display: grid;
   gap: 10px;
   grid-template-columns: minmax(0, 1fr);
+  min-width: 0;
 }
 
 .panelHeader h2,
 .routePicker h3,
 .intersections h3 {
   margin: 0;
+  overflow-wrap: anywhere;
 }
 
 .panelHeader p,
@@ -70,6 +148,7 @@
   color: var(--muted);
   font-size: 0.88rem;
   margin: 4px 0 0;
+  overflow-wrap: anywhere;
 }
 
 .mapModeButton {
@@ -79,6 +158,21 @@
   color: #ffffff;
   font-weight: 900;
   min-height: 42px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  padding: 0 14px;
+  width: 100%;
+}
+
+.locationButton {
+  background: #eafaf6;
+  border: 1px solid #b7eee0;
+  border-radius: var(--radius-sm);
+  color: var(--dark);
+  font-weight: 900;
+  min-height: 42px;
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 0 14px;
   width: 100%;
 }
@@ -87,6 +181,7 @@
   display: grid;
   gap: 8px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-width: 0;
 }
 
 .panelTools button {
@@ -97,12 +192,37 @@
   font-size: 0.72rem;
   font-weight: 900;
   min-height: 34px;
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 0 8px;
+}
+
+.panelTools .iconTool {
+  align-items: center;
+  display: inline-flex;
+  gap: 7px;
+  justify-content: center;
+}
+
+.iconTool svg {
+  fill: none;
+  flex: 0 0 auto;
+  height: 18px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  width: 18px;
+}
+
+.sidebar.minimized .panelTools button:not(:first-child) {
+  display: none;
 }
 
 .filterBody {
   display: grid;
   gap: 12px;
+  min-width: 0;
 }
 
 .filters label {
@@ -111,6 +231,7 @@
   font-size: 0.82rem;
   font-weight: 800;
   gap: 7px;
+  min-width: 0;
 }
 
 .filters input[type="text"],
@@ -121,6 +242,7 @@
   border-radius: var(--radius-sm);
   color: var(--dark);
   min-height: 42px;
+  min-width: 0;
   padding: 0 10px;
   width: 100%;
 }
@@ -129,6 +251,7 @@
   border-top: 1px solid var(--border);
   display: grid;
   gap: 8px;
+  min-width: 0;
   padding-top: 12px;
 }
 
@@ -140,6 +263,8 @@
   cursor: pointer;
   font-weight: 900;
   min-height: 40px;
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 0 12px;
 }
 
@@ -150,11 +275,13 @@
   font-weight: 700;
   line-height: 1.45;
   margin: 0;
+  overflow-wrap: anywhere;
 }
 
 .placeResults {
   display: grid;
   gap: 7px;
+  min-width: 0;
 }
 
 .placeResults button {
@@ -167,6 +294,7 @@
   min-height: 0;
   padding: 9px;
   text-align: left;
+  width: 100%;
 }
 
 .placeResults span {
@@ -178,6 +306,7 @@
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  overflow-wrap: anywhere;
 }
 
 .filters input::placeholder {
@@ -188,11 +317,13 @@
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-width: 0;
 }
 
 .toggles {
   display: grid;
   gap: 8px;
+  min-width: 0;
 }
 
 .toggles label {
@@ -204,6 +335,7 @@
   flex-direction: row;
   gap: 8px;
   min-height: 38px;
+  min-width: 0;
   padding: 8px 10px;
 }
 
@@ -211,6 +343,7 @@
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-width: 0;
 }
 
 .actions button {
@@ -220,6 +353,8 @@
   color: #ffffff;
   font-weight: 800;
   min-height: 42px;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .actions button + button {
@@ -232,6 +367,7 @@
   display: grid;
   gap: 8px;
   max-height: 360px;
+  min-width: 0;
   overflow: auto;
 }
 
@@ -240,11 +376,13 @@
   display: flex;
   gap: 12px;
   justify-content: space-between;
+  min-width: 0;
 }
 
 .routeHeader div {
   display: flex;
   gap: 6px;
+  min-width: 0;
 }
 
 .routeHeader button {
@@ -256,7 +394,45 @@
   font-size: 0.72rem;
   font-weight: 900;
   min-height: 32px;
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 0 8px;
+}
+
+.routeQuickActions {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-width: 0;
+}
+
+.routeQuickActions button {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--dark);
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 900;
+  min-height: 34px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  padding: 0 8px;
+}
+
+.routeQuickActions button:first-child {
+  background: #eafaf6;
+  border-color: #b7eee0;
+}
+
+.routeQuickActions button:nth-child(2) {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.routeQuickActions button:nth-child(3) {
+  background: #fff7dd;
+  border-color: #ffe18a;
 }
 
 .routePicker.collapsed {
@@ -264,6 +440,10 @@
 }
 
 .routePicker.collapsed .routeList {
+  display: none;
+}
+
+.routePicker.collapsed .routeQuickActions {
   display: none;
 }
 
@@ -283,6 +463,7 @@
   display: grid;
   gap: 9px;
   grid-template-columns: auto auto minmax(0, 1fr) auto;
+  min-width: 0;
   padding: 10px;
 }
 
@@ -298,12 +479,14 @@
   display: block;
   line-height: 1;
   margin-top: 1px;
+  min-width: 0;
 }
 
 .routeOption strong {
   display: block;
   font-size: 0.84rem;
   line-height: 1.35;
+  overflow-wrap: anywhere;
 }
 
 .routeOption small {
@@ -312,11 +495,13 @@
   font-size: 0.72rem;
   font-weight: 800;
   margin-top: 3px;
+  overflow-wrap: anywhere;
 }
 
 .routeOptionTools {
   display: grid;
   gap: 6px;
+  min-width: 0;
 }
 
 .routeOptionTools button {
@@ -328,6 +513,8 @@
   font-size: 0.7rem;
   font-weight: 900;
   min-height: 30px;
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 0 8px;
 }
 
@@ -368,6 +555,7 @@
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-card);
   height: 780px;
+  min-width: 0;
   overflow: hidden;
   position: relative;
 }
@@ -386,9 +574,12 @@
 
 .fullscreen .sidebar {
   bottom: 16px;
+  box-sizing: border-box;
+  height: calc(100vh - 32px);
   left: 16px;
   max-height: none;
   overflow: auto;
+  overscroll-behavior: contain;
   padding: 0 4px 0 0;
   position: absolute;
   top: 16px;
@@ -398,7 +589,13 @@
 
 .fullscreen .sidebar.minimized {
   bottom: auto;
+  height: 52px;
+  left: 16px;
   overflow: visible;
+  padding: 0;
+  right: auto;
+  top: 16px;
+  width: 52px;
 }
 
 .fullscreen .sidebar.maximizedPanel {
@@ -425,6 +622,8 @@
   font-size: 0.78rem;
   font-weight: 900;
   min-height: 38px;
+  max-width: calc(100% - 24px);
+  overflow-wrap: anywhere;
   padding: 0 12px;
   position: absolute;
   right: 12px;
@@ -432,25 +631,64 @@
   z-index: 900;
 }
 
+.mapWrap :global(.leaflet-top.leaflet-right) {
+  right: 12px;
+  top: 60px;
+  z-index: 850;
+}
+
+.mapWrap :global(.leaflet-control-zoom) {
+  border: 0;
+  box-shadow: 0 2px 8px rgb(15 23 42 / 14%);
+}
+
+.mapWrap :global(.leaflet-control-zoom a) {
+  border-color: #c8d1dc;
+  color: var(--dark);
+  font-weight: 900;
+}
+
 .fullscreen .fullscreenButton {
   right: 18px;
   top: 18px;
 }
 
+.fullscreen .mapWrap :global(.leaflet-top.leaflet-right) {
+  right: 18px;
+  top: 64px;
+}
+
 .zoomHint {
-  background: rgb(255 255 255 / 94%);
-  border: 1px solid #c8d1dc;
-  border-radius: 8px;
-  bottom: 18px;
-  box-shadow: 0 2px 8px rgb(15 23 42 / 14%);
+  animation: zoomHintIn 140ms ease-out;
+  background: rgb(16 42 67 / 92%);
+  border: 1px solid rgb(255 255 255 / 28%);
+  border-radius: 999px;
+  box-shadow: 0 18px 48px rgb(15 23 42 / 24%);
   color: var(--dark-soft);
-  font-size: 0.76rem;
+  color: #ffffff;
+  font-size: 0.86rem;
   font-weight: 900;
-  left: 12px;
-  padding: 8px 10px;
+  left: 50%;
+  max-width: calc(100% - 40px);
+  padding: 12px 16px;
   pointer-events: none;
   position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
   z-index: 800;
+}
+
+@keyframes zoomHintIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -44%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .locateButton {
@@ -463,12 +701,17 @@
   display: inline-flex;
   height: 36px;
   justify-content: center;
-  left: 10px;
   padding: 0;
   position: absolute;
-  top: 86px;
+  right: 12px;
+  top: 142px;
   width: 36px;
   z-index: 800;
+}
+
+.fullscreen .locateButton {
+  right: 18px;
+  top: 146px;
 }
 
 .locateButton:hover {
@@ -513,6 +756,7 @@
 
 .popup {
   max-width: 260px;
+  overflow-wrap: anywhere;
 }
 
 .popup h3 {
@@ -551,7 +795,7 @@
 @media (max-width: 1080px) {
   .layout {
     grid-template-columns: 1fr;
-    max-width: var(--container);
+    max-width: min(var(--container), calc(100vw - 32px));
   }
 
   .sidebar {
@@ -581,7 +825,7 @@
 
 @media (max-width: 620px) {
   .layout {
-    max-width: calc(100vw - 32px);
+    max-width: calc(100vw - 28px);
   }
 
   .filterGrid,
@@ -595,10 +839,11 @@
 
   .fullscreen .sidebar {
     bottom: auto;
-    left: 10px;
+    height: min(58vh, 520px);
+    left: 8px;
     max-height: min(58vh, 520px);
-    right: 10px;
-    top: 10px;
+    right: 8px;
+    top: 8px;
     width: auto;
   }
 
@@ -613,7 +858,13 @@
   }
 
   .fullscreen .sidebar.minimized {
+    height: 52px;
+    left: 8px;
     max-height: none;
+    padding: 0;
+    right: auto;
+    top: 8px;
+    width: 52px;
   }
 
   .fullscreen .sidebar.maximizedPanel {
@@ -629,23 +880,24 @@
   }
 
   .fullscreen .fullscreenButton {
-    bottom: 14px;
-    left: 12px;
-    right: auto;
-    top: auto;
+    right: 12px;
+    top: 14px;
+  }
+
+  .fullscreen .mapWrap :global(.leaflet-top.leaflet-right) {
+    right: 12px;
+    top: 60px;
+  }
+
+  .fullscreen .locateButton {
+    right: 12px;
+    top: 142px;
   }
 
   .zoomHint {
-    bottom: 12px;
     font-size: 0.7rem;
-    left: 10px;
-    max-width: calc(100% - 20px);
-  }
-
-  .fullscreen .zoomHint {
-    bottom: 14px;
-    left: auto;
-    right: 12px;
+    max-width: calc(100% - 24px);
+    padding: 10px 12px;
   }
 
   .routeHeader {
@@ -665,5 +917,29 @@
   .routeOptionTools {
     grid-column: 1 / -1;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 380px) {
+  .layout {
+    max-width: calc(100vw - 20px);
+  }
+
+  .sidebarHeader,
+  .filters,
+  .routePicker,
+  .intersections {
+    padding: 12px;
+  }
+
+  .panelTools,
+  .routeHeader div,
+  .routeQuickActions,
+  .routeOptionTools {
+    grid-template-columns: 1fr;
+  }
+
+  .mapWrap {
+    height: 460px;
   }
 }
