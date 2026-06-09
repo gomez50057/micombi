@@ -2,7 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   CircleMarker,
   GeoJSON,
@@ -11,6 +11,7 @@ import {
   Rectangle,
   TileLayer,
   useMap,
+  ZoomControl,
 } from "react-leaflet";
 import { allRoutes } from "@/data/routes/allRoutes";
 import { externalRouteTypes } from "@/data/generated/externalRoutes";
@@ -42,8 +43,16 @@ const ZMP_BOUNDS = [
   [19.94, -98.96],
   [20.28, -98.52],
 ];
+const MAP_PAN_BOUNDS = [
+  [19.78, -99.16],
+  [20.44, -98.32],
+];
 const NOMINATIM_VIEWBOX = "-98.96,20.28,-98.52,19.94";
 const mappableRoutes = allRoutes.filter((route) => route.geojson);
+const defaultSelectedRouteIds = mappableRoutes
+  .filter((route) => route.routeType === "combi")
+  .slice(0, 6)
+  .map((route) => route.id);
 
 const routeTypeOptions = {
   Todos: "Todos",
@@ -67,13 +76,46 @@ function MapFocus({ place }) {
   return null;
 }
 
-function CtrlWheelZoom() {
+function SidebarToggleIcon({ expanded }) {
+  return (
+    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+      <rect x="3" y="4" width="18" height="16" rx="3" />
+      <path d="M9 4v16" />
+      <path d={expanded ? "m15 9-3 3 3 3" : "m12 9 3 3-3 3"} />
+    </svg>
+  );
+}
+
+function PanelSizeIcon({ maximized }) {
+  return (
+    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+      {maximized ? (
+        <>
+          <path d="M9 4v6H3" />
+          <path d="M15 4v6h6" />
+          <path d="M9 20v-6H3" />
+          <path d="M15 20v-6h6" />
+        </>
+      ) : (
+        <>
+          <path d="M4 9V4h5" />
+          <path d="M20 9V4h-5" />
+          <path d="M4 15v5h5" />
+          <path d="M20 15v5h-5" />
+        </>
+      )}
+    </svg>
+  );
+}
+
+function CtrlWheelZoom({ onWheelHint }) {
   const map = useMap();
 
   useEffect(() => {
     const container = map.getContainer();
 
     const handleWheel = (event) => {
+      onWheelHint();
       if (!event.ctrlKey) return;
 
       event.preventDefault();
@@ -89,7 +131,7 @@ function CtrlWheelZoom() {
     return () => {
       container.removeEventListener("wheel", handleWheel);
     };
-  }, [map]);
+  }, [map, onWheelHint]);
 
   return null;
 }
@@ -201,6 +243,73 @@ function LocateButton({ onLocated }) {
   );
 }
 
+function LocateRequestHandler({ requestKey, onLocated }) {
+  const map = useMap();
+
+  useEffect(() => {
+    if (requestKey === 0) return;
+
+    if (!navigator.geolocation) {
+      notify({
+        message: "Tu navegador no permite usar ubicacion.",
+        title: "Ubicacion no disponible",
+        tone: "warning",
+      });
+      return;
+    }
+
+    notify({
+      message: "Estoy buscando tu posicion en el mapa.",
+      title: "Buscando ubicacion",
+      tone: "info",
+    });
+
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const nextPosition = [
+          position.coords.latitude,
+          position.coords.longitude,
+        ];
+
+        if (!isInsideZmp(nextPosition[0], nextPosition[1])) {
+          notify({
+            message: "Tu ubicacion esta fuera de la zona metropolitana aprobada.",
+            title: "Fuera de cobertura",
+            tone: "warning",
+          });
+          return;
+        }
+
+        map.setView(nextPosition, USER_LOCATION_ZOOM, { animate: true });
+        onLocated({
+          accuracy: position.coords.accuracy,
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        });
+        notify({
+          message: "El mapa se centro en tu ubicacion actual.",
+          title: "Ubicacion lista",
+          tone: "success",
+        });
+      },
+      () => {
+        notify({
+          message: "No se pudo obtener tu ubicacion.",
+          title: "Ubicacion no disponible",
+          tone: "danger",
+        });
+      },
+      {
+        enableHighAccuracy: true,
+        maximumAge: 30000,
+        timeout: 10000,
+      }
+    );
+  }, [map, onLocated, requestKey]);
+
+  return null;
+}
+
 export default function RouteMap() {
   const [query, setQuery] = useState("");
   const [municipality, setMunicipality] = useState("Todas");
@@ -209,7 +318,7 @@ export default function RouteMap() {
   const [onlyWithPhotos, setOnlyWithPhotos] = useState(false);
   const [onlyFavorites, setOnlyFavorites] = useState(false);
   const [sortNearby, setSortNearby] = useState(false);
-  const [showStations, setShowStations] = useState(true);
+  const [showStations, setShowStations] = useState(false);
   const [showRecharge, setShowRecharge] = useState(false);
   const [userPosition, setUserPosition] = useState(null);
   const [favoriteIds, setFavoriteIds] = useState([]);
@@ -221,12 +330,35 @@ export default function RouteMap() {
   const [sidebarPanelMode, setSidebarPanelMode] = useState("normal");
   const [routePanelMode, setRoutePanelMode] = useState("normal");
   const [isMapFullscreen, setIsMapFullscreen] = useState(false);
+  const [showZoomHint, setShowZoomHint] = useState(false);
+  const [locateRequestKey, setLocateRequestKey] = useState(0);
   const [selectedRouteIds, setSelectedRouteIds] = useState(() =>
-    mappableRoutes.slice(0, 6).map((route) => route.id)
+    defaultSelectedRouteIds
   );
   const [urlParamsReady, setUrlParamsReady] = useState(false);
+  const zoomHintTimerRef = useRef(null);
 
   const favoriteSet = useMemo(() => new Set(favoriteIds), [favoriteIds]);
+
+  const showMapZoomHint = () => {
+    setShowZoomHint(true);
+
+    if (zoomHintTimerRef.current) {
+      window.clearTimeout(zoomHintTimerRef.current);
+    }
+
+    zoomHintTimerRef.current = window.setTimeout(() => {
+      setShowZoomHint(false);
+    }, 1400);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (zoomHintTimerRef.current) {
+        window.clearTimeout(zoomHintTimerRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -286,6 +418,27 @@ export default function RouteMap() {
 
     return () => {
       document.body.style.overflow = previousOverflow;
+    };
+  }, [isMapFullscreen]);
+
+  useEffect(() => {
+    if (!isMapFullscreen) return undefined;
+
+    const closeFullscreenWithEsc = (event) => {
+      if (event.key !== "Escape") return;
+
+      setIsMapFullscreen(false);
+      notify({
+        message: "El mapa regreso a la vista normal.",
+        title: "Vista normal",
+        tone: "info",
+      });
+    };
+
+    window.addEventListener("keydown", closeFullscreenWithEsc);
+
+    return () => {
+      window.removeEventListener("keydown", closeFullscreenWithEsc);
     };
   }, [isMapFullscreen]);
 
@@ -397,6 +550,23 @@ export default function RouteMap() {
       message: `Se seleccionaron hasta ${MAX_VISIBLE_ROUTES} rutas filtradas.`,
       title: "Rutas seleccionadas",
       tone: "success",
+    });
+  };
+
+  const selectRoutesByType = (targetType, label) => {
+    const nextRouteIds = filteredRoutes
+      .filter((route) => route.routeType === targetType)
+      .slice(0, MAX_VISIBLE_ROUTES)
+      .map((route) => route.id);
+
+    setSelectedRouteIds(nextRouteIds);
+    notify({
+      message:
+        nextRouteIds.length > 0
+          ? `Se agregaron ${nextRouteIds.length} rutas de ${label}.`
+          : `No hay rutas de ${label} con los filtros actuales.`,
+      title: nextRouteIds.length > 0 ? "Rutas agregadas" : "Sin resultados",
+      tone: nextRouteIds.length > 0 ? "success" : "warning",
     });
   };
 
@@ -515,16 +685,17 @@ export default function RouteMap() {
     <div
       className={`${styles.layout} ${
         isMapFullscreen ? styles.fullscreen : ""
-      }`}
+      } ${sidebarPanelMode === "minimized" ? styles.mapExpanded : ""}`}
     >
       <aside
         className={`${styles.sidebar} ${
           sidebarPanelMode === "minimized" ? styles.minimized : ""
         } ${sidebarPanelMode === "maximized" ? styles.maximizedPanel : ""}`}
+        onWheel={(event) => event.stopPropagation()}
       >
         <div className={styles.sidebarHeader}>
           <div className={styles.panelHeader}>
-            <div>
+            <div className={styles.panelTitle}>
               <h2>Mapa para planear</h2>
               <p>
                 {filteredRoutes.length} rutas encontradas -{" "}
@@ -533,24 +704,48 @@ export default function RouteMap() {
             </div>
             <div className={styles.panelTools}>
               <button
+                aria-label={
+                  sidebarPanelMode === "minimized"
+                    ? "Mostrar panel de planeacion"
+                    : "Minimizar panel de planeacion"
+                }
+                className={styles.iconTool}
                 onClick={() =>
                   setSidebarPanelMode((current) =>
                     current === "minimized" ? "normal" : "minimized"
                   )
                 }
+                title={
+                  sidebarPanelMode === "minimized"
+                    ? "Mostrar panel"
+                    : "Minimizar panel"
+                }
                 type="button"
               >
-                {sidebarPanelMode === "minimized" ? "Mostrar" : "Minimizar"}
+                <SidebarToggleIcon expanded={sidebarPanelMode === "minimized"} />
+                <span>{sidebarPanelMode === "minimized" ? "Mostrar" : "Minimizar"}</span>
               </button>
               <button
+                aria-label={
+                  sidebarPanelMode === "maximized"
+                    ? "Volver panel a vista normal"
+                    : "Maximizar panel de planeacion"
+                }
+                className={styles.iconTool}
                 onClick={() =>
                   setSidebarPanelMode((current) =>
                     current === "maximized" ? "normal" : "maximized"
                   )
                 }
+                title={
+                  sidebarPanelMode === "maximized"
+                    ? "Vista normal"
+                    : "Maximizar panel"
+                }
                 type="button"
               >
-                {sidebarPanelMode === "maximized" ? "Normal" : "Maximizar"}
+                <PanelSizeIcon maximized={sidebarPanelMode === "maximized"} />
+                <span>{sidebarPanelMode === "maximized" ? "Normal" : "Maximizar"}</span>
               </button>
             </div>
           </div>
@@ -574,6 +769,13 @@ export default function RouteMap() {
                 type="button"
               >
                 {isMapFullscreen ? "Salir pantalla" : "Mapa completo"}
+              </button>
+              <button
+                className={styles.locationButton}
+                onClick={() => setLocateRequestKey((current) => current + 1)}
+                type="button"
+              >
+                Localizar ubicacion actual
               </button>
 
             <label>
@@ -789,6 +991,38 @@ export default function RouteMap() {
               </button>
             </div>
           </div>
+          <div className={styles.routeQuickActions}>
+            <button onClick={() => selectRoutesByType("combi", "combis")} type="button">
+              Solo combis
+            </button>
+            <button
+              onClick={() => selectRoutesByType("tuzobus_troncal", "Tuzobus troncal")}
+              type="button"
+            >
+              Solo troncal
+            </button>
+            <button
+              onClick={() =>
+                selectRoutesByType("tuzobus_alimentadora", "alimentadoras")
+              }
+              type="button"
+            >
+              Alimentadoras
+            </button>
+            <button
+              onClick={() => {
+                setSelectedRouteIds([]);
+                notify({
+                  message: "Se limpio la lista de rutas seleccionadas.",
+                  title: "Rutas limpias",
+                  tone: "success",
+                });
+              }}
+              type="button"
+            >
+              Limpiar rutas
+            </button>
+          </div>
           <div className={styles.routeList}>
             {filteredRoutes.slice(0, 80).map((route) => (
               <article className={styles.routeOption} key={route.id}>
@@ -872,18 +1106,26 @@ export default function RouteMap() {
         <MapContainer
           attributionControl={false}
           center={PACHUCA_CENTER}
-          maxBounds={ZMP_BOUNDS}
-          maxBoundsViscosity={1}
+          maxBounds={MAP_PAN_BOUNDS}
+          maxBoundsViscosity={0.45}
           maxZoom={MAX_ZOOM}
           minZoom={MIN_ZOOM}
           scrollWheelZoom={false}
+          zoomControl={false}
           zoom={INITIAL_ZOOM}
         >
-          <CtrlWheelZoom />
-          <MapResizeWatcher watch={isMapFullscreen} />
+          <CtrlWheelZoom onWheelHint={showMapZoomHint} />
+          <MapResizeWatcher watch={`${isMapFullscreen}-${sidebarPanelMode}`} />
+          <ZoomControl position="topright" />
           <LocateButton onLocated={setUserPosition} />
+          <LocateRequestHandler
+            onLocated={setUserPosition}
+            requestKey={locateRequestKey}
+          />
           <MapFocus place={selectedPlace} />
-          <div className={styles.zoomHint}>Ctrl + scroll para hacer zoom</div>
+          {showZoomHint ? (
+            <div className={styles.zoomHint}>Ctrl + scroll para hacer zoom</div>
+          ) : null}
 
           <TileLayer
             maxZoom={MAX_ZOOM}
