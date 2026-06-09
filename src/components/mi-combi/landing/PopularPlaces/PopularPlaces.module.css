@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  min-width: 0;
 }
 
 .tags span {
@@ -10,6 +11,8 @@
   border-radius: 999px;
   box-shadow: var(--shadow-soft);
   font-weight: 800;
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 11px 14px;
 }
 
@@ -17,4 +20,18 @@
   display: flex;
   justify-content: center;
   margin-top: 22px;
+}
+
+@media (max-width: 520px) {
+  .tags {
+    display: grid;
+  }
+
+  .tags span {
+    border-radius: var(--radius-sm);
+  }
+
+  .actions {
+    display: grid;
+  }
 }

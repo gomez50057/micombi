@@ -49,12 +49,14 @@
   margin: 0 auto;
   max-width: 1360px;
   min-height: 640px;
+  min-width: 0;
   position: relative;
 }
 
 .copy {
   align-self: center;
   max-width: 560px;
+  min-width: 0;
   padding: 4px 0 18px;
   position: relative;
   z-index: 2;
@@ -74,6 +76,7 @@
   min-height: 42px;
   padding: 5px 22px 5px 7px;
   white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .badgeIcon {
@@ -100,6 +103,7 @@
   letter-spacing: 0;
   line-height: 0.91;
   margin: 0;
+  overflow-wrap: anywhere;
   text-shadow: 0 8px 20px rgba(6, 29, 75, 0.08);
 }
 
@@ -150,6 +154,7 @@
   line-height: 1.75;
   margin: 20px 0 0;
   max-width: 610px;
+  overflow-wrap: anywhere;
 }
 
 .actions {
@@ -169,7 +174,9 @@
   gap: 14px;
   justify-content: center;
   min-height: 58px;
+  min-width: 0;
   padding: 14px 28px;
+  text-align: center;
   transition: transform 160ms ease, box-shadow 160ms ease;
   width: min(230px, 100%);
 }
@@ -236,6 +243,7 @@
   gap: 12px;
   min-height: 48px;
   min-width: 132px;
+  overflow-wrap: anywhere;
   padding: 10px 18px;
 }
 
@@ -268,6 +276,7 @@
   align-self: end;
   height: min(690px, 54vw);
   margin-left: -38px;
+  min-width: 0;
   position: relative;
   z-index: 1;
 }
@@ -334,6 +343,7 @@
   font-weight: 500;
   line-height: 1.4;
   margin: 0;
+  overflow-wrap: anywhere;
 }
 
 .heartIcon {
@@ -412,8 +422,8 @@
       ),
       url("/img/fondo.png");
     background-position: 47% top;
-    min-height: 1460px;
-    padding: 28px 20px 46px;
+    min-height: 0;
+    padding: 26px 16px 42px;
   }
 
   .hero::before {
@@ -429,12 +439,13 @@
   }
 
   .inner {
-    display: block;
+    display: grid;
+    gap: 28px;
     min-height: 0;
   }
 
   .copy {
-    max-width: 58%;
+    max-width: min(620px, 100%);
     padding-top: 0;
   }
 
@@ -499,30 +510,30 @@
   }
 
   .visual {
-    height: 1100px;
-    inset: 124px -20px auto auto;
+    height: clamp(360px, 88vw, 520px);
+    inset: auto;
     margin: 0;
     pointer-events: none;
-    position: absolute;
+    position: relative;
     width: 100%;
     z-index: 1;
   }
 
   .combiImage {
-    bottom: -230px;
-    right: -178px;
-    width: min(900px, 106vw);
+    bottom: -118px;
+    right: -160px;
+    width: min(680px, 132vw);
   }
 
   .shareCard {
     border-radius: 20px;
-    bottom: -4px;
+    bottom: 22px;
     gap: 11px;
     grid-template-columns: 46px minmax(0, 1fr);
-    left: 18%;
+    left: 16px;
     min-height: 108px;
     padding: 15px 42px 14px 15px;
-    width: min(320px, 58vw);
+    width: min(320px, calc(100vw - 64px));
   }
 
   .shareIcon {
@@ -554,12 +565,11 @@
 
 @media (max-width: 620px) {
   .hero {
-    min-height: 1340px;
-    padding-inline: 18px;
+    padding-inline: 14px;
   }
 
   .copy {
-    max-width: 62%;
+    max-width: 100%;
   }
 
   .badge {
@@ -567,30 +577,30 @@
   }
 
   .visual {
-    height: 1010px;
-    top: 122px;
+    height: 380px;
+    top: auto;
   }
 
   .combiImage {
-    bottom: -176px;
-    right: -202px;
-    width: 680px;
+    bottom: -78px;
+    right: -176px;
+    width: min(590px, 150vw);
   }
 
   .shareCard {
-    bottom: -2px;
-    left: 18%;
-    width: min(280px, 60vw);
+    bottom: 12px;
+    left: 10px;
+    width: calc(100vw - 48px);
   }
 }
 
 @media (max-width: 460px) {
   .hero {
-    min-height: 1220px;
+    padding-bottom: 32px;
   }
 
   .copy {
-    max-width: 78%;
+    max-width: 100%;
   }
 
   .badge {
@@ -615,24 +625,24 @@
   }
 
   .visual {
-    height: 910px;
+    height: 334px;
   }
 
   .combiImage {
-    bottom: -118px;
-    right: -178px;
-    width: 570px;
+    bottom: -70px;
+    right: -150px;
+    width: min(520px, 156vw);
   }
 
   .shareCard {
     border-radius: 16px;
-    bottom: -196px;
+    bottom: 8px;
     gap: 8px;
     grid-template-columns: 36px minmax(0, 1fr);
-    left: 32px;
+    left: 8px;
     min-height: 78px;
     padding: 10px 30px 9px 10px;
-    width: calc(100vw - 112px);
+    width: calc(100vw - 44px);
   }
 
   .shareIcon {

@@ -2,6 +2,7 @@
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-width: 0;
 }
 
 .item {
@@ -9,16 +10,19 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-soft);
+  min-width: 0;
   padding: 22px;
 }
 
 .item h3 {
   margin: 0 0 8px;
+  overflow-wrap: anywhere;
 }
 
 .item p {
   color: var(--muted);
   margin: 0;
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 720px) {

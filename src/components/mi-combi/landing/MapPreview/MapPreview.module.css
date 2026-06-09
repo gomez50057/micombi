@@ -3,6 +3,7 @@
   display: grid;
   gap: 36px;
   grid-template-columns: minmax(0, 0.8fr) minmax(300px, 1fr);
+  min-width: 0;
 }
 
 .preview {
@@ -11,6 +12,7 @@
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-card);
   min-height: 380px;
+  min-width: 0;
   overflow: hidden;
   position: relative;
 }
@@ -80,5 +82,32 @@
 @media (max-width: 840px) {
   .layout {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .layout {
+    gap: 24px;
+  }
+
+  .preview {
+    min-height: 300px;
+  }
+
+  .routeLine {
+    left: 42px;
+    width: min(300px, calc(100vw - 88px));
+  }
+
+  .pointA {
+    left: 28px;
+  }
+
+  .pointB {
+    left: 44%;
+  }
+
+  .pointC {
+    right: 18px;
   }
 }

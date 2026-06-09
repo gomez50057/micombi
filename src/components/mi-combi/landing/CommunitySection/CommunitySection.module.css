@@ -2,6 +2,7 @@
   display: grid;
   gap: 18px;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  min-width: 0;
 }
 
 .close {
@@ -9,6 +10,7 @@
   font-size: 1.15rem;
   font-weight: 900;
   margin: 24px 0 0;
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 980px) {
