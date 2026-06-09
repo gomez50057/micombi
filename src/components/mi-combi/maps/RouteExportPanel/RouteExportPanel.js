@@ -6,8 +6,8 @@ import { downloadJSON, downloadTextFile } from "@/lib/downloadHelpers";
 import Button from "../../ui/Button/Button";
 import styles from "./RouteExportPanel.module.css";
 
-const CONTACT_EMAIL = "tucorreo@example.com";
-const TELEGRAM_URL = "https://t.me/tuusuario";
+const CONTACT_EMAIL = "gomez.50057@gmail.com";
+const TELEGRAM_URL = "https://t.me/gomez50057";
 
 function slugify(value) {
   return (value || "mi-combi-ruta")
