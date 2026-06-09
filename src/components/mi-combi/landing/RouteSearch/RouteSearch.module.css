@@ -1,5 +1,6 @@
 .section {
   margin-top: -34px;
+  overflow-x: clip;
   padding: 0 20px 42px;
   position: relative;
   z-index: 2;
@@ -12,6 +13,8 @@
   box-shadow: var(--shadow-card);
   margin: 0 auto;
   max-width: var(--container);
+  min-width: 0;
+  overflow: hidden;
   padding: 24px;
 }
 
@@ -20,23 +23,27 @@
   gap: 16px;
   justify-content: space-between;
   margin-bottom: 18px;
+  min-width: 0;
 }
 
 .heading h2 {
   font-size: clamp(1.4rem, 3vw, 2.2rem);
   margin: 0;
+  overflow-wrap: anywhere;
 }
 
 .heading p {
   color: var(--secondary);
   font-weight: 800;
   margin: 0;
+  overflow-wrap: anywhere;
 }
 
 .controls {
   display: grid;
   gap: 12px;
-  grid-template-columns: minmax(220px, 1fr) minmax(170px, 0.32fr) minmax(170px, 0.32fr);
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 0.32fr) minmax(150px, 0.32fr);
+  min-width: 0;
 }
 
 .controls input,
@@ -48,7 +55,9 @@
   font-size: 0.95rem;
   font-weight: 700;
   min-height: 48px;
+  min-width: 0;
   padding: 0 14px;
+  width: 100%;
 }
 
 .quickFilters {
@@ -72,6 +81,8 @@
   font-size: 0.78rem;
   font-weight: 900;
   min-height: 34px;
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 0 10px;
 }
 
@@ -97,6 +108,7 @@
   display: inline-grid;
   gap: 4px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 100%;
   padding: 4px;
 }
 
@@ -109,6 +121,8 @@
   font-size: 0.78rem;
   font-weight: 900;
   min-height: 32px;
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 0 10px;
 }
 
@@ -166,6 +180,7 @@
   display: flex;
   gap: 12px;
   justify-content: space-between;
+  min-width: 0;
   padding: 14px;
 }
 
@@ -173,15 +188,21 @@
   padding: 11px 12px;
 }
 
+.result > div:first-child {
+  min-width: 0;
+}
+
 .result h3 {
   font-size: 0.98rem;
   margin: 0 0 4px;
+  overflow-wrap: anywhere;
 }
 
 .result p,
 .empty {
   color: var(--muted);
   margin: 0;
+  overflow-wrap: anywhere;
 }
 
 .metaGrid {
@@ -196,6 +217,7 @@
   background: #ffffff;
   border: 1px solid var(--border);
   border-radius: 8px;
+  min-width: 0;
   padding: 8px;
 }
 
@@ -213,6 +235,7 @@
   font-size: 0.82rem;
   font-weight: 800;
   margin: 0;
+  overflow-wrap: anywhere;
 }
 
 .resultAside {
@@ -250,6 +273,7 @@
   flex-wrap: wrap;
   gap: 6px;
   justify-content: flex-end;
+  min-width: 0;
 }
 
 .more {
@@ -313,7 +337,12 @@
   border-radius: var(--radius-sm);
   display: grid;
   gap: 10px;
+  min-width: 0;
   padding: 12px;
+}
+
+.compareGrid h4 {
+  overflow-wrap: anywhere;
 }
 
 .compareGrid dl {
@@ -335,6 +364,7 @@
   color: var(--dark);
   font: inherit;
   min-height: 190px;
+  min-width: 0;
   padding: 12px;
   resize: vertical;
   width: 100%;
@@ -345,6 +375,14 @@
 }
 
 @media (max-width: 820px) {
+  .section {
+    padding-inline: 14px;
+  }
+
+  .panel {
+    padding: 16px;
+  }
+
   .heading {
     display: grid;
   }
@@ -389,5 +427,28 @@
 
   .more {
     display: grid;
+  }
+}
+
+@media (max-width: 460px) {
+  .section {
+    padding-inline: 10px;
+  }
+
+  .panel {
+    padding: 14px;
+  }
+
+  .quickFilters button {
+    flex: 1 1 calc(50% - 8px);
+  }
+
+  .history {
+    display: grid;
+  }
+
+  .history button,
+  .history span {
+    width: 100%;
   }
 }

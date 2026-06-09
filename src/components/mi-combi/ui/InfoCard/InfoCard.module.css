@@ -3,6 +3,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-soft);
+  min-width: 0;
   padding: 22px;
 }
 
@@ -22,9 +23,11 @@
 .card h3 {
   font-size: 1.05rem;
   margin: 0 0 10px;
+  overflow-wrap: anywhere;
 }
 
 .card p {
   color: var(--muted);
   margin: 0;
+  overflow-wrap: anywhere;
 }

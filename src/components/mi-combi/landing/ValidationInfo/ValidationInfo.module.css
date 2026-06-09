@@ -4,6 +4,7 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   list-style: none;
   margin: 0;
+  min-width: 0;
   padding: 0;
 }
 
@@ -14,6 +15,8 @@
   box-shadow: var(--shadow-soft);
   color: var(--dark-soft);
   font-weight: 800;
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 16px;
 }
 

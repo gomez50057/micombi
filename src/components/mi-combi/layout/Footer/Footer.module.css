@@ -10,11 +10,13 @@
   grid-template-columns: minmax(0, 1.3fr) minmax(220px, 0.7fr);
   margin: 0 auto;
   max-width: var(--container);
+  min-width: 0;
 }
 
 .footer h2 {
   font-size: 1.8rem;
   margin: 0 0 4px;
+  overflow-wrap: anywhere;
 }
 
 .footer strong {
@@ -27,6 +29,7 @@
   color: rgba(255, 255, 255, 0.72);
   margin: 8px 0;
   max-width: 620px;
+  overflow-wrap: anywhere;
 }
 
 .links {
@@ -37,9 +40,14 @@
 .links a {
   color: rgba(255, 255, 255, 0.82);
   font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 720px) {
+  .footer {
+    padding: 42px 14px;
+  }
+
   .inner {
     grid-template-columns: 1fr;
   }

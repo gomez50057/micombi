@@ -8,6 +8,7 @@
   gap: 12px;
   margin: 18px auto 0;
   max-width: var(--container);
+  min-width: 0;
   padding: 10px;
   position: sticky;
   top: 10px;
@@ -26,6 +27,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  min-width: 0;
 }
 
 .nav a {
@@ -36,6 +38,8 @@
   font-size: 0.82rem;
   font-weight: 900;
   min-height: 34px;
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 8px 10px;
   text-decoration: none;
 }
@@ -50,6 +54,7 @@
   .nav {
     align-items: stretch;
     display: grid;
+    margin-inline: auto;
     top: 8px;
   }
 
@@ -59,6 +64,19 @@
   }
 
   .nav a {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
     text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav {
+    padding: 8px;
+  }
+
+  .nav div {
+    grid-template-columns: 1fr;
   }
 }

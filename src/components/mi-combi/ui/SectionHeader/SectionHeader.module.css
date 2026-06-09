@@ -1,6 +1,7 @@
 .header {
   margin-bottom: 28px;
   max-width: 760px;
+  min-width: 0;
 }
 
 .center {
@@ -13,10 +14,26 @@
   font-size: clamp(1.8rem, 4vw, 3.1rem);
   line-height: 1.08;
   margin: 14px 0 12px;
+  overflow-wrap: anywhere;
 }
 
 .header p {
   color: var(--muted);
   font-size: 1rem;
   margin: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 520px) {
+  .header {
+    margin-bottom: 22px;
+  }
+
+  .header h2 {
+    font-size: clamp(1.55rem, 9vw, 2.25rem);
+  }
+
+  .header p {
+    font-size: 0.95rem;
+  }
 }

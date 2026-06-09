@@ -29,7 +29,9 @@
   margin: 0 auto;
   max-width: var(--container);
   min-height: 76px;
+  min-width: 0;
   padding: 0 20px;
+  position: relative;
 }
 
 .brand {
@@ -49,12 +51,14 @@
   align-items: center;
   display: flex;
   gap: 18px;
+  min-width: 0;
 }
 
 .links a {
   color: var(--dark-soft);
   font-size: 0.9rem;
   font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
 .menuButton {
@@ -96,7 +100,7 @@
     padding: 10px;
     position: absolute;
     right: 16px;
-    top: 86px;
+    top: calc(100% + 10px);
     width: min(280px, calc(100vw - 32px));
   }
 
@@ -106,5 +110,21 @@
 
   .links a {
     padding: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav {
+    gap: 10px;
+    padding-inline: 12px;
+  }
+
+  .brand {
+    width: min(132px, 48vw);
+  }
+
+  .links {
+    right: 12px;
+    width: calc(100vw - 24px);
   }
 }

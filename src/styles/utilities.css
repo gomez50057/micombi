@@ -1,32 +1,38 @@
 .section {
+  overflow-x: clip;
   padding: 72px 20px;
 }
 
 .sectionAlt {
   background: #eefbf8;
+  overflow-x: clip;
   padding: 72px 20px;
 }
 
 .container {
   margin: 0 auto;
   max-width: var(--container);
+  min-width: 0;
   width: 100%;
 }
 
 .pageShell {
   min-height: 70vh;
+  overflow-x: clip;
   padding: 48px 20px 80px;
 }
 
 .pageIntro {
   margin: 0 auto 28px;
   max-width: var(--container);
+  min-width: 0;
 }
 
 .pageIntro h1 {
   font-size: clamp(2rem, 5vw, 4rem);
   line-height: 1.05;
   margin: 0 0 14px;
+  overflow-wrap: anywhere;
 }
 
 .pageIntro p {
@@ -34,6 +40,7 @@
   font-size: 1.03rem;
   margin: 0;
   max-width: 760px;
+  overflow-wrap: anywhere;
 }
 
 .leaflet-container {
@@ -44,10 +51,19 @@
 @media (max-width: 720px) {
   .section,
   .sectionAlt {
-    padding: 52px 16px;
+    padding: 44px 14px;
   }
 
   .pageShell {
-    padding: 32px 16px 64px;
+    padding: 28px 14px 56px;
+  }
+
+  .pageIntro h1 {
+    font-size: clamp(1.85rem, 10vw, 3rem);
+    line-height: 1.08;
+  }
+
+  .pageIntro p {
+    font-size: 0.96rem;
   }
 }

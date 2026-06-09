@@ -8,8 +8,12 @@
   gap: 8px;
   justify-content: center;
   min-height: 46px;
+  min-width: 0;
+  max-width: 100%;
   padding: 12px 18px;
+  text-align: center;
   transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+  overflow-wrap: anywhere;
 }
 
 .button:hover {

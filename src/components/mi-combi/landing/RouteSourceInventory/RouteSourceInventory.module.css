@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 18px;
+  min-width: 0;
 }
 
 .summary span {
@@ -12,6 +13,8 @@
   color: var(--dark-soft);
   font-size: 0.9rem;
   font-weight: 800;
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 10px 12px;
 }
 
@@ -20,6 +23,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-soft);
+  max-width: 100%;
   overflow-x: auto;
 }
 
@@ -49,6 +53,7 @@
   color: var(--dark-soft);
   font-size: 0.9rem;
   font-weight: 650;
+  overflow-wrap: anywhere;
 }
 
 .table tr:last-child td {
@@ -130,5 +135,9 @@
 
   .table td:last-child {
     border-bottom: 0;
+  }
+
+  .coverage {
+    white-space: normal;
   }
 }
