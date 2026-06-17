@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-06-06",
-  "routeCount": 61,
+  "routeCount": 60,
   "pointCount": 84,
   "files": [
     {
@@ -110,15 +110,6 @@
       "routeType": "combi",
       "color": "#ef792d",
       "file": "/data/geojson/routes/rutashidalgo-sanfernando-centro.geojson"
-    },
-    {
-      "id": "tuzobus-troncal-centro-tellez-oficial",
-      "name": "Tuzobus Troncal Centro - Tellez",
-      "source": "tuzobus_oficial",
-      "sourceLabel": "Tuzobus oficial",
-      "routeType": "tuzobus_troncal",
-      "color": "#7A1230",
-      "file": "/data/geojson/routes/tuzobus-troncal-centro-tellez-oficial.geojson"
     },
     {
       "id": "tuzobus-ra-01-a-ida",

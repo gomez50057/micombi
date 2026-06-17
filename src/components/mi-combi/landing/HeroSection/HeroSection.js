@@ -194,11 +194,11 @@ export default function HeroSection() {
               </span>
               Buscar ruta
             </Link>
-            <Link className={styles.secondaryAction} href="/trazar-ruta">
+            <Link className={styles.secondaryAction} href="/mapa">
               <span className={styles.actionIcon}>
                 <DrawIcon />
               </span>
-              Trazar ruta
+              Ver ruta en el mapa
             </Link>
           </div>
           <div className={styles.frequent}>

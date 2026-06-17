@@ -31,17 +31,26 @@ export function haversineMeters([lngA, latA], [lngB, latB]) {
   return earthRadius * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
-export function findNearbyRouteIntersections(routes, thresholdMeters = 90) {
+export function findNearbyRouteIntersections(
+  routes,
+  thresholdMeters = 90,
+  options = {}
+) {
   const intersections = [];
   const indexedRoutes = routes.map((route) => ({
     route,
     coordinates: sampleCoordinates(getRouteCoordinates(route)),
   }));
+  const getRouteKey = options.getRouteKey || ((route) => route.id);
 
   for (let i = 0; i < indexedRoutes.length; i += 1) {
     for (let j = i + 1; j < indexedRoutes.length; j += 1) {
       const first = indexedRoutes[i];
       const second = indexedRoutes[j];
+
+      if (getRouteKey(first.route) === getRouteKey(second.route)) {
+        continue;
+      }
 
       for (const firstCoord of first.coordinates) {
         for (const secondCoord of second.coordinates) {

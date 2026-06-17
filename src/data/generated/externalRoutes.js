@@ -1,4 +1,3 @@
-// Archivo generado desde fuentes publicas. En una fase posterior esto debe venir de Django/PostGIS.
 export const externalRoutes = [
   {
     "id": "rutashidalgo-tbtroncal1-1",
@@ -235,17 +234,17 @@ export const externalRoutes = [
     }
   },
   {
-    "id": "rutashidalgo-tbtroncal1-2-5",
-    "externalId": "TBTroncal1-2-5",
-    "name": "Tuzobus Troncal 2-5",
-    "origin": "Tuzobus Troncal 2-5",
-    "destination": "Tuzobus Troncal 2-5",
+    "id": "rutashidalgo-tbtroncal-2-4-5",
+    "externalId": "TBTroncal-2-4-5",
+    "name": "Tuzobus Troncal 2-4-5",
+    "origin": "Tuzobus Troncal 2-4-5",
+    "destination": "Tuzobus Troncal 2-4-5",
     "municipalities": [
       "Pachuca de Soto"
     ],
     "passesThrough": [
-      "Tuzobus Troncal 2-5",
-      "Tuzobus Troncal 2-5"
+      "Tuzobus Troncal 2-4-5",
+      "Tuzobus Troncal 2-4-5"
     ],
     "estimatedTime": "Por confirmar",
     "fare": "Por confirmar",
@@ -3778,232 +3777,6 @@ export const externalRoutes = [
               ]
             ],
             "type": "LineString"
-          }
-        }
-      ]
-    }
-  },
-  {
-    "id": "tuzobus-troncal-centro-tellez-oficial",
-    "externalId": "troncal-oficial",
-    "name": "Tuzobus Troncal Centro - Tellez",
-    "origin": "BIOPARQUE",
-    "destination": "TÉLLEZ",
-    "municipalities": [
-      "Pachuca de Soto",
-      "Zempoala"
-    ],
-    "passesThrough": [
-      "TÉLLEZ",
-      "GABRIEL MANCERA",
-      "MATILDE",
-      "EFRÉN REBOLLEDO",
-      "TERCERA EDAD",
-      "SAN ANTONIO",
-      "EJÉRCITO MEXICANO",
-      "FELIPE ÁNGELES",
-      "CENTRO DE JUSTICIA ORIENTE.",
-      "CENTRO DE JUSTICIA PONIENTE.",
-      "VICENTE SEGURA",
-      "JUAN C. DORIA",
-      "HOSPITALES",
-      "SEPH",
-      "TECNOLÓGICO",
-      "BICENTENARIO PONIENTE.",
-      "BICENTENARIO ORIENTE.",
-      "CENTRO MINERO",
-      "ZONA PLATEADA",
-      "TECLÓGICO DE MONTERREY",
-      "ESTADIO HIDALGO",
-      "CENTRAL DE AUTOBUSES",
-      "CUNA DE FUTBOL",
-      "SANTA JULIA",
-      "PREPA 1",
-      "REVOLUCIÓN",
-      "MANUEL DUBLÁN",
-      "PRESIDENTE ALEMÁN",
-      "NIÑOS HÉROES ORIENTE.",
-      "NIÑOS HEROES PONIENTE.",
-      "CENTRO HISTÓRICO",
-      "PLAZA JUÁREZ",
-      "PARQUE DEL MAESTRO",
-      "BIOPARQUE"
-    ],
-    "estimatedTime": "Por confirmar",
-    "fare": "$10 aprox.",
-    "frequency": "Por confirmar",
-    "schedule": "Lunes a Viernes de 05:30 a 22:30 hrs, Sabados de 06:00 a 22:00 hrs y Domingo de 7:00 a 22:00 hrs",
-    "status": "validated",
-    "source": "tuzobus_oficial",
-    "sourceLabel": "Tuzobus oficial",
-    "sourceUrl": "https://p-tuzobus.hidalgo.gob.mx/",
-    "routeType": "tuzobus_troncal",
-    "color": "#7A1230",
-    "notes": "Trazo aproximado generado con estaciones oficiales publicadas por Tuzobus.",
-    "updatedAt": "2026-06-06",
-    "photos": [
-      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/1-1.jpg",
-      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/1-2.jpg",
-      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/1-3.jpg",
-      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/1-4.jpg",
-      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/1-5.jpg",
-      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/2-1.jpg",
-      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/2-2.jpg",
-      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/2-3.jpg",
-      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/2-4.jpg",
-      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/2-5.jpg",
-      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/3-1.jpg",
-      "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/3-2.jpg"
-    ],
-    "geojson": {
-      "type": "FeatureCollection",
-      "features": [
-        {
-          "type": "Feature",
-          "properties": {
-            "routeId": "tuzobus-troncal-centro-tellez-oficial",
-            "name": "Tuzobus Troncal Centro - Tellez"
-          },
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [
-                -98.804444,
-                20.012222
-              ],
-              [
-                -98.808611,
-                20.024444
-              ],
-              [
-                -98.8025,
-                20.030833
-              ],
-              [
-                -98.798889,
-                20.035
-              ],
-              [
-                -98.793889,
-                20.042222
-              ],
-              [
-                -98.791111,
-                20.046944
-              ],
-              [
-                -98.789444,
-                20.050278
-              ],
-              [
-                -98.786667,
-                20.055556
-              ],
-              [
-                -98.784167,
-                20.06
-              ],
-              [
-                -98.784444,
-                20.06
-              ],
-              [
-                -98.782222,
-                20.064167
-              ],
-              [
-                -98.78,
-                20.068333
-              ],
-              [
-                -98.776389,
-                20.075
-              ],
-              [
-                -98.774444,
-                20.078889
-              ],
-              [
-                -98.7725,
-                20.083333
-              ],
-              [
-                -98.771111,
-                20.088056
-              ],
-              [
-                -98.770833,
-                20.088056
-              ],
-              [
-                -98.770833,
-                20.090833
-              ],
-              [
-                -98.768889,
-                20.094722
-              ],
-              [
-                -98.765278,
-                20.098333
-              ],
-              [
-                -98.760833,
-                20.102778
-              ],
-              [
-                -98.751111,
-                20.106111
-              ],
-              [
-                -98.754722,
-                20.108611
-              ],
-              [
-                -98.750833,
-                20.112222
-              ],
-              [
-                -98.747778,
-                20.114722
-              ],
-              [
-                -98.7425,
-                20.116111
-              ],
-              [
-                -98.739167,
-                20.118333
-              ],
-              [
-                -98.734722,
-                20.121667
-              ],
-              [
-                -98.7325,
-                20.125
-              ],
-              [
-                -98.732778,
-                20.125
-              ],
-              [
-                -98.731111,
-                20.129167
-              ],
-              [
-                -98.737152,
-                20.122716
-              ],
-              [
-                -98.740556,
-                20.12
-              ],
-              [
-                -98.744722,
-                20.116944
-              ]
-            ]
           }
         }
       ]

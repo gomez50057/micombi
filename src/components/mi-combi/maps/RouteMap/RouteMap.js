@@ -3,10 +3,12 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { divIcon } from "leaflet";
 import {
   CircleMarker,
   GeoJSON,
   MapContainer,
+  Marker,
   Popup,
   Rectangle,
   TileLayer,
@@ -18,7 +20,10 @@ import { externalRouteTypes } from "@/data/generated/externalRoutes";
 import { municipalities } from "@/data/municipalities";
 import { routeStatuses } from "@/data/routeStatuses";
 import { tuzobusPoints } from "@/data/generated/tuzobusPoints";
-import { findNearbyRouteIntersections } from "@/lib/mapAnalysis";
+import {
+  findNearbyRouteIntersections,
+  getRouteCoordinates,
+} from "@/lib/mapAnalysis";
 import { notify } from "@/lib/notifications";
 import {
   formatRouteDistance,
@@ -59,6 +64,95 @@ const routeTypeOptions = {
   ...externalRouteTypes,
 };
 
+const routeTreeGroups = [
+  {
+    key: "troncal",
+    label: "Troncal",
+    routeType: "tuzobus_troncal",
+    pointTypes: ["station"],
+  },
+  {
+    key: "alimentadoras",
+    label: "Alimentadoras",
+    routeType: "tuzobus_alimentadora",
+    pointTypes: ["stop", "parada"],
+  },
+  {
+    key: "combis",
+    label: "Combis",
+    routeType: "combi",
+    pointTypes: [],
+  },
+];
+
+const pointTypeLabels = {
+  parada: "Parada alimentadora",
+  recharge: "Punto de recarga",
+  station: "Estacion troncal",
+  stop: "Parada alimentadora",
+};
+
+const pointMarkerSvg = {
+  parada:
+    '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s6-5.1 6-11a6 6 0 0 0-12 0c0 5.9 6 11 6 11Z"/><circle cx="12" cy="10" r="2.3"/></svg>',
+  recharge:
+    '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 3h8v8H8z"/><path d="M10 11v7a3 3 0 1 0 6 0v-1h2"/><path d="M18 7v5"/></svg>',
+  station:
+    '<svg aria-hidden="true" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="15" rx="3"/><path d="M9 7h6M9 11h6M9 21l2-3M15 18l2 3"/></svg>',
+  stop:
+    '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s6-5.1 6-11a6 6 0 0 0-12 0c0 5.9 6 11 6 11Z"/><circle cx="12" cy="10" r="2.3"/></svg>',
+};
+
+function getRouteDirection(route) {
+  const text = `${route.id} ${route.name}`.toLowerCase();
+
+  if (/(^|[-\s(])ida($|[-\s)])/.test(text)) {
+    return "ida";
+  }
+
+  if (/(^|[-\s(])vuelta($|[-\s)])/.test(text)) {
+    return "vuelta";
+  }
+
+  return "unico";
+}
+
+function getRouteBaseName(route) {
+  return route.name.replace(/\s*\((ida|vuelta)\)\s*$/i, "").trim();
+}
+
+function getRouteBaseKey(route) {
+  return route.id.replace(/-(ida|vuelta)$/i, "");
+}
+
+function groupRoutesByBase(routes) {
+  const routeFamilies = new Map();
+
+  routes.forEach((route) => {
+    const baseKey = getRouteBaseKey(route);
+    const currentFamily = routeFamilies.get(baseKey) || {
+      id: baseKey,
+      name: getRouteBaseName(route),
+      routes: [],
+    };
+
+    currentFamily.routes.push({
+      ...route,
+      direction: getRouteDirection(route),
+      displayName: getRouteBaseName(route),
+    });
+    routeFamilies.set(baseKey, currentFamily);
+  });
+
+  return Array.from(routeFamilies.values()).map((family) => ({
+    ...family,
+    routes: family.routes.sort((first, second) => {
+      const order = { ida: 0, vuelta: 1, unico: 2 };
+      return order[first.direction] - order[second.direction];
+    }),
+  }));
+}
+
 const isInsideZmp = (lat, lng) =>
   lat >= ZMP_BOUNDS[0][0] &&
   lat <= ZMP_BOUNDS[1][0] &&
@@ -72,6 +166,33 @@ function MapFocus({ place }) {
     if (!place) return;
     map.setView([place.lat, place.lng], USER_LOCATION_ZOOM, { animate: true });
   }, [map, place]);
+
+  return null;
+}
+
+function RouteBoundsFocus({ focusKey, routes }) {
+  const map = useMap();
+
+  useEffect(() => {
+    if (!focusKey || routes.length === 0) return;
+
+    const routeCoordinates = routes.flatMap((route) =>
+      getRouteCoordinates(route).map(([lng, lat]) => [lat, lng])
+    );
+
+    if (routeCoordinates.length === 0) return;
+
+    if (routeCoordinates.length === 1) {
+      map.setView(routeCoordinates[0], USER_LOCATION_ZOOM, { animate: true });
+      return;
+    }
+
+    map.fitBounds(routeCoordinates, {
+      animate: true,
+      maxZoom: 16,
+      padding: [36, 36],
+    });
+  }, [focusKey, map, routes]);
 
   return null;
 }
@@ -104,6 +225,43 @@ function PanelSizeIcon({ maximized }) {
           <path d="M20 15v5h-5" />
         </>
       )}
+    </svg>
+  );
+}
+
+function RouteTreeIcon({ type }) {
+  if (type === "tuzobus_troncal") {
+    return (
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+        <rect x="6" y="3" width="12" height="15" rx="3" />
+        <path d="M9 7h6M9 11h6M9 21l2-3M15 18l2 3" />
+      </svg>
+    );
+  }
+
+  if (type === "tuzobus_alimentadora") {
+    return (
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+        <path d="M12 21s6-5.1 6-11a6 6 0 0 0-12 0c0 5.9 6 11 6 11Z" />
+        <circle cx="12" cy="10" r="2.4" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+      <path d="M7 5h10a3 3 0 0 1 3 3v8H4V8a3 3 0 0 1 3-3Z" />
+      <path d="M7 9h10M7 16v3M17 16v3" />
+      <circle cx="8" cy="13" r="1.2" />
+      <circle cx="16" cy="13" r="1.2" />
+    </svg>
+  );
+}
+
+function RouteGroupChevron({ expanded }) {
+  return (
+    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+      <path d={expanded ? "m6 9 6 6 6-6" : "m9 6 6 6-6 6"} />
     </svg>
   );
 }
@@ -319,6 +477,7 @@ export default function RouteMap() {
   const [onlyFavorites, setOnlyFavorites] = useState(false);
   const [sortNearby, setSortNearby] = useState(false);
   const [showStations, setShowStations] = useState(false);
+  const [showStops, setShowStops] = useState(false);
   const [showRecharge, setShowRecharge] = useState(false);
   const [userPosition, setUserPosition] = useState(null);
   const [favoriteIds, setFavoriteIds] = useState([]);
@@ -335,10 +494,23 @@ export default function RouteMap() {
   const [selectedRouteIds, setSelectedRouteIds] = useState(() =>
     defaultSelectedRouteIds
   );
+  const [routeFocusRequest, setRouteFocusRequest] = useState({
+    ids: [],
+    key: 0,
+  });
+  const [expandedRouteGroups, setExpandedRouteGroups] = useState({
+    alimentadoras: true,
+    combis: true,
+    troncal: true,
+  });
   const [urlParamsReady, setUrlParamsReady] = useState(false);
   const zoomHintTimerRef = useRef(null);
 
   const favoriteSet = useMemo(() => new Set(favoriteIds), [favoriteIds]);
+  const selectedRouteSet = useMemo(
+    () => new Set(selectedRouteIds),
+    [selectedRouteIds]
+  );
 
   const showMapZoomHint = () => {
     setShowZoomHint(true);
@@ -505,9 +677,36 @@ export default function RouteMap() {
   ]);
 
   const selectedRoutes = useMemo(() => {
-    const selectedSet = new Set(selectedRouteIds);
-    return mappableRoutes.filter((route) => selectedSet.has(route.id));
-  }, [selectedRouteIds]);
+    return mappableRoutes.filter((route) => selectedRouteSet.has(route.id));
+  }, [selectedRouteSet]);
+
+  const routeFocusRoutes = useMemo(() => {
+    const focusSet = new Set(routeFocusRequest.ids);
+    return mappableRoutes.filter((route) => focusSet.has(route.id));
+  }, [routeFocusRequest.ids]);
+
+  const routeGroups = useMemo(
+    () =>
+      routeTreeGroups.map((group) => {
+        const routes = filteredRoutes.filter(
+          (route) => route.routeType === group.routeType
+        );
+
+        return {
+          ...group,
+          families: groupRoutesByBase(routes),
+          routes,
+        };
+      }),
+    [filteredRoutes]
+  );
+  const filteredTreeRouteIds = useMemo(
+    () => routeGroups.flatMap((group) => group.routes.map((route) => route.id)),
+    [routeGroups]
+  );
+  const isWholeRouteTreeSelected =
+    filteredTreeRouteIds.length > 0 &&
+    filteredTreeRouteIds.every((routeId) => selectedRouteSet.has(routeId));
 
   const visibleRoutes =
     selectedRoutes.length > 0
@@ -515,17 +714,64 @@ export default function RouteMap() {
       : filteredRoutes.slice(0, MAX_VISIBLE_ROUTES);
 
   const intersections = useMemo(
-    () => findNearbyRouteIntersections(selectedRoutes, 95),
+    () =>
+      findNearbyRouteIntersections(selectedRoutes, 95, {
+        getRouteKey: getRouteBaseKey,
+      }),
     [selectedRoutes]
   );
 
   const visiblePoints = useMemo(() => {
     return tuzobusPoints.filter((point) => {
       if (point.type === "station") return showStations;
+      if (point.type === "stop" || point.type === "parada") return showStops;
       if (point.type === "recharge") return showRecharge;
       return false;
     });
-  }, [showRecharge, showStations]);
+  }, [showRecharge, showStations, showStops]);
+
+  const pointIcons = useMemo(
+    () => ({
+      parada: divIcon({
+        className: `${styles.pointMarker} ${styles.stopPointMarker}`,
+        html: pointMarkerSvg.parada,
+        iconAnchor: [15, 15],
+        iconSize: [30, 30],
+        popupAnchor: [0, -14],
+      }),
+      recharge: divIcon({
+        className: `${styles.pointMarker} ${styles.rechargePointMarker}`,
+        html: pointMarkerSvg.recharge,
+        iconAnchor: [15, 15],
+        iconSize: [30, 30],
+        popupAnchor: [0, -14],
+      }),
+      station: divIcon({
+        className: `${styles.pointMarker} ${styles.stationPointMarker}`,
+        html: pointMarkerSvg.station,
+        iconAnchor: [15, 15],
+        iconSize: [30, 30],
+        popupAnchor: [0, -14],
+      }),
+      stop: divIcon({
+        className: `${styles.pointMarker} ${styles.stopPointMarker}`,
+        html: pointMarkerSvg.stop,
+        iconAnchor: [15, 15],
+        iconSize: [30, 30],
+        popupAnchor: [0, -14],
+      }),
+    }),
+    []
+  );
+
+  const focusRoutesOnMap = (routeIds) => {
+    if (routeIds.length === 0) return;
+
+    setRouteFocusRequest((current) => ({
+      ids: routeIds,
+      key: current.key + 1,
+    }));
+  };
 
   const toggleRoute = (routeId) => {
     const route = mappableRoutes.find((item) => item.id === routeId);
@@ -535,6 +781,9 @@ export default function RouteMap() {
         ? current.filter((id) => id !== routeId)
         : [...current, routeId]
     );
+    if (!isSelected) {
+      focusRoutesOnMap([routeId]);
+    }
     notify({
       message: isSelected
         ? `${route?.name || "La ruta"} se quito del mapa.`
@@ -545,7 +794,12 @@ export default function RouteMap() {
   };
 
   const selectFilteredRoutes = () => {
-    setSelectedRouteIds(filteredRoutes.slice(0, MAX_VISIBLE_ROUTES).map((route) => route.id));
+    const nextRouteIds = filteredRoutes
+      .slice(0, MAX_VISIBLE_ROUTES)
+      .map((route) => route.id);
+
+    setSelectedRouteIds(nextRouteIds);
+    focusRoutesOnMap(nextRouteIds);
     notify({
       message: `Se seleccionaron hasta ${MAX_VISIBLE_ROUTES} rutas filtradas.`,
       title: "Rutas seleccionadas",
@@ -553,20 +807,111 @@ export default function RouteMap() {
     });
   };
 
-  const selectRoutesByType = (targetType, label) => {
-    const nextRouteIds = filteredRoutes
-      .filter((route) => route.routeType === targetType)
-      .slice(0, MAX_VISIBLE_ROUTES)
-      .map((route) => route.id);
+  const toggleRouteGroupExpanded = (groupKey) => {
+    setExpandedRouteGroups((current) => ({
+      ...current,
+      [groupKey]: !current[groupKey],
+    }));
+  };
 
-    setSelectedRouteIds(nextRouteIds);
+  const enableGroupPoints = (group) => {
+    if (group.pointTypes.includes("station")) {
+      setShowStations(true);
+    }
+
+    if (group.pointTypes.includes("stop") || group.pointTypes.includes("parada")) {
+      setShowStops(true);
+    }
+  };
+
+  const toggleRouteGroup = (group) => {
+    const groupRouteIds = group.routes.map((route) => route.id);
+    const selectedCount = groupRouteIds.filter((routeId) =>
+      selectedRouteSet.has(routeId)
+    ).length;
+    const isGroupSelected =
+      groupRouteIds.length > 0 && selectedCount === groupRouteIds.length;
+
+    setSelectedRouteIds((current) => {
+      if (isGroupSelected) {
+        const groupRouteSet = new Set(groupRouteIds);
+        return current.filter((routeId) => !groupRouteSet.has(routeId));
+      }
+
+      const nextRouteSet = new Set(current);
+      groupRouteIds.forEach((routeId) => nextRouteSet.add(routeId));
+      return Array.from(nextRouteSet);
+    });
+
+    if (!isGroupSelected) {
+      enableGroupPoints(group);
+      focusRoutesOnMap(groupRouteIds);
+    }
+
     notify({
-      message:
-        nextRouteIds.length > 0
-          ? `Se agregaron ${nextRouteIds.length} rutas de ${label}.`
-          : `No hay rutas de ${label} con los filtros actuales.`,
-      title: nextRouteIds.length > 0 ? "Rutas agregadas" : "Sin resultados",
-      tone: nextRouteIds.length > 0 ? "success" : "warning",
+      message: isGroupSelected
+        ? `Se apagaron las rutas de ${group.label}.`
+        : `Se prendieron ${groupRouteIds.length} rutas de ${group.label}.`,
+      title: isGroupSelected ? "Grupo apagado" : "Grupo prendido",
+      tone: isGroupSelected ? "warning" : "success",
+    });
+  };
+
+  const toggleRouteFamily = (family) => {
+    const familyRouteIds = family.routes.map((route) => route.id);
+    const selectedCount = familyRouteIds.filter((routeId) =>
+      selectedRouteSet.has(routeId)
+    ).length;
+    const isFamilySelected =
+      familyRouteIds.length > 0 && selectedCount === familyRouteIds.length;
+
+    setSelectedRouteIds((current) => {
+      if (isFamilySelected) {
+        const familyRouteSet = new Set(familyRouteIds);
+        return current.filter((routeId) => !familyRouteSet.has(routeId));
+      }
+
+      const nextRouteSet = new Set(current);
+      familyRouteIds.forEach((routeId) => nextRouteSet.add(routeId));
+      return Array.from(nextRouteSet);
+    });
+
+    notify({
+      message: isFamilySelected
+        ? `Se apagaron los sentidos de ${family.name}.`
+        : `Se prendieron ${familyRouteIds.length} sentidos de ${family.name}.`,
+      title: isFamilySelected ? "Ruta apagada" : "Ruta prendida",
+      tone: isFamilySelected ? "warning" : "success",
+    });
+
+    if (!isFamilySelected) {
+      focusRoutesOnMap(familyRouteIds);
+    }
+  };
+
+  const toggleWholeRouteTree = () => {
+    if (isWholeRouteTreeSelected) {
+      const treeRouteSet = new Set(filteredTreeRouteIds);
+      setSelectedRouteIds((current) =>
+        current.filter((routeId) => !treeRouteSet.has(routeId))
+      );
+    } else {
+      setSelectedRouteIds((current) => {
+        const nextRouteSet = new Set(current);
+        filteredTreeRouteIds.forEach((routeId) => nextRouteSet.add(routeId));
+        return Array.from(nextRouteSet);
+      });
+
+      routeGroups.forEach((group) => enableGroupPoints(group));
+      focusRoutesOnMap(filteredTreeRouteIds);
+    }
+
+    notify({
+      message: isWholeRouteTreeSelected
+        ? "Se apago el arbol de rutas filtradas."
+        : `Se prendio el arbol con ${filteredTreeRouteIds.length} rutas filtradas.`,
+      title: isWholeRouteTreeSelected ? "Arbol apagado" : "Arbol prendido",
+      tone: isWholeRouteTreeSelected ? "warning" : "success",
     });
   };
 
@@ -904,6 +1249,14 @@ export default function RouteMap() {
               </label>
               <label>
                 <input
+                  checked={showStops}
+                  onChange={(event) => setShowStops(event.target.checked)}
+                  type="checkbox"
+                />
+                Paradas alimentadoras
+              </label>
+              <label>
+                <input
                   checked={showRecharge}
                   onChange={(event) => setShowRecharge(event.target.checked)}
                   type="checkbox"
@@ -992,22 +1345,8 @@ export default function RouteMap() {
             </div>
           </div>
           <div className={styles.routeQuickActions}>
-            <button onClick={() => selectRoutesByType("combi", "combis")} type="button">
-              Solo combis
-            </button>
-            <button
-              onClick={() => selectRoutesByType("tuzobus_troncal", "Tuzobus troncal")}
-              type="button"
-            >
-              Solo troncal
-            </button>
-            <button
-              onClick={() =>
-                selectRoutesByType("tuzobus_alimentadora", "alimentadoras")
-              }
-              type="button"
-            >
-              Alimentadoras
+            <button onClick={toggleWholeRouteTree} type="button">
+              {isWholeRouteTreeSelected ? "Apagar arbol" : "Prender arbol"}
             </button>
             <button
               onClick={() => {
@@ -1023,44 +1362,170 @@ export default function RouteMap() {
               Limpiar rutas
             </button>
           </div>
-          <div className={styles.routeList}>
-            {filteredRoutes.slice(0, 80).map((route) => (
-              <article className={styles.routeOption} key={route.id}>
-                <label>
-                  <input
-                    checked={selectedRouteIds.includes(route.id)}
-                    onChange={() => toggleRoute(route.id)}
-                    type="checkbox"
-                  />
-                </label>
-                <span style={{ "--route-color": route.color || "#00C2A8" }} />
-                <div>
-                  <strong>{route.name}</strong>
-                  <small>
-                    {route.sourceLabel} -{" "}
-                    {externalRouteTypes[route.routeType] || "Combi"}
-                  </small>
-                  {userPosition ? (
-                    <small>
-                      Cerca de ti:{" "}
-                      {formatRouteDistance(getRouteDistanceFromUser(route, userPosition))}
-                    </small>
+          <div className={styles.routeTree}>
+            {routeGroups.map((group) => {
+              const selectedCount = group.routes.filter((route) =>
+                selectedRouteSet.has(route.id)
+              ).length;
+              const isGroupSelected =
+                group.routes.length > 0 && selectedCount === group.routes.length;
+              const isExpanded = expandedRouteGroups[group.key];
+
+              return (
+                <section className={styles.routeGroup} key={group.key}>
+                  <div className={styles.routeGroupHeader}>
+                    <button
+                      aria-expanded={isExpanded}
+                      aria-label={
+                        isExpanded
+                          ? `Contraer ${group.label}`
+                          : `Descontraer ${group.label}`
+                      }
+                      className={styles.routeGroupChevron}
+                      onClick={() => toggleRouteGroupExpanded(group.key)}
+                      type="button"
+                    >
+                      <RouteGroupChevron expanded={isExpanded} />
+                    </button>
+                    <span
+                      className={`${styles.routeGroupIcon} ${
+                        styles[`${group.key}RouteGroupIcon`]
+                      }`}
+                    >
+                      <RouteTreeIcon type={group.routeType} />
+                    </span>
+                    <button
+                      aria-pressed={isGroupSelected}
+                      className={styles.routeGroupToggle}
+                      disabled={group.routes.length === 0}
+                      onClick={() => toggleRouteGroup(group)}
+                      type="button"
+                    >
+                      <span>
+                        <strong>{group.label}</strong>
+                        <small>
+                          {selectedCount}/{group.routes.length} prendidas
+                        </small>
+                      </span>
+                      <em>{isGroupSelected ? "Apagar" : "Prender"}</em>
+                    </button>
+                  </div>
+
+                  {isExpanded ? (
+                    <div className={styles.routeGroupRoutes}>
+                      {group.routes.length > 0 ? (
+                        group.families.map((family) => {
+                          const familySelectedCount = family.routes.filter((route) =>
+                            selectedRouteSet.has(route.id)
+                          ).length;
+                          const isFamilySelected =
+                            family.routes.length > 0 &&
+                            familySelectedCount === family.routes.length;
+
+                          return (
+                            <article className={styles.routeFamily} key={family.id}>
+                              <div className={styles.routeFamilyHeader}>
+                                <div>
+                                  <strong>{family.name}</strong>
+                                  <small>
+                                    {familySelectedCount}/{family.routes.length}{" "}
+                                    sentidos prendidos
+                                  </small>
+                                </div>
+                                <button
+                                  aria-pressed={isFamilySelected}
+                                  onClick={() => toggleRouteFamily(family)}
+                                  type="button"
+                                >
+                                  {isFamilySelected ? "Apagar" : "Prender"}
+                                </button>
+                              </div>
+
+                              <div className={styles.routeDirectionList}>
+                                {family.routes.map((route) => (
+                                  <article
+                                    className={styles.routeOption}
+                                    key={route.id}
+                                  >
+                                    <label>
+                                      <input
+                                        checked={selectedRouteSet.has(route.id)}
+                                        onChange={() => toggleRoute(route.id)}
+                                        type="checkbox"
+                                      />
+                                    </label>
+                                    <span
+                                      style={{
+                                        "--route-color": route.color || "#00C2A8",
+                                      }}
+                                    />
+                                    <div>
+                                      <strong>
+                                        <span
+                                          className={`${styles.directionBadge} ${
+                                            styles[`${route.direction}DirectionBadge`]
+                                          }`}
+                                        >
+                                          {route.direction === "ida"
+                                            ? "Ida"
+                                            : route.direction === "vuelta"
+                                              ? "Vuelta"
+                                              : "Ruta"}
+                                        </span>
+                                        {route.name}
+                                      </strong>
+                                      <small>
+                                        {route.sourceLabel} -{" "}
+                                        {externalRouteTypes[route.routeType] ||
+                                          "Combi"}
+                                      </small>
+                                      {userPosition ? (
+                                        <small>
+                                          Cerca de ti:{" "}
+                                          {formatRouteDistance(
+                                            getRouteDistanceFromUser(
+                                              route,
+                                              userPosition
+                                            )
+                                          )}
+                                        </small>
+                                      ) : null}
+                                    </div>
+                                    <div className={styles.routeOptionTools}>
+                                      <button
+                                        aria-pressed={favoriteSet.has(route.id)}
+                                        onClick={() => handleFavorite(route.id)}
+                                        type="button"
+                                      >
+                                        {favoriteSet.has(route.id)
+                                          ? "Guardada"
+                                          : "Favorita"}
+                                      </button>
+                                      <button
+                                        onClick={() => copyRouteLink(route.id)}
+                                        type="button"
+                                      >
+                                        {copiedRouteId === route.id
+                                          ? "Copiado"
+                                          : "Link"}
+                                      </button>
+                                    </div>
+                                  </article>
+                                ))}
+                              </div>
+                            </article>
+                          );
+                        })
+                      ) : (
+                        <p className={styles.emptyRouteGroup}>
+                          Sin rutas con los filtros actuales.
+                        </p>
+                      )}
+                    </div>
                   ) : null}
-                </div>
-                <div className={styles.routeOptionTools}>
-                  <button
-                    aria-pressed={favoriteSet.has(route.id)}
-                    onClick={() => handleFavorite(route.id)}
-                    type="button"
-                  >
-                    {favoriteSet.has(route.id) ? "Guardada" : "Favorita"}
-                  </button>
-                  <button onClick={() => copyRouteLink(route.id)} type="button">
-                    {copiedRouteId === route.id ? "Copiado" : "Link"}
-                  </button>
-                </div>
-              </article>
-            ))}
+                </section>
+              );
+            })}
           </div>
         </div>
 
@@ -1123,6 +1588,10 @@ export default function RouteMap() {
             requestKey={locateRequestKey}
           />
           <MapFocus place={selectedPlace} />
+          <RouteBoundsFocus
+            focusKey={routeFocusRequest.key}
+            routes={routeFocusRoutes}
+          />
           {showZoomHint ? (
             <div className={styles.zoomHint}>Ctrl + scroll para hacer zoom</div>
           ) : null}
@@ -1177,18 +1646,15 @@ export default function RouteMap() {
           ))}
 
           {visiblePoints.map((point) => (
-            <CircleMarker
-              center={[point.lat, point.lng]}
-              color={point.type === "station" ? "#7A1230" : "#FFD23F"}
-              fillColor={point.type === "station" ? "#7A1230" : "#FFD23F"}
-              fillOpacity={0.9}
+            <Marker
+              icon={pointIcons[point.type] || pointIcons.stop}
               key={point.id}
-              radius={point.type === "station" ? 6 : 5}
-              weight={2}
+              position={[point.lat, point.lng]}
             >
               <Popup>
                 <div className={styles.popup}>
                   <h3>{point.name}</h3>
+                  <p>{pointTypeLabels[point.type] || "Punto de ruta"}</p>
                   <p>{point.subtitle}</p>
                   <p>{point.address}</p>
                   {point.photos?.[0] ? (
@@ -1196,7 +1662,7 @@ export default function RouteMap() {
                   ) : null}
                 </div>
               </Popup>
-            </CircleMarker>
+            </Marker>
           ))}
 
           {userPosition ? (

@@ -435,11 +435,271 @@
   border-color: #ffe18a;
 }
 
+.routeTree {
+  display: grid;
+  gap: 10px;
+  max-height: 390px;
+  min-width: 0;
+  overflow: auto;
+  padding-right: 2px;
+}
+
+.routeGroup {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+  padding: 8px;
+}
+
+.routeGroupHeader {
+  align-items: center;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 30px 34px minmax(0, 1fr);
+  min-width: 0;
+}
+
+.routeGroupChevron,
+.routeGroupToggle {
+  cursor: pointer;
+}
+
+.routeGroupChevron {
+  align-items: center;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--dark);
+  display: inline-flex;
+  height: 30px;
+  justify-content: center;
+  padding: 0;
+  width: 30px;
+}
+
+.routeGroupChevron svg {
+  fill: none;
+  height: 17px;
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.6;
+  width: 17px;
+}
+
+.routeGroupIcon {
+  align-items: center;
+  background: #eafaf6;
+  border: 1px solid #b7eee0;
+  border-radius: 10px;
+  color: #00a995;
+  display: inline-flex;
+  height: 34px;
+  justify-content: center;
+  width: 34px;
+}
+
+.routeGroupIcon svg {
+  fill: none;
+  height: 20px;
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.2;
+  width: 20px;
+}
+
+.troncalRouteGroupIcon {
+  background: #fff1f5;
+  border-color: #ffc7d7;
+  color: #7a1230;
+}
+
+.alimentadorasRouteGroupIcon {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  color: #0b5fff;
+}
+
+.combisRouteGroupIcon {
+  background: #eafaf6;
+  border-color: #b7eee0;
+  color: #00a995;
+}
+
+.routeGroupToggle {
+  align-items: center;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--dark);
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  min-height: 42px;
+  min-width: 0;
+  padding: 7px 9px;
+  text-align: left;
+}
+
+.routeGroupToggle span {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.routeGroupToggle strong,
+.routeGroupToggle small {
+  overflow-wrap: anywhere;
+}
+
+.routeGroupToggle strong {
+  font-size: 0.86rem;
+  line-height: 1.1;
+}
+
+.routeGroupToggle small {
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.routeGroupToggle em {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--dark);
+  flex: 0 0 auto;
+  font-size: 0.66rem;
+  font-style: normal;
+  font-weight: 900;
+  padding: 5px 8px;
+}
+
+.routeGroupToggle[aria-pressed="true"] {
+  background: #eafaf6;
+  border-color: #b7eee0;
+}
+
+.routeGroupToggle[aria-pressed="true"] em {
+  background: #00c2a8;
+  border-color: #00c2a8;
+  color: #ffffff;
+}
+
+.routeGroupRoutes {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.emptyRouteGroup {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin: 0;
+  padding: 4px 2px 2px 72px;
+}
+
+.routeFamily {
+  background: #f8fafc;
+  border: 1px solid #dbe3ec;
+  border-radius: var(--radius-sm);
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+  padding: 8px;
+}
+
+.routeFamilyHeader {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.routeFamilyHeader div {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.routeFamilyHeader strong {
+  color: var(--dark);
+  font-size: 0.8rem;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.routeFamilyHeader small {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.routeFamilyHeader button {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--dark);
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-size: 0.66rem;
+  font-weight: 900;
+  min-height: 28px;
+  padding: 0 9px;
+}
+
+.routeFamilyHeader button[aria-pressed="true"] {
+  background: #00c2a8;
+  border-color: #00c2a8;
+  color: #ffffff;
+}
+
+.routeDirectionList {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+}
+
+.directionBadge {
+  align-items: center;
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 0.62rem;
+  font-weight: 950;
+  line-height: 1;
+  margin-right: 6px;
+  padding: 4px 7px;
+  vertical-align: 1px;
+}
+
+.idaDirectionBadge {
+  background: #eafaf6;
+  color: #008f82;
+}
+
+.vueltaDirectionBadge {
+  background: #fff1f5;
+  color: #b42346;
+}
+
+.unicoDirectionBadge {
+  background: #eff6ff;
+  color: #0b5fff;
+}
+
 .routePicker.collapsed {
   gap: 0;
 }
 
-.routePicker.collapsed .routeList {
+.routePicker.collapsed .routeTree {
   display: none;
 }
 
@@ -451,7 +711,7 @@
   border-color: rgb(16 42 67 / 28%);
 }
 
-.routePicker.maximized .routeList {
+.routePicker.maximized .routeTree {
   max-height: 620px;
 }
 
@@ -558,6 +818,38 @@
   min-width: 0;
   overflow: hidden;
   position: relative;
+}
+
+.pointMarker {
+  align-items: center;
+  background: #ffffff;
+  border: 2px solid currentcolor;
+  border-radius: 999px;
+  box-shadow: 0 8px 18px rgb(15 23 42 / 22%);
+  display: flex;
+  justify-content: center;
+}
+
+.pointMarker svg {
+  fill: none;
+  height: 18px;
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.4;
+  width: 18px;
+}
+
+.stationPointMarker {
+  color: #7a1230;
+}
+
+.stopPointMarker {
+  color: #0b5fff;
+}
+
+.rechargePointMarker {
+  color: #f5a400;
 }
 
 .fullscreen {
