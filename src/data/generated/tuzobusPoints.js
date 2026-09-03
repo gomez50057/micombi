@@ -1,4 +1,4 @@
-// Puntos oficiales de Tuzobus generados desde CDN Hidalgo.
+// Puntos de estaciones Tuzobus con coordenadas ajustadas a su ubicación en el mapa.
 export const tuzobusPoints = [
   {
     "id": "station-01",
@@ -19,8 +19,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/1-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/1-5.jpg"
     ],
-    "lat": 20.012222,
-    "lng": -98.804444,
+    "lat": 20.0225839,
+    "lng": -98.8115499,
     "source": "tuzobus_oficial"
   },
   {
@@ -41,8 +41,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/2-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/2-5.jpg"
     ],
-    "lat": 20.024444,
-    "lng": -98.808611,
+    "lat": 20.0246226,
+    "lng": -98.8088288,
     "source": "tuzobus_oficial"
   },
   {
@@ -66,8 +66,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/3-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/3-5.jpg"
     ],
-    "lat": 20.030833,
-    "lng": -98.8025,
+    "lat": 20.0310958,
+    "lng": -98.8026462,
     "source": "tuzobus_oficial"
   },
   {
@@ -89,8 +89,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/4-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/4-5.jpg"
     ],
-    "lat": 20.035,
-    "lng": -98.798889,
+    "lat": 20.034986,
+    "lng": -98.7992131,
     "source": "tuzobus_oficial"
   },
   {
@@ -112,8 +112,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/5-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/5-5.jpg"
     ],
-    "lat": 20.042222,
-    "lng": -98.793889,
+    "lat": 20.0422104,
+    "lng": -98.7940472,
     "source": "tuzobus_oficial"
   },
   {
@@ -134,8 +134,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/6-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/6-5.jpg"
     ],
-    "lat": 20.046944,
-    "lng": -98.791111,
+    "lat": 20.0470344,
+    "lng": -98.791325,
     "source": "tuzobus_oficial"
   },
   {
@@ -157,8 +157,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/7-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/7-5.jpg"
     ],
-    "lat": 20.050278,
-    "lng": -98.789444,
+    "lat": 20.05035,
+    "lng": -98.7895901,
     "source": "tuzobus_oficial"
   },
   {
@@ -182,8 +182,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/8-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/8-5.jpg"
     ],
-    "lat": 20.055556,
-    "lng": -98.786667,
+    "lat": 20.0562113,
+    "lng": -98.7865994,
     "source": "tuzobus_oficial"
   },
   {
@@ -205,8 +205,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/9o-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/9o-5.jpg"
     ],
-    "lat": 20.06,
-    "lng": -98.784167,
+    "lat": 20.0600289,
+    "lng": -98.7845947,
     "source": "tuzobus_oficial"
   },
   {
@@ -251,8 +251,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/10-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/10-5.jpg"
     ],
-    "lat": 20.064167,
-    "lng": -98.782222,
+    "lat": 20.0641419,
+    "lng": -98.7824302,
     "source": "tuzobus_oficial"
   },
   {
@@ -275,8 +275,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/11-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/11-5.jpg"
     ],
-    "lat": 20.068333,
-    "lng": -98.78,
+    "lat": 20.0682367,
+    "lng": -98.780292,
     "source": "tuzobus_oficial"
   },
   {
@@ -298,8 +298,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/12-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/12-5.jpg"
     ],
-    "lat": 20.075,
-    "lng": -98.776389,
+    "lat": 20.075227,
+    "lng": -98.7765829,
     "source": "tuzobus_oficial"
   },
   {
@@ -321,8 +321,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/13-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/13-5.jpg"
     ],
-    "lat": 20.078889,
-    "lng": -98.774444,
+    "lat": 20.0790519,
+    "lng": -98.7746913,
     "source": "tuzobus_oficial"
   },
   {
@@ -344,8 +344,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/14-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/14-5.jpg"
     ],
-    "lat": 20.083333,
-    "lng": -98.7725,
+    "lat": 20.0832892,
+    "lng": -98.7727137,
     "source": "tuzobus_oficial"
   },
   {
@@ -369,8 +369,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/15p-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/15p-5.jpg"
     ],
-    "lat": 20.088056,
-    "lng": -98.771111,
+    "lat": 20.0882927,
+    "lng": -98.7709151,
     "source": "tuzobus_oficial"
   },
   {
@@ -394,8 +394,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/15o-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/15o-5.jpg"
     ],
-    "lat": 20.088056,
-    "lng": -98.770833,
+    "lat": 20.088365,
+    "lng": -98.771241,
     "source": "tuzobus_oficial"
   },
   {
@@ -417,8 +417,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/16-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/16-5.jpg"
     ],
-    "lat": 20.090833,
-    "lng": -98.770833,
+    "lat": 20.0907906,
+    "lng": -98.7709077,
     "source": "tuzobus_oficial"
   },
   {
@@ -440,8 +440,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/17-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/17-5.jpg"
     ],
-    "lat": 20.094722,
-    "lng": -98.768889,
+    "lat": 20.0943803,
+    "lng": -98.7697364,
     "source": "tuzobus_oficial"
   },
   {
@@ -465,8 +465,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/18-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/18-5.jpg"
     ],
-    "lat": 20.098333,
-    "lng": -98.765278,
+    "lat": 20.0981682,
+    "lng": -98.7657939,
     "source": "tuzobus_oficial"
   },
   {
@@ -490,8 +490,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/19-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/19-5.jpg"
     ],
-    "lat": 20.102778,
-    "lng": -98.760833,
+    "lat": 20.1030846,
+    "lng": -98.7606833,
     "source": "tuzobus_oficial"
   },
   {
@@ -512,8 +512,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/19-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/19-5.jpg"
     ],
-    "lat": 20.106111,
-    "lng": -98.751111,
+    "lat": 20.1062774,
+    "lng": -98.7518132,
     "source": "tuzobus_oficial"
   },
   {
@@ -534,8 +534,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/20-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/20-5.jpg"
     ],
-    "lat": 20.108611,
-    "lng": -98.754722,
+    "lat": 20.1087262,
+    "lng": -98.7548777,
     "source": "tuzobus_oficial"
   },
   {
@@ -557,8 +557,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/21-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/21-5.jpg"
     ],
-    "lat": 20.112222,
-    "lng": -98.750833,
+    "lat": 20.1124755,
+    "lng": -98.7509792,
     "source": "tuzobus_oficial"
   },
   {
@@ -580,8 +580,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/22-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/22-5.jpg"
     ],
-    "lat": 20.114722,
-    "lng": -98.747778,
+    "lat": 20.1147157,
+    "lng": -98.7481656,
     "source": "tuzobus_oficial"
   },
   {
@@ -603,8 +603,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/23o-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/23o-5.jpg"
     ],
-    "lat": 20.116111,
-    "lng": -98.7425,
+    "lat": 20.1161981,
+    "lng": -98.742651,
     "source": "tuzobus_oficial"
   },
   {
@@ -625,8 +625,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/24o-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/24o-5.jpg"
     ],
-    "lat": 20.118333,
-    "lng": -98.739167,
+    "lat": 20.1185629,
+    "lng": -98.739235,
     "source": "tuzobus_oficial"
   },
   {
@@ -650,8 +650,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/25o-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/25o-5.jpg"
     ],
-    "lat": 20.121667,
-    "lng": -98.734722,
+    "lat": 20.1217586,
+    "lng": -98.7348571,
     "source": "tuzobus_oficial"
   },
   {
@@ -673,8 +673,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/26o-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/26o-5.jpg"
     ],
-    "lat": 20.125,
-    "lng": -98.7325,
+    "lat": 20.1251067,
+    "lng": -98.7326966,
     "source": "tuzobus_oficial"
   },
   {
@@ -696,8 +696,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/26p-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/26p-5.jpg"
     ],
-    "lat": 20.125,
-    "lng": -98.732778,
+    "lat": 20.1250411,
+    "lng": -98.7330073,
     "source": "tuzobus_oficial"
   },
   {
@@ -719,8 +719,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/10-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/10-5.jpg"
     ],
-    "lat": 20.129167,
-    "lng": -98.731111,
+    "lat": 20.1292172,
+    "lng": -98.7313369,
     "source": "tuzobus_oficial"
   },
   {
@@ -744,8 +744,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/25p-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/25p-5.jpg"
     ],
-    "lat": 20.122716,
-    "lng": -98.737152,
+    "lat": 20.1227069,
+    "lng": -98.737052,
     "source": "tuzobus_oficial"
   },
   {
@@ -766,8 +766,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/24p-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/24p-5.jpg"
     ],
-    "lat": 20.12,
-    "lng": -98.740556,
+    "lat": 20.1204307,
+    "lng": -98.7403119,
     "source": "tuzobus_oficial"
   },
   {
@@ -788,8 +788,8 @@ export const tuzobusPoints = [
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/23p-4.jpg",
       "https://cdn.hidalgo.gob.mx/gobierno/dependencias/tuzobus/imagenes/troncales/23p-5.jpg"
     ],
-    "lat": 20.116944,
-    "lng": -98.744722,
+    "lat": 20.1170057,
+    "lng": -98.7449422,
     "source": "tuzobus_oficial"
   },
   {

@@ -1,4 +1,4 @@
-const CACHE_NAME = "mi-combi-static-v1";
+const CACHE_NAME = "mi-combi-static-v2";
 const CORE_ROUTES = [
   "/",
   "/rutas",
@@ -9,9 +9,6 @@ const CORE_ROUTES = [
   "/offline",
   "/manifest.json",
   "/icons/combi.svg",
-  "/data/geojson/index.json",
-  "/data/geojson/routes-all.geojson",
-  "/data/geojson/tuzobus-points.geojson",
 ];
 
 self.addEventListener("install", (event) => {

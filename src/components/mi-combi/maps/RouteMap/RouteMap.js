@@ -16,10 +16,14 @@ import {
   ZoomControl,
 } from "react-leaflet";
 import { allRoutes } from "@/data/routes/allRoutes";
-import { externalRouteTypes } from "@/data/generated/externalRoutes";
+import {
+  externalRoutes,
+  externalRouteTypes,
+} from "@/data/generated/externalRoutes";
+import { tuzobusPoints } from "@/data/generated/tuzobusPoints";
 import { municipalities } from "@/data/municipalities";
 import { routeStatuses } from "@/data/routeStatuses";
-import { tuzobusPoints } from "@/data/generated/tuzobusPoints";
+import { tuzobusTroncalPoints } from "@/data/routes/tuzobusTroncal1Routes";
 import {
   findNearbyRouteIntersections,
   getRouteCoordinates,
@@ -54,22 +58,87 @@ const MAP_PAN_BOUNDS = [
 ];
 const NOMINATIM_VIEWBOX = "-98.96,20.28,-98.52,19.94";
 const mappableRoutes = allRoutes.filter((route) => route.geojson);
+
+function getCoordinateAtProgress(coordinates, progress) {
+  if (coordinates.length === 0) return null;
+  if (coordinates.length === 1) return coordinates[0];
+
+  const segments = coordinates.slice(1).map((coordinate, index) => {
+    const previous = coordinates[index];
+    return {
+      coordinate,
+      length: Math.hypot(
+        coordinate[0] - previous[0],
+        coordinate[1] - previous[1]
+      ),
+    };
+  });
+  const totalLength = segments.reduce((sum, segment) => sum + segment.length, 0);
+  const targetLength = totalLength * progress;
+  let coveredLength = 0;
+
+  for (const [index, segment] of segments.entries()) {
+    const previous = coordinates[index];
+    if (coveredLength + segment.length >= targetLength) {
+      const segmentProgress = segment.length
+        ? (targetLength - coveredLength) / segment.length
+        : 0;
+      return [
+        previous[0] + (segment.coordinate[0] - previous[0]) * segmentProgress,
+        previous[1] + (segment.coordinate[1] - previous[1]) * segmentProgress,
+      ];
+    }
+    coveredLength += segment.length;
+  }
+
+  return coordinates[coordinates.length - 1];
+}
+
+const alimentadoraPoints = externalRoutes
+  .filter((route) => route.routeType === "tuzobus_alimentadora")
+  .flatMap((route) => {
+    const coordinates = getRouteCoordinates(route);
+    const stopNames = route.passesThrough?.length
+      ? route.passesThrough
+      : [route.origin, route.destination].filter(Boolean);
+
+    return stopNames.map((stopName, index) => {
+      const progress = stopNames.length > 1 ? index / (stopNames.length - 1) : 0;
+      const coordinate = getCoordinateAtProgress(coordinates, progress);
+
+      if (!coordinate) return null;
+
+      return {
+        id: `${route.id}-parada-${index + 1}`,
+        type: "parada",
+        name: `Parada ${index + 1}`,
+        subtitle: route.name,
+        address: stopName,
+        routeId: route.id,
+        source: route.source,
+        lat: coordinate[1],
+        lng: coordinate[0],
+      };
+    });
+  })
+  .filter(Boolean);
+
+const mapPoints = [
+  ...tuzobusPoints.filter((point) => point.type !== "station"),
+  ...tuzobusTroncalPoints,
+  ...alimentadoraPoints,
+];
 const defaultSelectedRouteIds = mappableRoutes
   .filter((route) => route.routeType === "combi")
   .slice(0, 6)
   .map((route) => route.id);
-
-const routeTypeOptions = {
-  Todos: "Todos",
-  ...externalRouteTypes,
-};
 
 const routeTreeGroups = [
   {
     key: "troncal",
     label: "Troncal",
     routeType: "tuzobus_troncal",
-    pointTypes: ["station"],
+    pointTypes: ["station", "recharge"],
   },
   {
     key: "alimentadoras",
@@ -151,6 +220,10 @@ function groupRoutesByBase(routes) {
       return order[first.direction] - order[second.direction];
     }),
   }));
+}
+
+function routeUsesStations(route) {
+  return route?.routeType === "tuzobus_troncal" && route.stationIds?.length > 0;
 }
 
 const isInsideZmp = (lat, lng) =>
@@ -472,8 +545,6 @@ export default function RouteMap() {
   const [query, setQuery] = useState("");
   const [municipality, setMunicipality] = useState("Todas");
   const [status, setStatus] = useState("Todos");
-  const [routeType, setRouteType] = useState("Todos");
-  const [onlyWithPhotos, setOnlyWithPhotos] = useState(false);
   const [onlyFavorites, setOnlyFavorites] = useState(false);
   const [sortNearby, setSortNearby] = useState(false);
   const [showStations, setShowStations] = useState(false);
@@ -554,6 +625,13 @@ export default function RouteMap() {
 
         if (routeIds.length > 0) {
           setSelectedRouteIds(routeIds.slice(0, MAX_VISIBLE_ROUTES));
+          if (
+            routeIds.some((routeId) =>
+              routeUsesStations(mappableRoutes.find((route) => route.id === routeId))
+            )
+          ) {
+            setShowStations(true);
+          }
         }
       }
 
@@ -637,17 +715,16 @@ export default function RouteMap() {
         !normalizedQuery || searchableText.includes(normalizedQuery);
       const matchesMunicipality =
         municipality === "Todas" || route.municipalities?.includes(municipality);
-      const matchesStatus = status === "Todos" || route.status === status;
-      const matchesType = routeType === "Todos" || route.routeType === routeType;
-      const matchesPhotos = !onlyWithPhotos || route.photos?.length > 0;
+      const matchesStatus =
+        route.routeType !== "combi" ||
+        status === "Todos" ||
+        route.status === status;
       const matchesFavorites = !onlyFavorites || favoriteSet.has(route.id);
 
       return (
         matchesQuery &&
         matchesMunicipality &&
         matchesStatus &&
-        matchesType &&
-        matchesPhotos &&
         matchesFavorites
       );
     });
@@ -668,9 +745,7 @@ export default function RouteMap() {
     favoriteSet,
     municipality,
     onlyFavorites,
-    onlyWithPhotos,
     query,
-    routeType,
     sortNearby,
     status,
     userPosition,
@@ -679,6 +754,22 @@ export default function RouteMap() {
   const selectedRoutes = useMemo(() => {
     return mappableRoutes.filter((route) => selectedRouteSet.has(route.id));
   }, [selectedRouteSet]);
+
+  const selectedStationIds = useMemo(() => {
+    return new Set(
+      selectedRoutes
+        .filter(routeUsesStations)
+        .flatMap((route) => route.stationIds)
+    );
+  }, [selectedRoutes]);
+
+  const selectedAlimentadoraRouteIds = useMemo(() => {
+    return new Set(
+      selectedRoutes
+        .filter((route) => route.routeType === "tuzobus_alimentadora")
+        .map((route) => route.id)
+    );
+  }, [selectedRoutes]);
 
   const routeFocusRoutes = useMemo(() => {
     const focusSet = new Set(routeFocusRequest.ids);
@@ -722,13 +813,30 @@ export default function RouteMap() {
   );
 
   const visiblePoints = useMemo(() => {
-    return tuzobusPoints.filter((point) => {
-      if (point.type === "station") return showStations;
-      if (point.type === "stop" || point.type === "parada") return showStops;
+    return mapPoints.filter((point) => {
+      if (point.type === "station") {
+        return (
+          showStations &&
+          (selectedStationIds.size === 0 || selectedStationIds.has(point.id))
+        );
+      }
+      if (point.type === "stop" || point.type === "parada") {
+        return (
+          showStops &&
+          (selectedAlimentadoraRouteIds.size === 0 ||
+            selectedAlimentadoraRouteIds.has(point.routeId))
+        );
+      }
       if (point.type === "recharge") return showRecharge;
       return false;
     });
-  }, [showRecharge, showStations, showStops]);
+  }, [
+    selectedAlimentadoraRouteIds,
+    selectedStationIds,
+    showRecharge,
+    showStations,
+    showStops,
+  ]);
 
   const pointIcons = useMemo(
     () => ({
@@ -781,6 +889,9 @@ export default function RouteMap() {
         ? current.filter((id) => id !== routeId)
         : [...current, routeId]
     );
+    if (!isSelected && routeUsesStations(route)) {
+      setShowStations(true);
+    }
     if (!isSelected) {
       focusRoutesOnMap([routeId]);
     }
@@ -799,6 +910,13 @@ export default function RouteMap() {
       .map((route) => route.id);
 
     setSelectedRouteIds(nextRouteIds);
+    if (
+      nextRouteIds.some((routeId) =>
+        routeUsesStations(mappableRoutes.find((route) => route.id === routeId))
+      )
+    ) {
+      setShowStations(true);
+    }
     focusRoutesOnMap(nextRouteIds);
     notify({
       message: `Se seleccionaron hasta ${MAX_VISIBLE_ROUTES} rutas filtradas.`,
@@ -817,6 +935,10 @@ export default function RouteMap() {
   const enableGroupPoints = (group) => {
     if (group.pointTypes.includes("station")) {
       setShowStations(true);
+    }
+
+    if (group.pointTypes.includes("recharge")) {
+      setShowRecharge(true);
     }
 
     if (group.pointTypes.includes("stop") || group.pointTypes.includes("parada")) {
@@ -885,6 +1007,9 @@ export default function RouteMap() {
     });
 
     if (!isFamilySelected) {
+      if (family.routes.some(routeUsesStations)) {
+        setShowStations(true);
+      }
       focusRoutesOnMap(familyRouteIds);
     }
   };
@@ -1194,7 +1319,7 @@ export default function RouteMap() {
                 </select>
               </label>
               <label>
-                Estado
+                Estado (solo combis)
                 <select
                   onChange={(event) => setStatus(event.target.value)}
                   value={status}
@@ -1203,19 +1328,6 @@ export default function RouteMap() {
                   {Object.entries(routeStatuses).map(([key, item]) => (
                     <option key={key} value={key}>
                       {item.label}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <label>
-                Tipo
-                <select
-                  onChange={(event) => setRouteType(event.target.value)}
-                  value={routeType}
-                >
-                  {Object.entries(routeTypeOptions).map(([key, label]) => (
-                    <option key={key} value={key}>
-                      {label}
                     </option>
                   ))}
                 </select>
@@ -1233,35 +1345,11 @@ export default function RouteMap() {
               </label>
               <label>
                 <input
-                  checked={onlyWithPhotos}
-                  onChange={(event) => setOnlyWithPhotos(event.target.checked)}
-                  type="checkbox"
-                />
-                Con fotos
-              </label>
-              <label>
-                <input
-                  checked={showStations}
-                  onChange={(event) => setShowStations(event.target.checked)}
-                  type="checkbox"
-                />
-                Estaciones Tuzobus
-              </label>
-              <label>
-                <input
                   checked={showStops}
                   onChange={(event) => setShowStops(event.target.checked)}
                   type="checkbox"
                 />
                 Paradas alimentadoras
-              </label>
-              <label>
-                <input
-                  checked={showRecharge}
-                  onChange={(event) => setShowRecharge(event.target.checked)}
-                  type="checkbox"
-                />
-                Recargas
               </label>
               <label>
                 <input
@@ -1295,8 +1383,11 @@ export default function RouteMap() {
               <button
                 onClick={() => {
                   setSelectedRouteIds([]);
+                  setShowStations(false);
+                  setShowRecharge(false);
                   notify({
-                    message: "Se limpio la seleccion del mapa.",
+                    message:
+                      "Se limpiaron las rutas, estaciones y puntos de recarga del mapa.",
                     title: "Seleccion limpia",
                     tone: "success",
                   });
@@ -1351,8 +1442,11 @@ export default function RouteMap() {
             <button
               onClick={() => {
                 setSelectedRouteIds([]);
+                setShowStations(false);
+                setShowRecharge(false);
                 notify({
-                  message: "Se limpio la lista de rutas seleccionadas.",
+                  message:
+                    "Se limpiaron las rutas, estaciones y puntos de recarga del mapa.",
                   title: "Rutas limpias",
                   tone: "success",
                 });
@@ -1413,6 +1507,30 @@ export default function RouteMap() {
 
                   {isExpanded ? (
                     <div className={styles.routeGroupRoutes}>
+                      {group.key === "troncal" ? (
+                        <div className={styles.toggles}>
+                          <label>
+                            <input
+                              checked={showStations}
+                              onChange={(event) =>
+                                setShowStations(event.target.checked)
+                              }
+                              type="checkbox"
+                            />
+                            Estaciones Tuzobus
+                          </label>
+                          <label>
+                            <input
+                              checked={showRecharge}
+                              onChange={(event) =>
+                                setShowRecharge(event.target.checked)
+                              }
+                              type="checkbox"
+                            />
+                            Recargas
+                          </label>
+                        </div>
+                      ) : null}
                       {group.routes.length > 0 ? (
                         group.families.map((family) => {
                           const familySelectedCount = family.routes.filter((route) =>
